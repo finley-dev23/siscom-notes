@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# June Care Company Landing Page
 
-## Getting Started
+A pixel-perfect recreation of the Republic.com June Care crowdfunding campaign page, built with Next.js 14 and Tailwind CSS.
 
-First, run the development server:
+## ✨ Features
 
+- 🎨 **Faithful Design Recreation**: Meticulously crafted to match the Republic.com design
+- 📱 **Fully Responsive**: Optimized for all screen sizes
+- 🖼️ **Interactive Media Gallery**: Video and image carousel with thumbnails
+- 📊 **Investment Dashboard**: Live funding progress, investor count, and deadline tracker
+- 🧭 **Left Sidebar Navigation**: Quick jump navigation through all pitch sections
+- 💼 **Deal Terms Display**: Comprehensive investment information and bonus perks
+- 🎯 **Tab-Based Content**: Pitch, Discussion, Updates, and Reviews sections
+- ⚡ **Optimized Performance**: Built with Next.js 14 for fast page loads
+
+## 🚀 Getting Started
+
+1. **Install dependencies:**
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Run the development server:**
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. **Open in browser:**
+Navigate to [http://localhost:3000](http://localhost:3000)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Tech Stack
 
-## Learn More
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **Deployment**: Vercel (recommended)
 
-To learn more about Next.js, take a look at the following resources:
+## 📁 Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+/app
+  ├── page.tsx          # Main page layout
+  ├── layout.tsx        # Root layout with metadata
+  └── globals.css       # Global styles and Tailwind imports
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+/components
+  ├── Header.tsx        # Navigation header with search and auth
+  ├── Hero.tsx          # Company profile and tags
+  ├── Tabs.tsx          # Tab navigation (Pitch, Discussion, etc.)
+  ├── MediaGallery.tsx  # Video/image carousel
+  ├── PitchContent.tsx  # Main pitch content with left nav
+  └── InvestmentStats.tsx # Sidebar with funding stats and perks
+```
 
-## Deploy on Vercel
+## 🎨 Key Sections Implemented
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Main Content
+- **Highlights & Deal Terms**: Key metrics and investment details side-by-side
+- **Problem**: Market opportunity and pain points
+- **Solution**: The June Care App and features
+- **Traction**: Growth metrics, user stats, and press coverage
+- **Vision & Strategy**: Expansion plans and fundraising goals
+- **Product**: Platform features and user experience
+- **Competition**: Competitive advantages
+- **Funding**: Previous funding rounds and investors
+- **Team & Founders**: Leadership information
+- **FAQ, Press, Risks, About**: Additional sections
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Sidebar Features
+- Real-time funding progress bar
+- Investor count and days remaining
+- CTA button ("Invest in June Care Company")
+- Complete deal terms breakdown
+- Legal documents and Form C links
+- Investment tier bonus perks ($1K, $5K, $25K)
+
+## 🎯 Design Alignment with Republic.com
+
+This implementation closely matches the actual Republic.com June Care page:
+
+- ✅ Clean, modern card-based layout
+- ✅ Gray (#F9FAFB) background with white content cards
+- ✅ Left sidebar navigation with active state indicators
+- ✅ Gradient logo and media placeholders
+- ✅ Typography hierarchy matching Republic's style
+- ✅ Proper spacing and padding throughout
+- ✅ Responsive grid layout (2/3 content, 1/3 sidebar)
+- ✅ Interactive elements with hover states
+- ✅ Shadow and border treatments
+
+## 🔧 Customization
+
+To adapt this for your own campaign:
+
+1. **Update company info** in `/components/Hero.tsx`
+2. **Modify pitch content** in `/components/PitchContent.tsx`
+3. **Adjust funding goals** in `/components/InvestmentStats.tsx`
+4. **Change media assets** in `/components/MediaGallery.tsx`
+5. **Update branding colors** in `tailwind.config.ts`
+
+## 📄 License
+
+MIT
+
+---
+
+Built with ❤️ using Next.js, TypeScript, and Tailwind CSS
+
