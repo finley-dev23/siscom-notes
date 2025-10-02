@@ -1,27 +1,24 @@
 "use client";
 
-import { useState } from "react";
-import { ChevronRight } from "lucide-react";
+import { useState, useEffect } from "react";
+import { ChevronRight, ExternalLink } from "lucide-react";
 
 export default function PitchContent() {
   const [activeSection, setActiveSection] = useState("problem");
+  const [showSidebar, setShowSidebar] = useState(false);
   
   const sections = [
     { id: "problem", label: "Problem" },
     { id: "solution", label: "Solution" },
-    { id: "traction", label: "Traction" },
-    { id: "vision", label: "Vision and strate..." },
-    { id: "summary", label: "Summary" },
-    { id: "product", label: "Product" },
-    { id: "competition", label: "Competition" },
-    { id: "funding", label: "Funding" },
-    { id: "founders", label: "Founders" },
-    { id: "about", label: "About" },
+    { id: "investment-rationale", label: "Why Invest" },
+    { id: "market", label: "Market" },
+    { id: "business-model", label: "Business Model" },
+    { id: "traction", label: "Traction & Pipeline" },
     { id: "team", label: "Team" },
-    { id: "press", label: "Press" },
-    { id: "faq", label: "FAQ" },
+    { id: "gtm", label: "Go-to-Market" },
+    { id: "funding", label: "Funding" },
     { id: "risks", label: "Risks" },
-    { id: "discussion", label: "Discussion" },
+    { id: "impact", label: "Impact" },
   ];
   
   const scrollToSection = (id: string) => {
@@ -31,102 +28,101 @@ export default function PitchContent() {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const problemSection = document.getElementById('problem');
+      
+      if (problemSection) {
+        const rect = problemSection.getBoundingClientRect();
+        // Show sidebar when Problem section reaches the top of viewport
+        setShowSidebar(rect.top <= 100);
+      }
+      
+      const sectionIds = sections.map(s => s.id);
+      
+      for (let i = sectionIds.length - 1; i >= 0; i--) {
+        const element = document.getElementById(sectionIds[i]);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 100) {
+            setActiveSection(sectionIds[i]);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [sections]);
   
   return (
-    <div className="flex gap-8">
-      {/* Left Navigation */}
-      <nav className="hidden lg:block w-48 flex-shrink-0">
-        <div className="sticky top-24 space-y-0.5">
-          {sections.map((section) => (
-            <button
-              key={section.id}
-              onClick={() => scrollToSection(section.id)}
-              className={`w-full text-left px-3 py-2 text-sm rounded transition ${
-                activeSection === section.id
-                  ? "bg-gray-900 text-white font-medium"
-                  : "text-gray-700 hover:bg-gray-100"
-              }`}
-            >
-              <span className="flex items-center justify-between">
-                <span className="truncate">{section.label}</span>
-                {activeSection === section.id && <ChevronRight className="w-3 h-3 flex-shrink-0 ml-1" />}
-              </span>
-            </button>
-          ))}
-        </div>
-      </nav>
-      
+    <div className="relative">
       {/* Main Content */}
-      <div className="flex-1 min-w-0">
+      <div className="max-w-4xl mx-auto">
+        
         {/* Highlights Section */}
         <section id="highlights" className="mb-16 scroll-mt-24">
-          <div className="flex justify-between items-start mb-8">
-            <div className="flex-1">
-              <h2 className="text-xl font-semibold text-gray-500 mb-6">Highlights</h2>
-            </div>
-            <div className="flex-1">
-              <h2 className="text-xl font-semibold text-gray-500 mb-6">Deal terms</h2>
-            </div>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <ul className="space-y-3 text-gray-700">
-                <li>• Solving childcare + parent income crisis.</li>
-                <li>• $75B childcare market: ripe for disruption.</li>
-                <li>• +300% YoY growth; $1.3M GMV annualized.</li>
-                <li>• 30K+ nationwide providers; 11K+ families.</li>
-                <li>• 98.6% of providers 5-star rated.</li>
-                <li>• Backed by top VCs: CRAFT & GREYCROFT.</li>
-                <li>• Featured on Good Morning America.</li>
-              </ul>
-            </div>
-            <div>
-              <div className="space-y-4">
-                <div className="flex justify-between py-2 border-b border-gray-200">
-                  <span className="text-gray-600">Valuation cap</span>
-                  <span className="font-semibold text-gray-900">$20,000,000</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-gray-200">
-                  <span className="text-gray-600">Minimum investment</span>
-                  <span className="font-semibold text-gray-900">$50</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-gray-200">
-                  <span className="text-gray-600">Maximum investment</span>
-                  <span className="font-semibold text-gray-900">$124,000</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-gray-200">
-                  <span className="text-gray-600">Funding goal</span>
-                  <span className="font-semibold text-gray-900">$500K</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-gray-200">
-                  <span className="text-gray-600">Deadline</span>
-                  <span className="font-semibold text-gray-900">December 9, 2025</span>
-                </div>
-                <div className="flex justify-between py-2">
-                  <span className="text-gray-600">Type of security</span>
-                  <span className="font-semibold text-gray-900">SAFE</span>
-                </div>
-              </div>
-              <button className="w-full mt-6 py-3 border border-gray-300 rounded-lg text-gray-700 font-medium hover:bg-gray-50 transition">
-                How it works
-              </button>
-            </div>
-          </div>
+          <h2 className="text-2xl font-semibold text-gray-500 mb-6">Highlights — Why Siscom, right now</h2>
+          <ul className="space-y-3 text-gray-700">
+            <li className="flex items-start">
+              <span className="mr-3">•</span>
+              <span><strong>First-mover:</strong> Building Africa's first dedicated Technology Bank + Investment Marketplace focused on financing cloud, GPU/AI compute, and data-center infrastructure.</span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-3">•</span>
+              <span><strong>Large & growing addressable market:</strong> Africa's digital infrastructure and data-center buildout is accelerating — trillions of dollars of downstream economic opportunity and billions of dollars of immediate infra TAM.</span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-3">•</span>
+              <span><strong>AI drives demand for capital-intensive infra:</strong> Africa's AI market is forecast to reach ~US$16.5B by 2030, requiring GPUs, rackspace and local processing capacity.</span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-3">•</span>
+              <span><strong>Cloud adoption is surging in Africa:</strong> McKinsey finds cloud adoption is accelerating across African enterprises and is unlocking large productivity gains.</span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-3">•</span>
+              <span><strong>Diaspora capital is sizable & available:</strong> Kenya alone recorded > $5.0B in 12-month remittance inflows — representing a large, under-deployed pool of capital.</span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-3">•</span>
+              <span><strong>Policy tailwinds:</strong> Data sovereignty and regulatory trends increase demand for local data hosting, creating structural demand for infrastructure we finance.</span>
+            </li>
+          </ul>
         </section>
         
         {/* Problem */}
         <section id="problem" className="mb-12 scroll-mt-24">
           <h2 className="text-2xl font-semibold text-gray-500 mb-6">Problem</h2>
-          <h3 className="text-3xl font-bold text-gray-900 mb-4">A dual crisis for parents</h3>
-          <p className="text-xl text-gray-700 mb-6">$75B market ripe for innovation</p>
-          <p className="text-gray-700 mb-6">Today's parents face an unprecedented challenge:</p>
+          <h3 className="text-3xl font-bold text-gray-900 mb-4">Capital allocation is skewed in Africa</h3>
+          <p className="text-xl text-gray-700 mb-6">Infrastructure underbuilt despite massive opportunity</p>
+          
           <ul className="space-y-4 text-gray-700 mb-8">
-            <li>
-              <strong>For Working Parents:</strong> Finding trusted, accessible, and affordable childcare is increasingly difficult and stressful.
+            <li className="flex items-start">
+              <span className="mr-3">•</span>
+              <div>
+              <strong>Capital allocation is skewed:</strong> Over 70%+ of local savings flow into low-yield assets (real estate, government bonds) that underperform frontier tech infrastructure opportunities.
+              </div>
             </li>
-            <li>
-              <strong>For Stay-at-Home Parents:</strong> It's hard to find flexible opportunities to earn income that fit around their childcare responsibilities.
+            <li className="flex items-start">
+              <span className="mr-3">•</span>
+              <div>
+              <strong>Infrastructure is underbuilt:</strong> Africa has &lt;1% of global data-center capacity despite rapidly accelerating data usage and cloud demand. External capital currently funds most buildouts — but local investors are excluded from the returns.
+              </div>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-3">•</span>
+              <div>
+              <strong>AI & cloud create new capital needs:</strong> GPUs, rackspace, and local compute are capital intensive (high upfront CAPEX), creating a funding gap that slows local deployments and increases reliance on foreign hyperscalers.
+              </div>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-3">•</span>
+              <div>
+              <strong>Regulatory pressure increases local demand:</strong> Data protection/data localisation trends force enterprises to host locally, increasing the cost and urgency of onshore infrastructure.
+              </div>
             </li>
           </ul>
         </section>
@@ -134,231 +130,302 @@ export default function PitchContent() {
         {/* Solution */}
         <section id="solution" className="mb-12 scroll-mt-24">
           <h2 className="text-2xl font-semibold text-gray-500 mb-6">Solution</h2>
-          <h3 className="text-3xl font-bold text-gray-900 mb-8">The June Care App</h3>
+          <h3 className="text-3xl font-bold text-gray-900 mb-8">The Technology Bank of Africa</h3>
           <p className="text-gray-700 mb-8">
-            June Care bridges this gap with an intuitive mobile app that puts power directly into parents' hands:
+            Siscom is building a regulated marketplace and platform that channels domestic retail, diaspora, and institutional capital into high-capex, high-return technology infrastructure: HPC nodes, GPU clusters, modular data centers, and associated services.
           </p>
           
-          {/* App Features - Placeholder for phone mockups */}
-          <div className="bg-gradient-to-r from-purple-100 via-pink-100 to-orange-100 rounded-xl p-8 mb-8">
-            <div className="grid md:grid-cols-3 gap-6 text-center">
-              <div>
-                <div className="bg-white rounded-lg p-6 h-64 flex items-center justify-center mb-3">
-                  <div className="text-gray-400">📱</div>
-                </div>
-                <h4 className="font-semibold text-gray-900 mb-2">Personalized Provider Recommendations</h4>
-                <p className="text-sm text-gray-600">97% fill rate</p>
-              </div>
-              <div>
-                <div className="bg-white rounded-lg p-6 h-64 flex items-center justify-center mb-3">
-                  <div className="text-gray-400">💬</div>
-                </div>
-                <h4 className="font-semibold text-gray-900 mb-2">In-App Chat and Video Calls</h4>
-                <p className="text-sm text-gray-600">Easily confirm details and fit</p>
-              </div>
-              <div>
-                <div className="bg-white rounded-lg p-6 h-64 flex items-center justify-center mb-3">
-                  <div className="text-gray-400">✅</div>
-                </div>
-                <h4 className="font-semibold text-gray-900 mb-2">On-Demand Childcare You Can Trust</h4>
-                <p className="text-sm text-gray-600">Book and pay in seconds</p>
-              </div>
-            </div>
-          </div>
-          
-          <ul className="space-y-4 text-gray-700">
-            <li>• <strong>Easy connections:</strong> We connect parents needing care with vetted, experienced caregivers in their community.</li>
-            <li>• <strong>Flexible scheduling:</strong> Book care for a few hours, a full day, or ongoing arrangements.</li>
-            <li>• <strong>Trust & safety:</strong> All providers complete background checks and profile reviews.</li>
-          </ul>
-        </section>
-        
-        {/* Traction */}
-        <section id="traction" className="mb-12 scroll-mt-24">
-          <h2 className="text-2xl font-semibold text-gray-500 mb-6">Traction</h2>
-          <h3 className="text-3xl font-bold text-gray-900 mb-6">Rapid growth & national recognition</h3>
-          <p className="text-gray-700 mb-8">June Care's model is proving incredibly effective, driven by authentic community growth:</p>
-          
-          {/* Traction Stats - Placeholder */}
+          {/* Solution Components */}
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-8 mb-8">
-            <h4 className="text-xl font-bold text-teal-700 mb-6">Key Milestones & Traction</h4>
-            <div className="grid md:grid-cols-2 gap-6">
+            <h4 className="text-xl font-bold text-blue-700 mb-6">The Siscom Product Stack</h4>
+            <div className="space-y-6">
               <div>
-                <p className="text-sm text-gray-600 mb-2">Nationwide Network of 30,000 providers</p>
-                <p className="text-sm text-gray-600 mb-2">Launched in San Diego</p>
-                <p className="text-sm text-gray-600 mb-2">Early Organic Expansion</p>
+                <h5 className="font-semibold text-gray-900 mb-3">1) Marketplace & Platform</h5>
+                <ul className="text-sm text-gray-700 space-y-2">
+                  <li>• Investor onboarding & KYC/AML (pan-Africa compliant)</li>
+                  <li>• Investment product catalog: tokenized cloud tokens, GPU pods, modular DC slots</li>
+                  <li>• Secondary liquidity layer: internal order book + scheduled periodic buybacks</li>
+                </ul>
               </div>
-              <div className="bg-purple-600 text-white rounded-lg p-6">
-                <p className="text-3xl font-bold mb-2">30,000 providers</p>
-                <p className="text-sm mb-4">... and growing nationwide</p>
-                <p className="text-3xl font-bold mb-2">11,000 families</p>
-                <p className="text-sm mb-4">use June Care for childcare</p>
-                <p className="text-3xl font-bold mb-2">$1.3M GMV</p>
-                <p className="text-sm mb-4">annualized</p>
-                <p className="text-3xl font-bold">+300% growth</p>
-                <p className="text-sm">year over year</p>
+              <div>
+                <h5 className="font-semibold text-gray-900 mb-3">2) Deal Origination & Underwriting</h5>
+                <ul className="text-sm text-gray-700 space-y-2">
+                  <li>• Underwrite infrastructure operators (data center hosts, colo partners)</li>
+                  <li>• Bespoke financial engineering (cashflow waterfall, revenue sharing)</li>
+                  <li>• Take-or-pay anchor contracts to de-risk early projects</li>
+                </ul>
               </div>
             </div>
           </div>
           
-          <div className="bg-gradient-to-r from-pink-100 to-orange-100 rounded-xl p-6 mb-6">
-            <div className="flex items-center gap-4">
-              <div className="text-4xl">📺</div>
+          <div className="bg-gradient-to-r from-green-50 to-teal-50 rounded-xl p-6 mb-6">
+            <h4 className="text-lg font-bold text-green-700 mb-4">Asset Types (Phase Plan)</h4>
+            <div className="grid md:grid-cols-3 gap-4 text-sm">
               <div>
-                <p className="font-bold text-gray-900">Big News!</p>
-                <p className="text-gray-700">June Care featured on Good Morning America</p>
+                <p className="font-semibold text-gray-900 mb-2">Phase 1 (2025)</p>
+                <p className="text-gray-700">HPC nodes, AI GPU clusters (H100 & A100 class), hybrid storage clusters</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-2">Phase 2 (2026–27)</p>
+                <p className="text-gray-700">Modular DC campuses, Starlink/edge zones, colocation slots</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-2">Phase 3 (2028+)</p>
+                <p className="text-gray-700">Hyperscale-ready campuses, cross-border regional POPs, high-yield structured products</p>
               </div>
             </div>
           </div>
-        </section>
-        
-        {/* Vision and Strategy */}
-        <section id="vision" className="mb-12 scroll-mt-24">
-          <h2 className="text-2xl font-semibold text-gray-500 mb-6">Vision and strategy</h2>
-          <h3 className="text-3xl font-bold text-gray-900 mb-6">Expanding access, everywhere</h3>
-          <p className="text-gray-700 mb-6">
-            June Care's vision is simple yet powerful: moms supporting moms in their most important work. We aim to expand access to income opportunities for parents everywhere. With an <strong>annualized GMV projected to reach $5M by Q2 2026</strong>, we are poised for significant expansion.
-          </p>
-          <p className="text-gray-700 mb-6">
-            We are currently <strong>raising $500K to capitalize on this momentum</strong>, planning to build on organic growth across California and new markets, expand to 3+ new cities per month, and launch strategic partnerships to access employer-sponsored demand. We are at a "crucible moment" with regulatory tailwinds, a proven product, and a strong "word of mom" flywheel.
-          </p>
-          
-          <div className="bg-gradient-to-r from-teal-50 to-blue-50 rounded-xl p-8">
-            <h4 className="text-xl font-bold text-teal-700 mb-4">Raising $500K to capture the moment</h4>
-            <p className="text-sm text-teal-600 mb-4">With additional capital, we can:</p>
-            <ul className="space-y-2 text-gray-700">
-              <li>• <strong>Build on organic growth</strong> across CA and new markets</li>
-              <li>• <strong>Expand June Care</strong> to new +3 new cities / month</li>
-              <li>• <strong>Launch strategic partnerships</strong> to access employer-sponsored demand</li>
+
+          <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-xl p-6">
+            <h4 className="text-lg font-bold text-indigo-700 mb-4">Go-to-Market (GTM)</h4>
+            <ul className="text-sm text-gray-700 space-y-2">
+              <li>• <strong>Diaspora retail channel:</strong> partnerships with remittance providers and fintech wallets (M-Pesa, Flutterwave)</li>
+              <li>• <strong>Institutional channel:</strong> pension funds, family offices, and local banks for larger tranches</li>
+              <li>• <strong>Operator channel:</strong> developer partnerships with modular DC builders, IX Africa, GPU suppliers</li>
             </ul>
           </div>
         </section>
         
-        {/* Summary */}
-        <section id="summary" className="mb-12 scroll-mt-24">
-          <h2 className="text-2xl font-semibold text-gray-500 mb-6">Summary</h2>
-          <h3 className="text-3xl font-bold text-gray-900 mb-6">Why Invest: Seize the Heart of the Care Economy</h3>
-          <p className="text-gray-700 mb-6">
-            June Care offers a compelling investment opportunity in a rapidly expanding, underserved $75B market:
-          </p>
+        {/* Investment Rationale */}
+        <section id="investment-rationale" className="mb-12 scroll-mt-24">
+          <h2 className="text-2xl font-semibold text-gray-500 mb-6">Why Invest</h2>
+          <h3 className="text-3xl font-bold text-gray-900 mb-6">Investment Rationale</h3>
+          
           <ul className="space-y-4 text-gray-700">
-            <li>
-              • <strong>Disruptive Model:</strong> Creating a new "careshare" category by leveraging existing parental networks, addressing supply and demand unlike traditional incumbents.
+            <li className="flex items-start">
+              <span className="mr-3">•</span>
+              <div>
+                <strong>Asymmetric upside:</strong> Local investors gain access to asset classes with higher risk-adjusted returns than domestic real estate and bonds.
+              </div>
             </li>
-            <li>
-              • <strong>Proven Traction & Growth:</strong> Demonstrating explosive user growth, high retention, and significant GMV increases driven largely by organic referrals.
+            <li className="flex items-start">
+              <span className="mr-3">•</span>
+              <div>
+                <strong>Structural demand:</strong> Cloud & AI adoption + data sovereignty laws create multi-decade demand for locally provisioned compute and storage.
+              </div>
             </li>
-            <li>
-              • <strong>Strong Leadership:</strong> A passionate and experienced team with relevant industry and startup experience.
+            <li className="flex items-start">
+              <span className="mr-3">•</span>
+              <div>
+                <strong>Scalable model:</strong> Marketplace approach — assets are originated by specialists; Siscom captures fees and recurring servicing income.
+              </div>
             </li>
-            <li>
-              • <strong>Mission-Driven Impact:</strong> Investing in June Care means empowering parents, fostering community, and solving a critical societal need, all within a high-growth market.
+            <li className="flex items-start">
+              <span className="mr-3">•</span>
+              <div>
+                <strong>Liquidity innovation:</strong> Tokenization + periodic secondary mechanisms reduce the historical illiquidity of infra investments.
+              </div>
             </li>
-          </ul>
-          <p className="text-gray-700 mt-6">
-            Invest in June Care and help build... <a href="#" className="text-blue-600 hover:underline">Read more</a>
-          </p>
-        </section>
-        
-        {/* Product */}
-        <section id="product" className="mb-12 scroll-mt-24">
-          <h2 className="text-2xl font-semibold text-gray-500 mb-6">Product</h2>
-          <h3 className="text-3xl font-bold text-gray-900 mb-6">A user-friendly app that makes finding trusted childcare a breeze</h3>
-          <p className="text-gray-700 mb-8">
-            June Care transforms finding childcare into a peer-to-peer experience, making it easier for parents to get childcare they trust. And they're able to do that with our user-friendly app. Here's how it works:
-          </p>
-          <ul className="space-y-4 text-gray-700">
-            <li>• Parents use the June Care app to browse profiles of local caregivers and see their reviews, experience, rates, and location.</li>
-            <li>• You can book and pay for childcare directly in the app, with options to chat or video call the provider beforehand to make sure they're a good fit.</li>
-            <li>• Most providers are highly rated, and many come recommended by other parents. June Care emphasizes "word of mom" referrals to maintain trust and quality.</li>
-            <li>• The app gives you access to a lot of part-time, flexible care options that traditional daycares don't offer.</li>
-          </ul>
-        </section>
-        
-        {/* Competition */}
-        <section id="competition" className="mb-12 scroll-mt-24">
-          <h2 className="text-2xl font-semibold text-gray-500 mb-6">Competition</h2>
-          <h3 className="text-3xl font-bold text-gray-900 mb-6">The most affordable, high-quality care families can find!</h3>
-          <ul className="space-y-4 text-gray-700">
-            <li>
-              • <strong>Affordable:</strong> no membership fees or long-term contracts. Families only pay for the care they need / use.
-            </li>
-            <li>
-              • <strong>Flexible</strong> care for today's modern workforce - works for hybrid, shift, last-minute schedules vs. traditional M-F, 9AM - 5PM schedules.
-            </li>
-            <li>
-              • <strong>High quality</strong> providers must complete a full profile, share reviews / references, complete background checks and a profile review by our trust & safety team. Only 30% of applicants are onboarded as a June Care provider.
-            </li>
-            <li>
-              • <strong>Personalized (automated) matching</strong> so families can find their perfect match in minutes (vs. days or weeks with traditional solutions).
-            </li>
-            <li>
-              • <strong>Easy-to-use</strong> mobile app means families can book trusted care anytime from their phone.
+            <li className="flex items-start">
+              <span className="mr-3">•</span>
+              <div>
+                <strong>Macro tailwinds & institutional support:</strong> Major institutional entrants (IFC/World Bank investments) demonstrate confidence in market economics.
+              </div>
             </li>
           </ul>
         </section>
         
-        {/* Funding */}
-        <section id="funding" className="mb-12 scroll-mt-24">
-          <h2 className="text-2xl font-semibold text-gray-500 mb-6">Funding</h2>
-          <h3 className="text-3xl font-bold text-gray-900 mb-6">$3.6 million raised from Craft Ventures, Greycroft, and angel investors</h3>
-          <p className="text-gray-700 mb-6">
-            June Care has raised $3.6 million in funding to support its mission of providing flexible, affordable, and community-driven childcare.
-          </p>
-          <p className="text-gray-700 mb-6">
-            Secured over two rounds, the funding comes from notable backers such as VC firms Craft Ventures (Airbnb, Facebook, Slack), Greycroft (Venmo, Bumble, Huffington Post), and Yes VC (Etsy, Kickstarter, Unity), as well as Pinterest co-founder Evan Sharp and Instacart co-founder Max Mullen.
-          </p>
-        </section>
-        
-        {/* Founders */}
-        <section id="founders" className="mb-12 scroll-mt-24">
-          <h2 className="text-2xl font-semibold text-gray-500 mb-6">Founders</h2>
-          <h3 className="text-3xl font-bold text-gray-900 mb-6">Meet the team</h3>
-          <div className="bg-gray-50 rounded-xl p-8">
-            <p className="text-gray-700">
-              Our founding team brings together expertise in technology, childcare, and community building to create a platform that truly serves parents' needs.
-            </p>
+        {/* Market */}
+        <section id="market" className="mb-12 scroll-mt-24">
+          <h2 className="text-2xl font-semibold text-gray-500 mb-6">Market</h2>
+          <h3 className="text-3xl font-bold text-gray-900 mb-6">Large & Growing Addressable Market</h3>
+          
+          <div className="space-y-6">
+            <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6">
+              <h4 className="font-semibold text-gray-900 mb-3">AI Market (Africa)</h4>
+              <p className="text-2xl font-bold text-purple-700 mb-2">$4.5B → $16.5B</p>
+              <p className="text-sm text-gray-700">Projected growth from 2025 to 2030, driving demand for GPUs and local processing capacity</p>
+              <a href="https://www.mastercard.com" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 hover:underline flex items-center mt-2">
+                Source: Mastercard/Statista <ExternalLink className="w-3 h-3 ml-1" />
+              </a>
+            </div>
+
+            <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-6">
+              <h4 className="font-semibold text-gray-900 mb-3">Cloud Adoption</h4>
+              <p className="text-gray-700 mb-2">McKinsey finds cloud adoption accelerating across African enterprises; cloud migration unlocking significant productivity and growth opportunities.</p>
+              <a href="https://www.mckinsey.com" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 hover:underline flex items-center mt-2">
+                Source: McKinsey & Company <ExternalLink className="w-3 h-3 ml-1" />
+              </a>
+            </div>
+
+            <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-6">
+              <h4 className="font-semibold text-gray-900 mb-3">Data-Center Investment</h4>
+              <p className="text-gray-700 mb-2">IFC/World Bank activity shows billions in active investments. Example: IFC backing Raxio with $100M to expand data centers across African markets.</p>
+              <a href="https://www.reuters.com" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 hover:underline flex items-center mt-2">
+                Source: Reuters <ExternalLink className="w-3 h-3 ml-1" />
+              </a>
+            </div>
+
+            <div className="bg-gradient-to-r from-orange-50 to-yellow-50 rounded-xl p-6">
+              <h4 className="font-semibold text-gray-900 mb-3">Remittances (Kenya)</h4>
+              <p className="text-2xl font-bold text-orange-700 mb-2">$5.0B+</p>
+              <p className="text-sm text-gray-700">12-month cumulative inflows to June 2025, with monthly peaks > $400M — a large addressable pool of capital for retail investment channels</p>
+              <a href="#" className="text-sm text-blue-600 hover:underline flex items-center mt-2">
+                Source: Central Bank of Kenya <ExternalLink className="w-3 h-3 ml-1" />
+              </a>
+            </div>
           </div>
         </section>
         
-        {/* About */}
-        <section id="about" className="mb-12 scroll-mt-24">
-          <h2 className="text-2xl font-semibold text-gray-500 mb-6">About</h2>
-          <p className="text-gray-700 mb-4">
-            June Care is revolutionizing the childcare industry by creating a trusted community marketplace that connects families with quality in-home care providers.
-          </p>
+        {/* Business Model */}
+        <section id="business-model" className="mb-12 scroll-mt-24">
+          <h2 className="text-2xl font-semibold text-gray-500 mb-6">Business Model & Unit Economics</h2>
+          <h3 className="text-3xl font-bold text-gray-900 mb-6">Multiple Revenue Streams</h3>
+          
+          <div className="bg-gray-50 rounded-xl p-8 mb-6">
+            <h4 className="text-lg font-bold text-gray-900 mb-4">Revenue Lines</h4>
+            <ul className="space-y-3 text-gray-700">
+              <li><strong>Origination fees (one-time):</strong> charged to operators for raising capital via Siscom (2–4% typical)</li>
+              <li><strong>Platform servicing / management fees:</strong> annual fees on AUM (1–2% per annum) for asset servicing and monitoring</li>
+              <li><strong>Secondary market fees:</strong> per trade execution fees and spread capture on token trading</li>
+              <li><strong>Value-add services:</strong> data center operations advisory, power/energy optimization, and marketplace integrations</li>
+            </ul>
+          </div>
+
+          <div className="border-l-4 border-blue-600 pl-6 py-4 bg-blue-50 rounded-r-xl">
+            <h4 className="font-semibold text-gray-900 mb-3">Sample Unit Economics (5 MW modular campus)</h4>
+            <div className="grid grid-cols-2 gap-4 text-sm">
+              <div>
+                <p className="text-gray-600">CAPEX</p>
+                <p className="text-xl font-bold text-gray-900">$25M</p>
+              </div>
+              <div>
+                <p className="text-gray-600">Annual Revenue</p>
+                <p className="text-xl font-bold text-gray-900">$6M/year</p>
+              </div>
+              <div>
+                <p className="text-gray-600">Operating Margin</p>
+                <p className="text-xl font-bold text-gray-900">35–45%</p>
+              </div>
+              <div>
+                <p className="text-gray-600">Investor IRR</p>
+                <p className="text-xl font-bold text-gray-900">20–35%</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* Traction */}
+        <section id="traction" className="mb-12 scroll-mt-24">
+          <h2 className="text-2xl font-semibold text-gray-500 mb-6">Traction & Pipeline</h2>
+          <h3 className="text-3xl font-bold text-gray-900 mb-6">Current Pipeline & Near-Term Projects</h3>
+          
+          <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-8 mb-8">
+            <h4 className="text-xl font-bold text-indigo-700 mb-6">Pipeline Highlights</h4>
+            <div className="space-y-4">
+              <div className="bg-white rounded-lg p-4">
+                <h5 className="font-semibold text-gray-900 mb-2">Cluster 1 (Q1–Q3 2025)</h5>
+                <p className="text-sm text-gray-700">HPC node pilot — demand $0.5M–$2M</p>
+              </div>
+              <div className="bg-white rounded-lg p-4">
+                <h5 className="font-semibold text-gray-900 mb-2">Cluster 2 (Q4 2025–Q3 2026)</h5>
+                <p className="text-sm text-gray-700">Hybrid compute + storage cluster — target $5M–$10M</p>
+              </div>
+              <div className="bg-white rounded-lg p-4">
+                <h5 className="font-semibold text-gray-900 mb-2">AI GPU Cluster</h5>
+                <p className="text-sm text-gray-700">Partnership talks with NVIDIA channel partners, Supermicro — target initial cluster $10M</p>
+              </div>
+              <div className="bg-white rounded-lg p-4">
+                <h5 className="font-semibold text-gray-900 mb-2">Modular DC Site (Naivasha SEZ)</h5>
+                <p className="text-sm text-gray-700">Campus with $100M funding goal (partnered design)</p>
+              </div>
+            </div>
+          </div>
         </section>
         
         {/* Team */}
         <section id="team" className="mb-12 scroll-mt-24">
           <h2 className="text-2xl font-semibold text-gray-500 mb-6">Team</h2>
-          <p className="text-gray-700">
-            Led by experienced entrepreneurs and childcare advocates with a passion for supporting families.
-          </p>
-        </section>
-        
-        {/* Press */}
-        <section id="press" className="mb-12 scroll-mt-24">
-          <h2 className="text-2xl font-semibold text-gray-500 mb-6">Press</h2>
-          <div className="space-y-4">
-            <div className="border-l-4 border-blue-600 pl-4 py-2">
-              <p className="font-semibold text-gray-900">Good Morning America</p>
-              <p className="text-sm text-gray-600">Featured coverage of June Care's innovative approach to childcare</p>
+          <h3 className="text-3xl font-bold text-gray-900 mb-6">Experienced Leadership</h3>
+          
+          <div className="space-y-6">
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h4 className="text-lg font-semibold text-gray-900 mb-2">CEO / Founding CEO (Finance + Infra)</h4>
+              <p className="text-sm text-gray-700">Ex-investment banker / structurer with track record in infrastructure deals and African markets. Leads fund design, institutional sales, and capital strategy.</p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h4 className="text-lg font-semibold text-gray-900 mb-2">COO / Head of Platform</h4>
+              <p className="text-sm text-gray-700">Product & operations lead — marketplace design, investor onboarding, compliance, partnerships with payment & remittance providers.</p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h4 className="text-lg font-semibold text-gray-900 mb-2">Head of Underwriting</h4>
+              <p className="text-sm text-gray-700">Financial engineer with experience in structured finance, project finance, and asset securitization.</p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h4 className="text-lg font-semibold text-gray-900 mb-2">Head of Tech / CTO</h4>
+              <p className="text-sm text-gray-700">Cloud & infra specialist — deep knowledge of data-center architectures, GPU clusters, and operator workflows.</p>
             </div>
           </div>
         </section>
         
-        {/* FAQ */}
-        <section id="faq" className="mb-12 scroll-mt-24">
-          <h2 className="text-2xl font-semibold text-gray-500 mb-6">FAQ</h2>
-          <div className="space-y-4">
-            <div className="border-b border-gray-200 pb-4">
-              <h4 className="font-semibold text-gray-900 mb-2">How does June Care vet providers?</h4>
-              <p className="text-gray-700 text-sm">All providers undergo comprehensive background checks and profile reviews. Only 30% of applicants are approved.</p>
+        {/* Go-to-Market */}
+        <section id="gtm" className="mb-12 scroll-mt-24">
+          <h2 className="text-2xl font-semibold text-gray-500 mb-6">Go-to-Market</h2>
+          <h3 className="text-3xl font-bold text-gray-900 mb-6">Multi-Channel Strategy</h3>
+          
+          <div className="space-y-6">
+            <div className="border-l-4 border-green-600 pl-6 py-4 bg-green-50">
+              <h4 className="font-semibold text-gray-900 mb-2">Diaspora Channel (Quick Wins)</h4>
+              <p className="text-sm text-gray-700">Integrate with remittance rails and major wallets (M-Pesa, payment processors) to present low-ticket infrastructure investments ($500–$2,500) to diaspora customers.</p>
             </div>
-            <div className="border-b border-gray-200 pb-4">
-              <h4 className="font-semibold text-gray-900 mb-2">What are the fees?</h4>
-              <p className="text-gray-700 text-sm">No membership fees or long-term contracts. Families only pay for the care they use.</p>
+            <div className="border-l-4 border-blue-600 pl-6 py-4 bg-blue-50">
+              <h4 className="font-semibold text-gray-900 mb-2">Institutional Channel (Scale)</h4>
+              <p className="text-sm text-gray-700">Run dedicated institutional funds / managed accounts for pension funds and family offices with larger minimums ($250k+), emphasizing regulatory compliance and yield.</p>
+            </div>
+            <div className="border-l-4 border-purple-600 pl-6 py-4 bg-purple-50">
+              <h4 className="font-semibold text-gray-900 mb-2">Operator Partnerships</h4>
+              <p className="text-sm text-gray-700">Secure long-term colocation and take-or-pay contracts with anchor tenants (hyperscalers, telcos, large enterprise customers) to reduce revenue volatility.</p>
+            </div>
+          </div>
+        </section>
+        
+        {/* Funding */}
+        <section id="funding" className="mb-12 scroll-mt-24">
+          <h2 className="text-2xl font-semibold text-gray-500 mb-6">Funding</h2>
+          <h3 className="text-3xl font-bold text-gray-900 mb-6">Use of Proceeds</h3>
+          
+          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8">
+            <div className="grid grid-cols-2 gap-6 mb-8">
+              <div>
+                <p className="text-sm text-gray-600 mb-1">Round Type</p>
+                <p className="text-2xl font-bold text-gray-900">Seed</p>
+              </div>
+              <div>
+                <p className="text-sm text-gray-600 mb-1">Target</p>
+                <p className="text-2xl font-bold text-gray-900">$1.25M</p>
+              </div>
+              <div>
+                <p className="text-sm text-gray-600 mb-1">Pre-money Valuation</p>
+                <p className="text-2xl font-bold text-gray-900">$10M</p>
+              </div>
+              <div>
+                <p className="text-sm text-gray-600 mb-1">Security</p>
+                <p className="text-2xl font-bold text-gray-900">Equity + SAFE</p>
+              </div>
+            </div>
+
+            <h4 className="text-lg font-bold text-gray-900 mb-4">Planned Use of Funds (24-month runway)</h4>
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-700">Platform & product engineering</span>
+                <span className="text-sm font-semibold text-gray-900">30%</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-700">Operator & deal pipeline development</span>
+                <span className="text-sm font-semibold text-gray-900">25%</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-700">Marketing & investor acquisition</span>
+                <span className="text-sm font-semibold text-gray-900">20%</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-700">Regulatory, licensing & compliance</span>
+                <span className="text-sm font-semibold text-gray-900">15%</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-700">Key hires</span>
+                <span className="text-sm font-semibold text-gray-900">10%</span>
+              </div>
             </div>
           </div>
         </section>
@@ -366,24 +433,97 @@ export default function PitchContent() {
         {/* Risks */}
         <section id="risks" className="mb-12 scroll-mt-24">
           <h2 className="text-2xl font-semibold text-gray-500 mb-6">Risks</h2>
-          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
-            <p className="text-sm text-gray-700 mb-4">
-              <strong>Investment Risk:</strong> Investing in early-stage companies involves significant risk and may result in the loss of your entire investment.
-            </p>
-            <p className="text-sm text-gray-700">
-              Specific risks include market competition, regulatory changes, and execution challenges inherent in scaling a marketplace business.
-            </p>
+          <h3 className="text-3xl font-bold text-gray-900 mb-6">Investment Risks</h3>
+          
+          <div className="space-y-4">
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+              <h4 className="font-semibold text-gray-900 mb-2">Execution Risk</h4>
+              <p className="text-sm text-gray-700">Building & financing data centers and GPU clusters is capital and project execution intensive. Delays can affect returns.</p>
+            </div>
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+              <h4 className="font-semibold text-gray-900 mb-2">Regulatory Risk</h4>
+              <p className="text-sm text-gray-700">Cross-jurisdictional licensing, data protection mandates, and securities law for tokenized products are evolving — compliance costs may rise.</p>
+            </div>
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+              <h4 className="font-semibold text-gray-900 mb-2">Macroeconomic & FX Risk</h4>
+              <p className="text-sm text-gray-700">Local currency depreciation, inflation and sovereign risk in some markets could affect operator cashflows and investor returns.</p>
+            </div>
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+              <h4 className="font-semibold text-gray-900 mb-2">Market Adoption Risk</h4>
+              <p className="text-sm text-gray-700">If hyperscalers delay local deployments or anchor contracts are not secured, cashflows will be slower to stabilize.</p>
+            </div>
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+              <h4 className="font-semibold text-gray-900 mb-2">Liquidity Risk</h4>
+              <p className="text-sm text-gray-700">Tokenized instruments rely on marketplace depth; early secondary liquidity may be limited.</p>
+            </div>
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+              <h4 className="font-semibold text-gray-900 mb-2">Technology Risk</h4>
+              <p className="text-sm text-gray-700">GPU supply cycles and rapid changes in compute architecture could require additional CAPEX upgrades or stranded assets.</p>
+            </div>
           </div>
         </section>
         
-        {/* Discussion */}
-        <section id="discussion" className="mb-12 scroll-mt-24">
-          <h2 className="text-2xl font-semibold text-gray-500 mb-6">Discussion</h2>
-          <p className="text-gray-600 text-center py-8">
-            Join the conversation in the Discussion tab above.
-          </p>
+        {/* Impact */}
+        <section id="impact" className="mb-12 scroll-mt-24">
+          <h2 className="text-2xl font-semibold text-gray-500 mb-6">Impact & Policy Alignment</h2>
+          <h3 className="text-3xl font-bold text-gray-900 mb-6">Creating Lasting Impact</h3>
+          
+          <ul className="space-y-4 text-gray-700">
+            <li className="flex items-start">
+              <span className="mr-3">•</span>
+              <div>
+                <strong>Economic inclusion:</strong> Enables diaspora and local retail investors to participate in high-value digital infrastructure returns.
+              </div>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-3">•</span>
+              <div>
+                <strong>Digital sovereignty:</strong> By financing local data hosting, Siscom supports national strategies for data sovereignty and reduced foreign dependency.
+              </div>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-3">•</span>
+              <div>
+                <strong>Sustainable infrastructure:</strong> Focus on modular DC designs and renewable energy siting (Kenya's renewables profile) reduces OPEX and carbon footprint.
+              </div>
+            </li>
+          </ul>
+
+          <div className="mt-8 bg-gradient-to-r from-green-50 to-teal-50 rounded-xl p-8">
+            <h4 className="text-xl font-bold text-green-700 mb-4">Exit Paths</h4>
+            <ul className="space-y-2 text-sm text-gray-700">
+              <li>• <strong>IPO:</strong> Build to list as Africa's first Technology Bank / infra platform</li>
+              <li>• <strong>Strategic sale:</strong> Sell platform or assets to global private equity, infrastructure funds, or hyperscalers</li>
+              <li>• <strong>Portfolio monetization:</strong> Structured secondary market and corporate partnerships enable partial liquidity for early investors</li>
+            </ul>
+          </div>
         </section>
+        
       </div>
+      
+      {/* Left Sidebar Navigation */}
+      {showSidebar && (
+        <nav className="fixed left-0 top-24 hidden lg:block w-40 z-50">
+          <div className="p-4 space-y-0.5">
+            {sections.map((section) => (
+              <button
+                key={section.id}
+                onClick={() => scrollToSection(section.id)}
+                className={`w-full text-left px-3 py-2 text-sm rounded transition ${
+                  activeSection === section.id
+                    ? "text-blue-600 font-semibold"
+                    : "text-gray-600 hover:text-gray-900"
+                }`}
+              >
+                <span className="flex items-center justify-between">
+                  <span className="truncate">{section.label}</span>
+                  {activeSection === section.id && <ChevronRight className="w-3 h-3 flex-shrink-0 ml-1" />}
+                </span>
+              </button>
+            ))}
+          </div>
+        </nav>
+      )}
     </div>
   );
 }

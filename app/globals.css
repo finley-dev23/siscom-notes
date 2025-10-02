@@ -7,6 +7,23 @@
   --foreground: #111827;
   --font-archivo: 'Archivo Black', sans-serif;
   --font-funnel: 'Funnel Sans', sans-serif;
+  
+  /* First Section Colors */
+  --primary-blue: #007AFF;
+  --primary-blue-hover: #0056CC;
+  --primary-blue-active: #0041A8;
+  --text-primary: #000000;
+  --text-secondary: #333333;
+  --text-muted: #666666;
+  --text-light: #999999;
+  --tag-bg-default: #F5F5F5;
+  --tag-bg-highlighted: #E8FAF8;
+  --tag-text-highlighted: #0A6059;
+  --border-default: #E0E0E0;
+  --border-input: #CCCCCC;
+  --shadow-card: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-button: 0 2px 6px rgba(0,0,0,0.15);
+  --shadow-hover: 0 6px 16px rgba(0,0,0,0.12);
 }
 
 body {
@@ -35,8 +52,20 @@ body {
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-archivo);
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
 }
 
 button {
@@ -50,5 +79,64 @@ button {
 
 .font-funnel {
   font-family: var(--font-funnel);
+}
+
+/* First Section Specific Styles */
+.first-section-container {
+  max-width: 1200px;
+  padding: 0 16px;
+}
+
+.first-section-body-text {
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.first-section-tag {
+  color: #6B7280;
+  font-size: 12px;
+  font-weight: 500;
+  background: #F3F4F6;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 6px 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.first-section-tag.highlighted {
+  background: #DBEAFE;
+  border-color: #3B82F6;
+  color: #1D4ED8;
+}
+
+.first-section-button-primary {
+  background: var(--primary-blue);
+  color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: var(--shadow-button);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.first-section-button-primary:hover {
+  background: var(--primary-blue-hover);
+  box-shadow: var(--shadow-hover);
+}
+
+.first-section-button-primary:active {
+  background: var(--primary-blue-active);
+}
+
+.first-section-icon {
+  fill: var(--text-secondary);
+  background: transparent;
+}
+
+.first-section-icon-action {
+  fill: var(--primary-blue);
+  background: #E6F0FF;
+  border-radius: 50%;
 }
 

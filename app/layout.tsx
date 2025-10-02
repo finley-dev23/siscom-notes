@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "June Care Company - Connecting Parents with Childcare",
-  description: "June Care connects parents looking for childcare with stay-at-home moms who can care for their kids!",
+  title: "Siscom Africa - Powering #FutureAfrica",
+  description: "Building Africa's first dedicated Technology Bank + Investment Marketplace focused on financing cloud, GPU/AI compute, and data-center infrastructure.",
 };
 
 export default function RootLayout({
