@@ -50,17 +50,17 @@ export default function Press() {
 
   return (
     <div className="space-y-6">
-      <h2 className="text-xl font-semibold text-gray-900">Press</h2>
+      <h2 className="text-2xl font-semibold text-gray-900">Press</h2>
       
       <div className="space-y-4">
         {pressItems.map((item, index) => (
           <div key={index} className="border border-gray-200 rounded-lg p-4 hover:bg-gray-50 transition">
             <div className="flex items-start justify-between">
               <div className="flex-1">
-                <h3 className="text-sm font-medium text-gray-900 mb-2 line-clamp-2">
+                <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2">
                   {item.title}
                 </h3>
-                <div className="flex items-center space-x-2 text-xs text-gray-500 mb-2">
+                <div className="flex items-center space-x-2 text-sm text-gray-500 mb-2">
                   <span>{item.source}</span>
                   <span>•</span>
                   <div className="flex items-center space-x-1">
@@ -68,7 +68,7 @@ export default function Press() {
                     <span>{item.date}</span>
                   </div>
                 </div>
-                <p className="text-sm text-gray-700 line-clamp-2">
+                <p className="text-base text-gray-700 line-clamp-2">
                   {item.description}
                 </p>
               </div>
@@ -77,7 +77,7 @@ export default function Press() {
           </div>
         ))}
         
-        <button className="w-full py-3 text-sm font-medium text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-50 transition">
+        <button className="w-full py-3 text-base font-medium text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-50 transition">
           Show all
         </button>
       </div>

@@ -39,7 +39,7 @@ export default function FAQ() {
 
   return (
     <div className="space-y-6">
-      <h2 className="text-xl font-semibold text-gray-900">FAQ</h2>
+      <h2 className="text-2xl font-semibold text-gray-900">FAQ</h2>
       
       <div className="space-y-2">
         {faqs.map((faq, index) => (
@@ -48,7 +48,7 @@ export default function FAQ() {
               onClick={() => toggleItem(index)}
               className="w-full text-left flex items-center justify-between hover:text-gray-700 transition py-2"
             >
-              <span className="text-sm font-medium text-gray-900">{faq.question}</span>
+              <span className="text-base font-medium text-gray-900">{faq.question}</span>
               {openItems.includes(index) ? (
                 <ChevronUp className="w-4 h-4 text-gray-500" />
               ) : (
@@ -58,13 +58,13 @@ export default function FAQ() {
             
             {openItems.includes(index) && (
               <div className="pb-3">
-                <p className="text-sm text-gray-700">{faq.answer}</p>
+                <p className="text-base text-gray-700">{faq.answer}</p>
               </div>
             )}
           </div>
         ))}
         
-        <button className="w-full py-3 text-sm font-medium text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-50 transition">
+        <button className="w-full py-3 text-base font-medium text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-50 transition">
           Show all FAQ
         </button>
       </div>

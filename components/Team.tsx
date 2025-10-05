@@ -24,19 +24,16 @@ export default function Team() {
 
   return (
     <div className="space-y-6">
-      <h2 className="text-xl font-semibold text-gray-900">Siscom Africa Team</h2>
-      <p className="text-sm text-gray-600">Everyone helping build Siscom Africa, not limited to employees</p>
+      <h2 className="text-2xl font-semibold text-gray-900">Siscom Africa Team</h2>
+      <p className="text-base text-gray-600">Everyone helping build Siscom Africa, not limited to employees</p>
       
       <div className="space-y-6">
         {teamMembers.map((member, index) => (
-          <div key={index} className="flex items-start space-x-4 p-4 rounded-lg hover:bg-gray-50 transition">
-            <div className="w-16 h-16 flex-shrink-0 rounded-full bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 flex items-center justify-center shadow-md">
-              <span className="text-white text-xl font-bold">{member.initials}</span>
-            </div>
+          <div key={index} className="p-4 rounded-lg hover:bg-gray-50 transition">
             <div className="flex-1">
-              <h3 className="text-lg font-semibold text-gray-900 mb-1">{member.name}</h3>
-              <p className="text-sm font-medium text-blue-600 mb-3">{member.role}</p>
-              <p className="text-sm text-gray-700 leading-relaxed">{member.description}</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-1">{member.name}</h3>
+              <p className="text-base font-medium text-blue-600 mb-3">{member.role}</p>
+              <p className="text-base text-gray-700 leading-relaxed">{member.description}</p>
             </div>
           </div>
         ))}

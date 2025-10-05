@@ -49,7 +49,7 @@ export default function Tabs() {
                   <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
-                    className={`pb-4 pt-4 font-medium text-base transition relative ${
+                    className={`pb-4 pt-4 font-medium text-lg transition relative ${
                       activeTab === tab.id
                         ? "text-blue-600 border-b-2 border-blue-600"
                         : "text-gray-500 hover:text-gray-700"
@@ -58,7 +58,7 @@ export default function Tabs() {
                     <span className="flex items-center space-x-2">
                       <span>{tab.label}</span>
                       {tab.badge !== null && (
-                        <span className="bg-gray-200 text-gray-700 text-xs px-2 py-0.5 rounded-full font-medium">
+                        <span className="bg-gray-200 text-gray-700 text-sm px-2 py-0.5 rounded-full font-medium">
                           {tab.badge}
                         </span>
                       )}
@@ -66,9 +66,12 @@ export default function Tabs() {
                   </button>
                 ))}
               </div>
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-base font-semibold transition-colors">
+              <a 
+                href="/invest"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors inline-block"
+              >
                 Invest in Siscom Africa
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -77,26 +80,26 @@ export default function Tabs() {
       {/* Tab Headers */}
       <div ref={tabsRef} className="border-b border-gray-200 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8">
         <div className="flex space-x-8">
-          {tabs.map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`pb-3 font-medium text-base transition relative ${
-                activeTab === tab.id
-                  ? "text-blue-600 border-b-2 border-blue-600"
-                  : "text-gray-500 hover:text-gray-700"
-              }`}
-            >
-              <span className="flex items-center space-x-2">
-                <span>{tab.label}</span>
-                {tab.badge !== null && (
-                  <span className="bg-gray-200 text-gray-700 text-xs px-2 py-0.5 rounded-full font-medium">
-                    {tab.badge}
-                  </span>
-                )}
-              </span>
-            </button>
-          ))}
+            {tabs.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`pb-3 font-medium text-lg transition relative ${
+                  activeTab === tab.id
+                    ? "text-blue-600 border-b-2 border-blue-600"
+                    : "text-gray-500 hover:text-gray-700"
+                }`}
+              >
+                <span className="flex items-center space-x-2">
+                  <span>{tab.label}</span>
+                  {tab.badge !== null && (
+                    <span className="bg-gray-200 text-gray-700 text-sm px-2 py-0.5 rounded-full font-medium">
+                      {tab.badge}
+                    </span>
+                  )}
+                </span>
+              </button>
+            ))}
         </div>
       </div>
       
@@ -112,13 +115,13 @@ export default function Tabs() {
             
             {activeTab === "updates" && (
               <div className="text-center py-16">
-                <p className="text-gray-500">No updates yet. Check back soon!</p>
+                <p className="text-gray-500 text-lg">No updates yet. Check back soon!</p>
               </div>
             )}
             
             {activeTab === "reviews" && (
               <div className="text-center py-16">
-                <p className="text-gray-500">Be the first to review this campaign</p>
+                <p className="text-gray-500 text-lg">Be the first to review this campaign</p>
               </div>
             )}
           </div>

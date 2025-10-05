@@ -60,12 +60,12 @@ export default function PitchContent() {
   return (
     <div className="relative">
       {/* Main Content */}
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto xl:ml-10">
         
         {/* Highlights Section */}
         <section id="highlights" className="mb-16 scroll-mt-24">
-          <h2 className="text-2xl font-semibold text-gray-500 mb-6">Highlights — Why Siscom, right now</h2>
-          <ul className="space-y-3 text-gray-700">
+          <h2 className="text-3xl font-semibold text-gray-500 mb-6">Highlights — Why Siscom, right now</h2>
+          <ul className="space-y-3 text-lg text-gray-700">
             <li className="flex items-start">
               <span className="mr-3">•</span>
               <span><strong>First-mover:</strong> Building Africa's first dedicated Technology Bank + Investment Marketplace focused on financing cloud, GPU/AI compute, and data-center infrastructure.</span>
@@ -95,11 +95,11 @@ export default function PitchContent() {
         
         {/* Problem */}
         <section id="problem" className="mb-12 scroll-mt-24">
-          <h2 className="text-2xl font-semibold text-gray-500 mb-6">Problem</h2>
-          <h3 className="text-3xl font-bold text-gray-900 mb-4">Capital allocation is skewed in Africa</h3>
-          <p className="text-xl text-gray-700 mb-6">Infrastructure underbuilt despite massive opportunity</p>
+          <h2 className="text-3xl font-semibold text-gray-500 mb-6">Problem</h2>
+          <h3 className="text-4xl font-bold text-gray-900 mb-4">Capital allocation is skewed in Africa</h3>
+          <p className="text-2xl text-gray-700 mb-6">Infrastructure underbuilt despite massive opportunity</p>
           
-          <ul className="space-y-4 text-gray-700 mb-8">
+          <ul className="space-y-4 text-lg text-gray-700 mb-8">
             <li className="flex items-start">
               <span className="mr-3">•</span>
               <div>
@@ -129,27 +129,27 @@ export default function PitchContent() {
         
         {/* Solution */}
         <section id="solution" className="mb-12 scroll-mt-24">
-          <h2 className="text-2xl font-semibold text-gray-500 mb-6">Solution</h2>
-          <h3 className="text-3xl font-bold text-gray-900 mb-8">The Technology Bank of Africa</h3>
-          <p className="text-gray-700 mb-8">
+          <h2 className="text-3xl font-semibold text-gray-500 mb-6">Solution</h2>
+          <h3 className="text-4xl font-bold text-gray-900 mb-8">The Technology Bank of Africa</h3>
+          <p className="text-lg text-gray-700 mb-8">
             Siscom is building a regulated marketplace and platform that channels domestic retail, diaspora, and institutional capital into high-capex, high-return technology infrastructure: HPC nodes, GPU clusters, modular data centers, and associated services.
           </p>
           
           {/* Solution Components */}
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-8 mb-8">
-            <h4 className="text-xl font-bold text-blue-700 mb-6">The Siscom Product Stack</h4>
+            <h4 className="text-2xl font-bold text-blue-700 mb-6">The Siscom Product Stack</h4>
             <div className="space-y-6">
               <div>
-                <h5 className="font-semibold text-gray-900 mb-3">1) Marketplace & Platform</h5>
-                <ul className="text-sm text-gray-700 space-y-2">
+                <h5 className="text-lg font-semibold text-gray-900 mb-3">1) Marketplace & Platform</h5>
+                <ul className="text-base text-gray-700 space-y-2">
                   <li>• Investor onboarding & KYC/AML (pan-Africa compliant)</li>
                   <li>• Investment product catalog: tokenized cloud tokens, GPU pods, modular DC slots</li>
                   <li>• Secondary liquidity layer: internal order book + scheduled periodic buybacks</li>
                 </ul>
               </div>
               <div>
-                <h5 className="font-semibold text-gray-900 mb-3">2) Deal Origination & Underwriting</h5>
-                <ul className="text-sm text-gray-700 space-y-2">
+                <h5 className="text-lg font-semibold text-gray-900 mb-3">2) Deal Origination & Underwriting</h5>
+                <ul className="text-base text-gray-700 space-y-2">
                   <li>• Underwrite infrastructure operators (data center hosts, colo partners)</li>
                   <li>• Bespoke financial engineering (cashflow waterfall, revenue sharing)</li>
                   <li>• Take-or-pay anchor contracts to de-risk early projects</li>
@@ -159,26 +159,26 @@ export default function PitchContent() {
           </div>
           
           <div className="bg-gradient-to-r from-green-50 to-teal-50 rounded-xl p-6 mb-6">
-            <h4 className="text-lg font-bold text-green-700 mb-4">Asset Types (Phase Plan)</h4>
-            <div className="grid md:grid-cols-3 gap-4 text-sm">
+            <h4 className="text-xl font-bold text-green-700 mb-4">Asset Types (Phase Plan)</h4>
+            <div className="grid md:grid-cols-3 gap-4 text-base">
               <div>
-                <p className="font-semibold text-gray-900 mb-2">Phase 1 (2025)</p>
-                <p className="text-gray-700">HPC nodes, AI GPU clusters (H100 & A100 class), hybrid storage clusters</p>
+                <p className="text-lg font-semibold text-gray-900 mb-2">Phase 1 (2025)</p>
+                <p className="text-base text-gray-700">HPC nodes, AI GPU clusters (H100 & A100 class), hybrid storage clusters</p>
               </div>
               <div>
-                <p className="font-semibold text-gray-900 mb-2">Phase 2 (2026–27)</p>
-                <p className="text-gray-700">Modular DC campuses, Starlink/edge zones, colocation slots</p>
+                <p className="text-lg font-semibold text-gray-900 mb-2">Phase 2 (2026–27)</p>
+                <p className="text-base text-gray-700">Modular DC campuses, Starlink/edge zones, colocation slots</p>
               </div>
               <div>
-                <p className="font-semibold text-gray-900 mb-2">Phase 3 (2028+)</p>
-                <p className="text-gray-700">Hyperscale-ready campuses, cross-border regional POPs, high-yield structured products</p>
+                <p className="text-lg font-semibold text-gray-900 mb-2">Phase 3 (2028+)</p>
+                <p className="text-base text-gray-700">Hyperscale-ready campuses, cross-border regional POPs, high-yield structured products</p>
               </div>
             </div>
           </div>
-
+          
           <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-xl p-6">
-            <h4 className="text-lg font-bold text-indigo-700 mb-4">Go-to-Market (GTM)</h4>
-            <ul className="text-sm text-gray-700 space-y-2">
+            <h4 className="text-xl font-bold text-indigo-700 mb-4">Go-to-Market (GTM)</h4>
+            <ul className="text-base text-gray-700 space-y-2">
               <li>• <strong>Diaspora retail channel:</strong> partnerships with remittance providers and fintech wallets (M-Pesa, Flutterwave)</li>
               <li>• <strong>Institutional channel:</strong> pension funds, family offices, and local banks for larger tranches</li>
               <li>• <strong>Operator channel:</strong> developer partnerships with modular DC builders, IX Africa, GPU suppliers</li>
@@ -188,10 +188,10 @@ export default function PitchContent() {
         
         {/* Investment Rationale */}
         <section id="investment-rationale" className="mb-12 scroll-mt-24">
-          <h2 className="text-2xl font-semibold text-gray-500 mb-6">Why Invest</h2>
-          <h3 className="text-3xl font-bold text-gray-900 mb-6">Investment Rationale</h3>
+          <h2 className="text-3xl font-semibold text-gray-500 mb-6">Why Invest</h2>
+          <h3 className="text-4xl font-bold text-gray-900 mb-6">Investment Rationale</h3>
           
-          <ul className="space-y-4 text-gray-700">
+          <ul className="space-y-4 text-lg text-gray-700">
             <li className="flex items-start">
               <span className="mr-3">•</span>
               <div>
@@ -227,8 +227,8 @@ export default function PitchContent() {
         
         {/* Market */}
         <section id="market" className="mb-12 scroll-mt-24">
-          <h2 className="text-2xl font-semibold text-gray-500 mb-6">Market</h2>
-          <h3 className="text-3xl font-bold text-gray-900 mb-6">Large & Growing Addressable Market</h3>
+          <h2 className="text-3xl font-semibold text-gray-500 mb-6">Market</h2>
+          <h3 className="text-4xl font-bold text-gray-900 mb-6">Large & Growing Addressable Market</h3>
           
           <div className="space-y-6">
             <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6">
@@ -504,23 +504,23 @@ export default function PitchContent() {
       {/* Left Sidebar Navigation */}
       {showSidebar && (
         <nav className="fixed left-0 top-24 hidden lg:block w-40 z-50">
-          <div className="p-4 space-y-0.5">
-            {sections.map((section) => (
-              <button
-                key={section.id}
-                onClick={() => scrollToSection(section.id)}
-                className={`w-full text-left px-3 py-2 text-sm rounded transition ${
-                  activeSection === section.id
+            <div className="p-4 space-y-0.5">
+              {sections.map((section) => (
+                <button
+                  key={section.id}
+                  onClick={() => scrollToSection(section.id)}
+                className={`w-full text-left px-3 py-2 text-base rounded transition ${
+                    activeSection === section.id
                     ? "text-blue-600 font-semibold"
                     : "text-gray-600 hover:text-gray-900"
-                }`}
-              >
-                <span className="flex items-center justify-between">
-                  <span className="truncate">{section.label}</span>
-                  {activeSection === section.id && <ChevronRight className="w-3 h-3 flex-shrink-0 ml-1" />}
-                </span>
-              </button>
-            ))}
+                  }`}
+                >
+                  <span className="flex items-center justify-between">
+                    <span className="truncate">{section.label}</span>
+                    {activeSection === section.id && <ChevronRight className="w-3 h-3 flex-shrink-0 ml-1" />}
+                  </span>
+                </button>
+              ))}
           </div>
         </nav>
       )}

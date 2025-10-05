@@ -39,7 +39,7 @@ export default function Risks() {
 
   return (
     <div className="space-y-6">
-      <h2 className="text-xl font-semibold text-gray-900">Risks</h2>
+      <h2 className="text-2xl font-semibold text-gray-900">Risks</h2>
       
       <div className="space-y-2">
         {risks.map((risk, index) => (
@@ -48,7 +48,7 @@ export default function Risks() {
               onClick={() => toggleItem(index)}
               className="w-full text-left flex items-center justify-between hover:text-gray-700 transition py-2"
             >
-              <span className="text-sm font-medium text-gray-900 pr-4">{risk.title}</span>
+              <span className="text-base font-medium text-gray-900 pr-4">{risk.title}</span>
               {openItems.includes(index) ? (
                 <ChevronUp className="w-4 h-4 text-gray-500 flex-shrink-0" />
               ) : (
@@ -58,13 +58,13 @@ export default function Risks() {
             
             {openItems.includes(index) && (
               <div className="pb-3">
-                <p className="text-sm text-gray-700">{risk.description}</p>
+                <p className="text-base text-gray-700">{risk.description}</p>
               </div>
             )}
           </div>
         ))}
         
-        <button className="w-full py-3 text-sm font-medium text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-50 transition">
+        <button className="w-full py-3 text-base font-medium text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-50 transition">
           Show all Risks
         </button>
       </div>

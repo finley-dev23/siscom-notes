@@ -5,44 +5,44 @@ import { MapPin, Calendar, Building, Users, Globe, ExternalLink } from "lucide-r
 export default function About() {
   return (
     <div className="space-y-6">
-      <h2 className="text-xl font-semibold text-gray-900">About Siscom Africa</h2>
+      <h2 className="text-2xl font-semibold text-gray-900">About Siscom Africa</h2>
       
       <div className="space-y-4">
         <div className="flex items-center justify-between">
-          <span className="text-sm font-medium text-gray-900">Legal Name</span>
-          <span className="text-sm text-gray-700">Siscom Africa Limited</span>
+          <span className="text-base font-medium text-gray-900">Legal Name</span>
+          <span className="text-base text-gray-700">Siscom Africa Limited</span>
         </div>
         
         <div className="flex items-center justify-between">
-          <span className="text-sm font-medium text-gray-900">Category</span>
-          <span className="text-sm text-gray-700">Cloud · AI · Infrastructure Finance</span>
+          <span className="text-base font-medium text-gray-900">Category</span>
+          <span className="text-base text-gray-700">Cloud · AI · Infrastructure Finance</span>
         </div>
         
         <div className="flex items-center justify-between">
-          <span className="text-sm font-medium text-gray-900">Founded</span>
-          <span className="text-sm text-gray-700">2024</span>
+          <span className="text-base font-medium text-gray-900">Founded</span>
+          <span className="text-base text-gray-700">2024</span>
         </div>
         
         <div className="flex items-center justify-between">
-          <span className="text-sm font-medium text-gray-900">Form</span>
-          <span className="text-sm text-gray-700">Kenya Limited Company</span>
+          <span className="text-base font-medium text-gray-900">Form</span>
+          <span className="text-base text-gray-700">Kenya Limited Company</span>
         </div>
         
         <div className="flex items-center justify-between">
-          <span className="text-sm font-medium text-gray-900">Employees</span>
-          <span className="text-sm text-gray-700">Core team + advisors</span>
+          <span className="text-base font-medium text-gray-900">Employees</span>
+          <span className="text-base text-gray-700">Core team + advisors</span>
         </div>
         
         <div className="flex items-center justify-between">
-          <span className="text-sm font-medium text-gray-900">Website</span>
-          <a href="https://siscomafrica.com" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 hover:underline flex items-center space-x-1">
+          <span className="text-base font-medium text-gray-900">Website</span>
+          <a href="https://siscomafrica.com" target="_blank" rel="noopener noreferrer" className="text-base text-blue-600 hover:underline flex items-center space-x-1">
             <span>siscomafrica.com</span>
             <ExternalLink className="w-3 h-3" />
           </a>
         </div>
         
         <div className="flex items-center justify-between">
-          <span className="text-sm font-medium text-gray-900">Social Media</span>
+          <span className="text-base font-medium text-gray-900">Social Media</span>
           <div className="flex space-x-3">
             <a href="#" className="text-gray-400 hover:text-gray-600">
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -63,10 +63,10 @@ export default function About() {
         </div>
         
         <div className="flex items-center justify-between">
-          <span className="text-sm font-medium text-gray-900">Headquarters</span>
+          <span className="text-base font-medium text-gray-900">Headquarters</span>
           <div className="flex items-center space-x-2">
             <MapPin className="w-4 h-4 text-gray-400" />
-            <span className="text-sm text-gray-700">Nairobi, Kenya</span>
+            <span className="text-base text-gray-700">Nairobi, Kenya</span>
           </div>
         </div>
       </div>
