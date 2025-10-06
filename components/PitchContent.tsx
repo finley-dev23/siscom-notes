@@ -84,7 +84,7 @@ export default function PitchContent() {
             </li>
             <li className="flex items-start">
               <span className="mr-3">•</span>
-              <span><strong>Diaspora capital is sizable & available:</strong> Kenya alone recorded > $5.0B in 12-month remittance inflows — representing a large, under-deployed pool of capital.</span>
+              <span><strong>Diaspora capital is sizable & available:</strong> Kenya alone recorded &gt; $5.0B in 12-month remittance inflows — representing a large, under-deployed pool of capital.</span>
             </li>
             <li className="flex items-start">
               <span className="mr-3">•</span>
