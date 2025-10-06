@@ -259,7 +259,7 @@ export default function PitchContent() {
             <div className="bg-gradient-to-r from-orange-50 to-yellow-50 rounded-xl p-6">
               <h4 className="font-semibold text-gray-900 mb-3">Remittances (Kenya)</h4>
               <p className="text-2xl font-bold text-orange-700 mb-2">$5.0B+</p>
-              <p className="text-sm text-gray-700">12-month cumulative inflows to June 2025, with monthly peaks > $400M — a large addressable pool of capital for retail investment channels</p>
+              <p className="text-sm text-gray-700">12-month cumulative inflows to June 2025, with monthly peaks &gt; $400M — a large addressable pool of capital for retail investment channels</p>
               <a href="#" className="text-sm text-blue-600 hover:underline flex items-center mt-2">
                 Source: Central Bank of Kenya <ExternalLink className="w-3 h-3 ml-1" />
               </a>
