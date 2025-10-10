@@ -1,11 +1,20 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { Info, FileText } from "lucide-react";
 
 export default function InvestmentStats() {
   const raised = 16700;
   const minGoal = 75000;
   const percentage = Math.round((raised / minGoal) * 100);
+  
+  // Set to show exactly 90 days remaining
+  const [daysRemaining, setDaysRemaining] = useState(90);
+  
+  useEffect(() => {
+    // Keep it at 90 days for now
+    setDaysRemaining(90);
+  }, []);
   
   return (
     <div className="space-y-6">
@@ -26,7 +35,7 @@ export default function InvestmentStats() {
           {/* Progress Bar */}
           <div className="w-full bg-gray-200 rounded-full h-2 mt-3">
             <div
-              className="bg-blue-600 h-2 rounded-full transition-all duration-500"
+              className="bg-pink-500 h-2 rounded-full transition-all duration-500"
               style={{ width: `${percentage}%` }}
             ></div>
           </div>
@@ -40,13 +49,13 @@ export default function InvestmentStats() {
           </div>
           
           <div>
-            <div className="text-3xl font-bold text-gray-900">71 days</div>
+            <div className="text-3xl font-bold text-gray-900">{daysRemaining} days</div>
             <div className="text-sm text-gray-600">Left to invest</div>
           </div>
         </div>
         
         {/* CTA Button */}
-        <button className="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg shadow-blue-600/30">
+        <button className="w-full bg-pink-500 text-white py-4 rounded-lg font-semibold text-lg hover:bg-pink-600 transition-colors shadow-lg shadow-pink-500/30">
           Invest in June Care Company
         </button>
         
@@ -138,7 +147,7 @@ export default function InvestmentStats() {
               <div className="flex justify-between items-start mb-2">
                 <span className="text-xs text-gray-600">Invest</span>
               </div>
-              <div className="text-2xl font-bold text-blue-600 mb-3">$1,000</div>
+              <div className="text-2xl font-bold text-pink-500 mb-3">$1,000</div>
               <div className="text-xs text-gray-600 mb-2">Receive</div>
               <ul className="text-sm text-gray-700 space-y-1">
                 <li>• A June Care Branded Yeti</li>
@@ -152,7 +161,7 @@ export default function InvestmentStats() {
               <div className="flex justify-between items-start mb-2">
                 <span className="text-xs text-gray-600">Invest</span>
               </div>
-              <div className="text-2xl font-bold text-blue-600 mb-3">$5,000</div>
+              <div className="text-2xl font-bold text-pink-500 mb-3">$5,000</div>
               <div className="text-xs text-gray-600 mb-2">Receive</div>
               <ul className="text-sm text-gray-700 space-y-1">
                 <li>• A limited-edition June Care hoodie</li>
@@ -165,7 +174,7 @@ export default function InvestmentStats() {
               <div className="flex justify-between items-start mb-2">
                 <span className="text-xs text-gray-600">Invest</span>
               </div>
-              <div className="text-2xl font-bold text-blue-600 mb-3">$25,000</div>
+              <div className="text-2xl font-bold text-pink-500 mb-3">$25,000</div>
               <div className="text-xs text-gray-600 mb-2">Receive</div>
               <ul className="text-sm text-gray-700 space-y-1">
                 <li>• You'll be invited to join our Advisory Board</li>

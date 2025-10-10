@@ -15,6 +15,14 @@ export default function InvestmentForm() {
   });
 
   const [isAmountDropdownOpen, setIsAmountDropdownOpen] = useState(false);
+  
+  // Set to show exactly 90 days remaining
+  const [daysRemaining, setDaysRemaining] = useState(90);
+  
+  useEffect(() => {
+    // Keep it at 90 days for now
+    setDaysRemaining(90);
+  }, []);
 
   const investmentAmounts = [
     "$500",
@@ -172,7 +180,7 @@ export default function InvestmentForm() {
             </div>
             <div>
               <span className="text-gray-500">Days Remaining:</span>
-              <span className="ml-2 font-medium">90 days</span>
+              <span className="ml-2 font-medium">{daysRemaining} days</span>
             </div>
           </div>
         </div>
@@ -296,11 +304,11 @@ export default function InvestmentForm() {
                 />
                 <label htmlFor="terms" className="text-base text-gray-700">
                   I agree to the{" "}
-                  <a href="#" className="text-blue-600 hover:underline">
+                  <a href="#" className="text-pink-500 hover:underline">
                     Terms of Service
                   </a>{" "}
                   and{" "}
-                  <a href="#" className="text-blue-600 hover:underline">
+                  <a href="#" className="text-pink-500 hover:underline">
                     Privacy Policy
                   </a>
                   . I understand that this is a private investment opportunity and I am an accredited investor.
@@ -311,7 +319,7 @@ export default function InvestmentForm() {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg text-lg font-semibold transition-colors duration-200"
+              className="w-full bg-pink-500 hover:bg-pink-600 text-white py-3 px-6 rounded-lg text-lg font-semibold transition-colors duration-200"
             >
               Submit Request
             </button>

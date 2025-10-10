@@ -63,7 +63,7 @@ export default function Discussion() {
       
       <p className="text-sm text-gray-700">
         Ask questions and share feedback with the Siscom Africa team below. If you have support related questions for Republic, please contact{" "}
-        <a href="mailto:investors@republic.co" className="text-blue-600 hover:underline">
+        <a href="mailto:investors@republic.co" className="text-pink-500 hover:underline">
           investors@republic.co
         </a>
         .
@@ -114,7 +114,7 @@ export default function Discussion() {
         ))}
         
         <div className="text-center py-6">
-          <button className="px-6 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition">
+          <button className="px-6 py-2 bg-pink-500 text-white text-sm font-medium rounded-lg hover:bg-pink-600 transition">
             Join the discussion
           </button>
         </div>

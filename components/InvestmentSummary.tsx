@@ -1,11 +1,20 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { Star, Share2, DollarSign } from "lucide-react";
 
 export default function InvestmentSummary() {
   const raised = 420000;
   const target = 1250000;
   const percentage = 34; // 420K/1.25M = 33.6%
+  
+  // Set to show exactly 90 days remaining
+  const [daysRemaining, setDaysRemaining] = useState(90);
+  
+  useEffect(() => {
+    // Keep it at 90 days for now
+    setDaysRemaining(90);
+  }, []);
   
   return (
     <div className="space-y-6">
@@ -39,7 +48,7 @@ export default function InvestmentSummary() {
       
       {/* Days Remaining */}
       <div className="mb-8">
-        <div className="text-5xl font-bold text-gray-900">90 days</div>
+        <div className="text-5xl font-bold text-gray-900">{daysRemaining} days</div>
         <div className="text-base text-gray-500">Left to invest</div>
       </div>
       
@@ -47,7 +56,7 @@ export default function InvestmentSummary() {
       <div className="space-y-3">
         <a 
           href="/invest"
-          className="block w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg text-lg font-semibold transition-colors duration-200 text-center"
+          className="block w-full bg-pink-500 hover:bg-pink-600 text-white py-3 px-6 rounded-lg text-lg font-semibold transition-colors duration-200 text-center"
         >
           Invest in Siscom Africa
         </a>

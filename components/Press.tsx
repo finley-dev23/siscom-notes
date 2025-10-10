@@ -5,46 +5,32 @@ import { ExternalLink, Calendar } from "lucide-react";
 export default function Press() {
   const pressItems = [
     {
-      title: "TechCrunch Africa Features New Infrastructure Startup - Siscom Africa",
-      source: "TechCrunch Africa",
-      date: "Dec 15, 2024",
-      description: "This Kenyan entrepreneur turned a cloud infrastructure gap into a startup that's raised $2.5 million",
-      url: "#"
+      title: "Siscom and Navon World partner to deploy AI-ready modular data centers, powering Africa's digital future",
+      source: "Afcacia",
+      date: "Jul 24, 2025",
+      description: "By combining modular design, AI-driven computing, and inclusive investment, the two companies are laying the foundation for Africa's digital sovereignty and a future where the continent engineers its own path to technological empowerment.",
+      url: "https://afcacia.io/siscom-and-navon-world-partner-to-deploy-ai-ready-modular-data-centers-powering-africas-digital-future/"
     },
     {
-      title: "Siscom Africa infrastructure service 'by Africans for Africans' comes to Nairobi",
-      source: "TechCrunch Africa", 
-      date: "Nov 28, 2024",
-      description: "Siscom Africa, a platform that connects investors with infrastructure opportunities, has launched in Nairobi. Siscom Africa connects investors who need infrastructure with local providers who can deliver...",
-      url: "#"
+      title: "How Siscom is turning cloud infrastructure into a shared asset for Kenya's tech revolution",
+      source: "Citizen Digital", 
+      date: "Jul 02, 2025",
+      description: "Siscom Nodes allows everyday citizens to invest directly in the servers powering everything from social media and streaming to e-commerce and artificial intelligence, starting from as little as $150.",
+      url: "https://www.citizen.digital/article/how-siscom-is-turning-cloud-infrastructure-into-a-shared-asset-for-kenyas-tech-revolution-n365639"
     },
     {
-      title: "This platform connects investors who need infrastructure with providers in Africa",
-      source: "TechCrunch Africa",
-      date: "Oct 14, 2024", 
-      description: "Siscom Africa is an infrastructure investment platform that connects investors who need infrastructure with providers in their region who can deliver...",
-      url: "#"
+      title: "Kenyans can now own the cloud: Siscom launches crowd-invested data infrastructure",
+      source: "Nation Africa",
+      date: "Jul 01, 2025", 
+      description: "Siscom's model flips the script by mobilizing local capital to build the digital backbone Africa needs, allowing individuals to invest in physical 'nodes' that power Kenya's digital economy.",
+      url: "https://nation.africa/africa/news/kenyans-can-now-own-the-cloud-siscom-launches-crowd-invested-data-infrastructure-5104224"
     },
     {
-      title: "Siscom Africa Offers Affordable Infrastructure Solutions in Kenya",
-      source: "TechCrunch Africa",
-      date: "Sep 22, 2024",
-      description: "With 2x more African enterprises adopting cloud infrastructure in 2024 than 2023, we need more affordable infrastructure solutions + flexible investment options...",
-      url: "#"
-    },
-    {
-      title: "Nairobi entrepreneur creates platform to help investors find infrastructure opportunities",
-      source: "TechCrunch Africa",
-      date: "Sep 21, 2024",
-      description: "The COVID-19 pandemic accelerated digital transformation across Africa, creating an 'infrastructure opportunity' for local investors...",
-      url: "#"
-    },
-    {
-      title: "African-led company providing access to affordable infrastructure investment opportunities",
-      source: "BBC Africa",
-      date: "Aug 5, 2024",
-      description: "Siscom Africa, a Nairobi company, links investors with infrastructure providers for affordable opportunities, offering 30% lower costs than traditional solutions...",
-      url: "#"
+      title: "Kenyan tech firm launches platform for people to co-own cloud servers",
+      source: "The Standard",
+      date: "Jun 30, 2025",
+      description: "Siscom has launched a revolutionary platform that allows Kenyans to collectively own and invest in cloud infrastructure, democratizing access to the digital economy and creating new investment opportunities.",
+      url: "https://www.standardmedia.co.ke/business/sci-tech/article/2001523325/kenyan-tech-firm-launches-platform-for-people-to-co-own-cloud-servers"
     }
   ];
 
@@ -54,10 +40,16 @@ export default function Press() {
       
       <div className="space-y-4">
         {pressItems.map((item, index) => (
-          <div key={index} className="border border-gray-200 rounded-lg p-4 hover:bg-gray-50 transition">
+          <a 
+            key={index} 
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block border border-gray-200 rounded-lg p-4 hover:bg-gray-50 transition cursor-pointer"
+          >
             <div className="flex items-start justify-between">
               <div className="flex-1">
-                <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2">
+                <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-pink-500 transition">
                   {item.title}
                 </h3>
                 <div className="flex items-center space-x-2 text-sm text-gray-500 mb-2">
@@ -74,7 +66,7 @@ export default function Press() {
               </div>
               <ExternalLink className="w-4 h-4 text-gray-400 ml-2 flex-shrink-0" />
             </div>
-          </div>
+          </a>
         ))}
         
         <button className="w-full py-3 text-base font-medium text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-50 transition">

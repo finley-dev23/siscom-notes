@@ -10,7 +10,7 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center space-x-8">
             <a href="/" className="flex items-center space-x-2">
-              <div className="w-7 h-7 bg-blue-600 rounded flex items-center justify-center">
+              <div className="w-7 h-7 bg-pink-500 rounded flex items-center justify-center">
                 <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z" />
                 </svg>
@@ -51,7 +51,7 @@ export default function Header() {
             <button className="text-gray-700 font-medium text-sm hover:text-gray-900 transition">
               Log in
             </button>
-            <button className="bg-blue-600 text-white px-5 py-2 rounded-lg font-medium text-sm hover:bg-blue-700 transition shadow-sm">
+            <button className="bg-pink-500 text-white px-5 py-2 rounded-lg font-medium text-sm hover:bg-pink-600 transition shadow-sm">
               Sign up
             </button>
           </div>

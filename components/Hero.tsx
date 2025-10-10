@@ -1,8 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import { Star, Share2 } from "lucide-react";
 
 export default function Hero() {
+  const [activeTag, setActiveTag] = useState("CLOUD");
+  
   const tags = [
     "CLOUD",
     "AI", 
@@ -10,6 +13,26 @@ export default function Hero() {
     "TOKENIZATION",
     "MARKETPLACE"
   ];
+
+  const handleTagClick = (tag: string) => {
+    setActiveTag(tag);
+    
+    // Scroll to relevant section based on tag
+    const sectionMap: { [key: string]: string } = {
+      "CLOUD": "solution",
+      "AI": "market", 
+      "INFRASTRUCTURE FINANCE": "business-model",
+      "TOKENIZATION": "solution",
+      "MARKETPLACE": "solution"
+    };
+    
+    const targetSection = sectionMap[tag] || "solution";
+    const element = document.getElementById(targetSection);
+    
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   return (
     <div className="first-section-container">
@@ -42,14 +65,15 @@ export default function Hero() {
       {/* Tags */}
       <div className="flex flex-wrap gap-2">
         {tags.map((tag, index) => (
-          <span
+          <button
             key={index}
+            onClick={() => handleTagClick(tag)}
             className={`first-section-tag ${
-              tag === "CLOUD" ? "highlighted" : ""
-            }`}
+              activeTag === tag ? "highlighted" : ""
+            } cursor-pointer transition-all duration-200 hover:scale-105`}
           >
             {tag}
-          </span>
+          </button>
         ))}
       </div>
     </div>

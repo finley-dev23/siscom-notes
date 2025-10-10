@@ -8,7 +8,7 @@ export default function MediaGallery() {
   const [currentIndex, setCurrentIndex] = useState(0);
   
   const media = [
-    { type: "image", title: "Introducing", src: "/assets/images/aleksandr-lyaptsev-q0Jo_J5YxHY-unsplash.jpg" },
+    { type: "image", title: "Siscom Africa", src: "/assets/images/aleksandr-lyaptsev-q0Jo_J5YxHY-unsplash.jpg" },
     { type: "image", title: "The Problem", src: "/assets/images/growtika-FiezGnin5TQ-unsplash.jpg" },
     { type: "image", title: "How we solve it", src: "/assets/images/jainath-ponnala-BIHgNEaM394-unsplash.jpg" },
     { type: "image", title: "Company Vision", src: "/assets/images/joe-murray-chkiRy7LhmQ-unsplash.jpg" },
@@ -37,16 +37,6 @@ export default function MediaGallery() {
             className="object-cover"
             priority
           />
-          
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-black/20"></div>
-          
-          {/* Title Overlay */}
-          <div className="absolute bottom-4 left-4 z-10">
-            <p className="text-white text-2xl font-semibold drop-shadow-lg">
-              {media[currentIndex].title}
-            </p>
-          </div>
         </div>
         
         {/* Next Arrow */}
@@ -66,7 +56,7 @@ export default function MediaGallery() {
             onClick={() => setCurrentIndex(index)}
             className={`relative flex-shrink-0 w-32 h-20 rounded-lg overflow-hidden border-3 transition ${
               currentIndex === index
-                ? "border-blue-600 ring-2 ring-blue-600"
+                ? "border-pink-500 ring-2 ring-pink-500"
                 : "border-gray-200"
             }`}
             style={{ borderWidth: currentIndex === index ? '3px' : '1px' }}
@@ -77,12 +67,6 @@ export default function MediaGallery() {
               fill
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-black/30"></div>
-            <div className="relative h-full flex flex-col items-center justify-center p-2">
-              <p className="text-white text-xs font-medium text-center leading-tight drop-shadow-md">
-                {item.title}
-              </p>
-            </div>
           </button>
         ))}
       </div>

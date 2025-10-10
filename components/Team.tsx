@@ -3,22 +3,16 @@
 export default function Team() {
   const teamMembers = [
     {
-      name: "Sarah Kimani",
-      role: "Founder & CEO",
-      description: "Sarah is the visionary behind Siscom Africa, deeply rooted in Kenya's technology ecosystem. Before starting Siscom Africa, she served as a Technology Infrastructure Executive at Safaricom, leading a partnerships team of over 50 people across East Africa. She played a key role in developing cloud infrastructure strategies for African enterprises. Outside of her professional achievements, Sarah is also a former TechWomen Fellow (2022).",
-      initials: "SK"
+      name: "Derrick Gakuu",
+      role: "Founder",
+      description: "Derrick is the founder of Siscom Africa, leading the vision to build the Technology Bank of Africa. He is driving the mission to democratize access to Africa's technology infrastructure investment opportunities and connect local and diaspora capital to high-return digital infrastructure projects.",
+      initials: "DG"
     },
     {
-      name: "David Ochieng",
-      role: "Head of Technology",
-      description: "With over 12 years of experience as a Cloud Infrastructure Specialist at Microsoft Azure, David brings deep understanding of scaling technology infrastructure across Africa. He leads Siscom Africa's technology team, ensuring that every infrastructure project meets the highest standards of reliability and performance.",
-      initials: "DO"
-    },
-    {
-      name: "Grace Mwangi",
-      role: "Head of Operations",
-      description: "A seasoned operations leader, Grace has led technical teams at multiple early-stage startups across Africa. Her previous experience includes key roles at Andela and Flutterwave. At Siscom Africa, she heads up the operations team, driving efficiency and building the processes that power the platform.",
-      initials: "GM"
+      name: "Nashon Garvey",
+      role: "Co-Founder",
+      description: "Nashon is the co-founder of Siscom Africa and an expert in digital infrastructure and fintech. As a reality architect, he is building the backbone of Africa's digital economy by connecting capital to transformative technology infrastructure projects across the continent.",
+      initials: "NG"
     }
   ];
 
@@ -32,7 +26,7 @@ export default function Team() {
           <div key={index} className="p-4 rounded-lg hover:bg-gray-50 transition">
             <div className="flex-1">
               <h3 className="text-xl font-semibold text-gray-900 mb-1">{member.name}</h3>
-              <p className="text-base font-medium text-blue-600 mb-3">{member.role}</p>
+              <p className="text-base font-medium text-pink-500 mb-3">{member.role}</p>
               <p className="text-base text-gray-700 leading-relaxed">{member.description}</p>
             </div>
           </div>

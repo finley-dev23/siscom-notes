@@ -130,9 +130,14 @@ export default function PitchContent() {
         {/* Solution */}
         <section id="solution" className="mb-12 scroll-mt-24">
           <h2 className="text-3xl font-semibold text-gray-500 mb-6">Solution</h2>
-          <h3 className="text-4xl font-bold text-gray-900 mb-8">The Technology Bank of Africa</h3>
+          <h3 className="text-4xl font-bold text-gray-900 mb-4">The Technology Bank of Africa</h3>
+          
+          <p className="text-lg text-gray-700 mb-4">
+            Siscom is creating a regulated technology investment marketplace that channels local, diaspora, and institutional capital into Africa's high-capex, high-return technology infrastructure — from GPU clusters and HPC nodes to modular data centers and cloud service layers.
+          </p>
+          
           <p className="text-lg text-gray-700 mb-8">
-            Siscom is building a regulated marketplace and platform that channels domestic retail, diaspora, and institutional capital into high-capex, high-return technology infrastructure: HPC nodes, GPU clusters, modular data centers, and associated services.
+            We are building the backbone that powers Africa's digital, AI, and cloud economy, enabling local participation in one of the continent's fastest-growing asset classes.
           </p>
           
           {/* Solution Components */}
@@ -141,47 +146,50 @@ export default function PitchContent() {
             <div className="space-y-6">
               <div>
                 <h5 className="text-lg font-semibold text-gray-900 mb-3">1) Marketplace & Platform</h5>
-                <ul className="text-base text-gray-700 space-y-2">
-                  <li>• Investor onboarding & KYC/AML (pan-Africa compliant)</li>
-                  <li>• Investment product catalog: tokenized cloud tokens, GPU pods, modular DC slots</li>
-                  <li>• Secondary liquidity layer: internal order book + scheduled periodic buybacks</li>
+                <p className="text-base text-gray-700 mb-3">A unified platform for investing in Africa's digital infrastructure:</p>
+                <ul className="text-base text-gray-700 space-y-2 ml-4">
+                  <li>• <strong>Investor onboarding & KYC/AML compliance</strong> — pan-African ready.</li>
+                  <li>• <strong>Investment product catalog</strong> — fractional ownership of cloud tokens, GPU pods, and modular data center capacity.</li>
+                  <li>• <strong>Liquidity layer</strong> — internal marketplace with scheduled buybacks for early liquidity and investor flexibility.</li>
                 </ul>
               </div>
               <div>
                 <h5 className="text-lg font-semibold text-gray-900 mb-3">2) Deal Origination & Underwriting</h5>
-                <ul className="text-base text-gray-700 space-y-2">
-                  <li>• Underwrite infrastructure operators (data center hosts, colo partners)</li>
-                  <li>• Bespoke financial engineering (cashflow waterfall, revenue sharing)</li>
-                  <li>• Take-or-pay anchor contracts to de-risk early projects</li>
+                <p className="text-base text-gray-700 mb-3">Siscom partners with vetted infrastructure operators and handles the financial structuring to ensure safe, transparent, and sustainable returns:</p>
+                <ul className="text-base text-gray-700 space-y-2 ml-4">
+                  <li>• <strong>Operator due diligence</strong> — onboarding and underwriting data center hosts, colocation partners, and GPU node operators.</li>
+                  <li>• <strong>Bespoke financial engineering</strong> — cashflow waterfalls, revenue-sharing models, and risk-managed structures.</li>
+                  <li>• <strong>Anchor contracts</strong> — take-or-pay agreements to stabilize early deployments and reduce investment risk.</li>
                 </ul>
               </div>
             </div>
           </div>
           
           <div className="bg-gradient-to-r from-green-50 to-teal-50 rounded-xl p-6 mb-6">
-            <h4 className="text-xl font-bold text-green-700 mb-4">Asset Types (Phase Plan)</h4>
+            <h4 className="text-xl font-bold text-green-700 mb-4">Asset Types (Phase Roadmap)</h4>
             <div className="grid md:grid-cols-3 gap-4 text-base">
               <div>
-                <p className="text-lg font-semibold text-gray-900 mb-2">Phase 1 (2025)</p>
-                <p className="text-base text-gray-700">HPC nodes, AI GPU clusters (H100 & A100 class), hybrid storage clusters</p>
+                <p className="text-lg font-semibold text-gray-900 mb-2">Phase 1 (2025):</p>
+                <p className="text-base text-gray-700">HPC nodes, AI GPU clusters (A100/H100 class), and hybrid cloud storage nodes.</p>
               </div>
               <div>
-                <p className="text-lg font-semibold text-gray-900 mb-2">Phase 2 (2026–27)</p>
-                <p className="text-base text-gray-700">Modular DC campuses, Starlink/edge zones, colocation slots</p>
+                <p className="text-lg font-semibold text-gray-900 mb-2">Phase 2 (2026–2027):</p>
+                <p className="text-base text-gray-700">Modular data center campuses, Starlink/edge zones, and colocation infrastructure.</p>
               </div>
               <div>
-                <p className="text-lg font-semibold text-gray-900 mb-2">Phase 3 (2028+)</p>
-                <p className="text-base text-gray-700">Hyperscale-ready campuses, cross-border regional POPs, high-yield structured products</p>
+                <p className="text-lg font-semibold text-gray-900 mb-2">Phase 3 (2028+):</p>
+                <p className="text-base text-gray-700">Hyperscale-ready campuses, regional Points of Presence (PoPs), and high-yield digital infrastructure products.</p>
               </div>
             </div>
           </div>
           
           <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-xl p-6">
-            <h4 className="text-xl font-bold text-indigo-700 mb-4">Go-to-Market (GTM)</h4>
-            <ul className="text-base text-gray-700 space-y-2">
-              <li>• <strong>Diaspora retail channel:</strong> partnerships with remittance providers and fintech wallets (M-Pesa, Flutterwave)</li>
-              <li>• <strong>Institutional channel:</strong> pension funds, family offices, and local banks for larger tranches</li>
-              <li>• <strong>Operator channel:</strong> developer partnerships with modular DC builders, IX Africa, GPU suppliers</li>
+            <h4 className="text-xl font-bold text-indigo-700 mb-4">Go-To-Market Strategy</h4>
+            <p className="text-base text-gray-700 mb-4">Siscom is designed for scale — with multi-channel access to capital and infrastructure:</p>
+            <ul className="text-base text-gray-700 space-y-3">
+              <li>• <strong>Diaspora Retail Channel:</strong> Strategic partnerships with remittance and fintech platforms like M-Pesa, Flutterwave, and WorldRemit, enabling simple access for Africans abroad to invest back home.</li>
+              <li>• <strong>Institutional Channel:</strong> Collaborations with pension funds, family offices, and local banks for large-scale, structured infrastructure investments.</li>
+              <li>• <strong>Operator Channel:</strong> Partnerships with data center developers, GPU suppliers, and cloud infrastructure builders to ensure technical readiness and deployment capacity.</li>
             </ul>
           </div>
         </section>
@@ -191,76 +199,88 @@ export default function PitchContent() {
           <h2 className="text-3xl font-semibold text-gray-500 mb-6">Why Invest</h2>
           <h3 className="text-4xl font-bold text-gray-900 mb-6">Investment Rationale</h3>
           
-          <ul className="space-y-4 text-lg text-gray-700">
-            <li className="flex items-start">
-              <span className="mr-3">•</span>
-              <div>
-                <strong>Asymmetric upside:</strong> Local investors gain access to asset classes with higher risk-adjusted returns than domestic real estate and bonds.
-              </div>
-            </li>
-            <li className="flex items-start">
-              <span className="mr-3">•</span>
-              <div>
-                <strong>Structural demand:</strong> Cloud & AI adoption + data sovereignty laws create multi-decade demand for locally provisioned compute and storage.
-              </div>
-            </li>
-            <li className="flex items-start">
-              <span className="mr-3">•</span>
-              <div>
-                <strong>Scalable model:</strong> Marketplace approach — assets are originated by specialists; Siscom captures fees and recurring servicing income.
-              </div>
-            </li>
-            <li className="flex items-start">
-              <span className="mr-3">•</span>
-              <div>
-                <strong>Liquidity innovation:</strong> Tokenization + periodic secondary mechanisms reduce the historical illiquidity of infra investments.
-              </div>
-            </li>
-            <li className="flex items-start">
-              <span className="mr-3">•</span>
-              <div>
-                <strong>Macro tailwinds & institutional support:</strong> Major institutional entrants (IFC/World Bank investments) demonstrate confidence in market economics.
-              </div>
-            </li>
-          </ul>
+          <p className="text-lg text-gray-700 mb-8">
+            Siscom offers investors a gateway into Africa's most strategic and fast-growing asset class — digital infrastructure. By connecting capital directly to cloud, AI, and data infrastructure projects, Siscom enables investors to earn sustainable returns while fueling the continent's digital transformation.
+          </p>
+          
+          <div className="space-y-6">
+            <div>
+              <h4 className="text-xl font-bold text-gray-900 mb-2">Asymmetric Upside:</h4>
+              <p className="text-lg text-gray-700">
+                Siscom opens up access to high-yield, high-growth assets — such as GPU clusters and modular data centers — offering stronger risk-adjusted returns than traditional local assets like real estate or bonds.
+              </p>
+            </div>
+            
+            <div>
+              <h4 className="text-xl font-bold text-gray-900 mb-2">Structural Demand:</h4>
+              <p className="text-lg text-gray-700">
+                The rise of AI, cloud, and data sovereignty laws is driving multi-decade demand for locally hosted compute and storage, creating a permanent market need for onshore infrastructure.
+              </p>
+            </div>
+            
+            <div>
+              <h4 className="text-xl font-bold text-gray-900 mb-2">Scalable Model:</h4>
+              <p className="text-lg text-gray-700">
+                Siscom's marketplace model allows specialized infrastructure operators to originate and manage assets, while Siscom captures fees and recurring service revenue, ensuring scalability without operational overload.
+              </p>
+            </div>
+            
+            <div>
+              <h4 className="text-xl font-bold text-gray-900 mb-2">Liquidity Innovation:</h4>
+              <p className="text-lg text-gray-700">
+                Through tokenization and periodic secondary market buybacks, Siscom provides early liquidity options — solving the traditional challenge of long lock-up periods in infrastructure investing.
+              </p>
+            </div>
+            
+            <div>
+              <h4 className="text-xl font-bold text-gray-900 mb-2">Institutional Validation:</h4>
+              <p className="text-lg text-gray-700">
+                With major players like the IFC, World Bank, and Raxio investing heavily in African data centers, the macro tailwinds are undeniable. Siscom brings that same institutional confidence to the retail and diaspora investor level.
+              </p>
+            </div>
+          </div>
         </section>
         
         {/* Market */}
         <section id="market" className="mb-12 scroll-mt-24">
           <h2 className="text-3xl font-semibold text-gray-500 mb-6">Market</h2>
-          <h3 className="text-4xl font-bold text-gray-900 mb-6">Large & Growing Addressable Market</h3>
+          <h3 className="text-4xl font-bold text-gray-900 mb-6">Market Opportunity</h3>
+          
+          <p className="text-lg text-gray-700 mb-8">
+            The market is massive — and just getting started.
+          </p>
           
           <div className="space-y-6">
             <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6">
               <h4 className="font-semibold text-gray-900 mb-3">AI Market (Africa)</h4>
-              <p className="text-2xl font-bold text-purple-700 mb-2">$4.5B → $16.5B</p>
-              <p className="text-sm text-gray-700">Projected growth from 2025 to 2030, driving demand for GPUs and local processing capacity</p>
-              <a href="https://www.mastercard.com" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 hover:underline flex items-center mt-2">
-                Source: Mastercard/Statista <ExternalLink className="w-3 h-3 ml-1" />
+              <p className="text-2xl font-bold text-purple-700 mb-2">$4.5B → $16.5B by 2030</p>
+              <p className="text-base text-gray-700 mb-3">Driven by the explosion of AI model training, edge computing, and GPU demand, Africa's AI market is expected to grow more than 3x in five years.</p>
+              <a href="https://www.mastercard.com" target="_blank" rel="noopener noreferrer" className="text-sm text-pink-500 hover:underline flex items-center mt-2">
+                Source: Mastercard, Statista <ExternalLink className="w-3 h-3 ml-1" />
               </a>
             </div>
 
             <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-6">
               <h4 className="font-semibold text-gray-900 mb-3">Cloud Adoption</h4>
-              <p className="text-gray-700 mb-2">McKinsey finds cloud adoption accelerating across African enterprises; cloud migration unlocking significant productivity and growth opportunities.</p>
-              <a href="https://www.mckinsey.com" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 hover:underline flex items-center mt-2">
+              <p className="text-base text-gray-700 mb-3">Cloud migration is accelerating across African enterprises, with local hosting creating new revenue and efficiency opportunities.</p>
+              <a href="https://www.mckinsey.com" target="_blank" rel="noopener noreferrer" className="text-sm text-pink-500 hover:underline flex items-center mt-2">
                 Source: McKinsey & Company <ExternalLink className="w-3 h-3 ml-1" />
               </a>
             </div>
 
             <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-6">
-              <h4 className="font-semibold text-gray-900 mb-3">Data-Center Investment</h4>
-              <p className="text-gray-700 mb-2">IFC/World Bank activity shows billions in active investments. Example: IFC backing Raxio with $100M to expand data centers across African markets.</p>
-              <a href="https://www.reuters.com" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 hover:underline flex items-center mt-2">
+              <h4 className="font-semibold text-gray-900 mb-3">Data Center Expansion</h4>
+              <p className="text-base text-gray-700 mb-3">The IFC and World Bank are investing hundreds of millions into regional data centers. For instance, IFC's $100M investment in Raxio reflects global confidence in Africa's digital infrastructure market.</p>
+              <a href="https://www.reuters.com" target="_blank" rel="noopener noreferrer" className="text-sm text-pink-500 hover:underline flex items-center mt-2">
                 Source: Reuters <ExternalLink className="w-3 h-3 ml-1" />
               </a>
             </div>
 
             <div className="bg-gradient-to-r from-orange-50 to-yellow-50 rounded-xl p-6">
-              <h4 className="font-semibold text-gray-900 mb-3">Remittances (Kenya)</h4>
+              <h4 className="font-semibold text-gray-900 mb-3">Diaspora Remittances (Kenya)</h4>
               <p className="text-2xl font-bold text-orange-700 mb-2">$5.0B+</p>
-              <p className="text-sm text-gray-700">12-month cumulative inflows to June 2025, with monthly peaks &gt; $400M — a large addressable pool of capital for retail investment channels</p>
-              <a href="#" className="text-sm text-blue-600 hover:underline flex items-center mt-2">
+              <p className="text-base text-gray-700 mb-3">in annual inflows (2025), with monthly peaks exceeding $400M. Siscom taps into this massive pool of underutilized diaspora capital, redirecting it into productive tech assets that power local growth.</p>
+              <a href="#" className="text-sm text-pink-500 hover:underline flex items-center mt-2">
                 Source: Central Bank of Kenya <ExternalLink className="w-3 h-3 ml-1" />
               </a>
             </div>
@@ -282,7 +302,7 @@ export default function PitchContent() {
             </ul>
           </div>
 
-          <div className="border-l-4 border-blue-600 pl-6 py-4 bg-blue-50 rounded-r-xl">
+          <div className="border-l-4 border-pink-500 pl-6 py-4 bg-pink-50 rounded-r-xl">
             <h4 className="font-semibold text-gray-900 mb-3">Sample Unit Economics (5 MW modular campus)</h4>
             <div className="grid grid-cols-2 gap-4 text-sm">
               <div>
@@ -340,20 +360,12 @@ export default function PitchContent() {
           
           <div className="space-y-6">
             <div className="bg-gray-50 rounded-xl p-6">
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">CEO / Founding CEO (Finance + Infra)</h4>
-              <p className="text-sm text-gray-700">Ex-investment banker / structurer with track record in infrastructure deals and African markets. Leads fund design, institutional sales, and capital strategy.</p>
+              <h4 className="text-lg font-semibold text-gray-900 mb-2">Derrick Gakuu - Founder</h4>
+              <p className="text-base text-gray-700">Derrick is the founder of Siscom Africa, leading the vision to build the Technology Bank of Africa. He is driving the mission to democratize access to Africa's technology infrastructure economy and enable local participation in the continent's fastest-growing asset class.</p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">COO / Head of Platform</h4>
-              <p className="text-sm text-gray-700">Product & operations lead — marketplace design, investor onboarding, compliance, partnerships with payment & remittance providers.</p>
-            </div>
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Head of Underwriting</h4>
-              <p className="text-sm text-gray-700">Financial engineer with experience in structured finance, project finance, and asset securitization.</p>
-            </div>
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Head of Tech / CTO</h4>
-              <p className="text-sm text-gray-700">Cloud & infra specialist — deep knowledge of data-center architectures, GPU clusters, and operator workflows.</p>
+              <h4 className="text-lg font-semibold text-gray-900 mb-2">Nashon Garvey - Co-Founder</h4>
+              <p className="text-base text-gray-700">Expert in Digital Infrastructure & Fintech | Reality Architect. Nashon co-leads Siscom's vision to democratize access to Africa's technology infrastructure economy, connecting local and diaspora capital to high-return digital infrastructure projects.</p>
             </div>
           </div>
         </section>
@@ -368,7 +380,7 @@ export default function PitchContent() {
               <h4 className="font-semibold text-gray-900 mb-2">Diaspora Channel (Quick Wins)</h4>
               <p className="text-sm text-gray-700">Integrate with remittance rails and major wallets (M-Pesa, payment processors) to present low-ticket infrastructure investments ($500–$2,500) to diaspora customers.</p>
             </div>
-            <div className="border-l-4 border-blue-600 pl-6 py-4 bg-blue-50">
+            <div className="border-l-4 border-pink-500 pl-6 py-4 bg-pink-50">
               <h4 className="font-semibold text-gray-900 mb-2">Institutional Channel (Scale)</h4>
               <p className="text-sm text-gray-700">Run dedicated institutional funds / managed accounts for pension funds and family offices with larger minimums ($250k+), emphasizing regulatory compliance and yield.</p>
             </div>
@@ -435,30 +447,34 @@ export default function PitchContent() {
           <h2 className="text-2xl font-semibold text-gray-500 mb-6">Risks</h2>
           <h3 className="text-3xl font-bold text-gray-900 mb-6">Investment Risks</h3>
           
+          <p className="text-base text-gray-700 mb-6">
+            At Siscom, we believe in transparency and responsible innovation. While the opportunities across Africa's digital infrastructure landscape are substantial, investors should be aware of the following potential risks associated with this emerging asset class:
+          </p>
+          
           <div className="space-y-4">
-            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-5">
               <h4 className="font-semibold text-gray-900 mb-2">Execution Risk</h4>
-              <p className="text-sm text-gray-700">Building & financing data centers and GPU clusters is capital and project execution intensive. Delays can affect returns.</p>
+              <p className="text-base text-gray-700">Developing, financing, and operationalizing data centers, GPU clusters, and hybrid cloud nodes requires significant capital and precision. Delays in procurement, deployment, or partner execution could temporarily impact projected timelines and returns.</p>
             </div>
-            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-5">
               <h4 className="font-semibold text-gray-900 mb-2">Regulatory Risk</h4>
-              <p className="text-sm text-gray-700">Cross-jurisdictional licensing, data protection mandates, and securities law for tokenized products are evolving — compliance costs may rise.</p>
+              <p className="text-base text-gray-700">Data protection, cloud licensing, and digital asset regulations vary across African jurisdictions and are still evolving. Siscom's marketplace and tokenization model will maintain pan-African regulatory compliance, but shifts in law or compliance costs may influence operations or returns.</p>
             </div>
-            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-5">
               <h4 className="font-semibold text-gray-900 mb-2">Macroeconomic & FX Risk</h4>
-              <p className="text-sm text-gray-700">Local currency depreciation, inflation and sovereign risk in some markets could affect operator cashflows and investor returns.</p>
+              <p className="text-base text-gray-700">Given exposure to multiple African markets, currency fluctuations, inflation, or sovereign credit risk may affect infrastructure operator revenues and investor payouts. Siscom actively mitigates this through multi-currency structuring and diversified hosting zones.</p>
             </div>
-            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-5">
               <h4 className="font-semibold text-gray-900 mb-2">Market Adoption Risk</h4>
-              <p className="text-sm text-gray-700">If hyperscalers delay local deployments or anchor contracts are not secured, cashflows will be slower to stabilize.</p>
+              <p className="text-base text-gray-700">Market performance depends on enterprise adoption of local compute and storage solutions. Should hyperscalers or anchor tenants delay local hosting or contract commitments, early-stage projects could experience slower-than-expected cashflow stabilization.</p>
             </div>
-            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-5">
               <h4 className="font-semibold text-gray-900 mb-2">Liquidity Risk</h4>
-              <p className="text-sm text-gray-700">Tokenized instruments rely on marketplace depth; early secondary liquidity may be limited.</p>
+              <p className="text-base text-gray-700">While Siscom introduces tokenized infrastructure units with scheduled buybacks and internal marketplace liquidity, the secondary market depth may be limited during early rollout phases, potentially reducing immediate exit options for investors.</p>
             </div>
-            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-5">
               <h4 className="font-semibold text-gray-900 mb-2">Technology Risk</h4>
-              <p className="text-sm text-gray-700">GPU supply cycles and rapid changes in compute architecture could require additional CAPEX upgrades or stranded assets.</p>
+              <p className="text-base text-gray-700">The GPU and compute hardware ecosystem evolves rapidly. New architectures or supply disruptions may necessitate additional capital expenditure to remain competitive, which could impact short-term yields or lead to stranded assets over time.</p>
             </div>
           </div>
         </section>
@@ -468,26 +484,32 @@ export default function PitchContent() {
           <h2 className="text-2xl font-semibold text-gray-500 mb-6">Impact & Policy Alignment</h2>
           <h3 className="text-3xl font-bold text-gray-900 mb-6">Creating Lasting Impact</h3>
           
-          <ul className="space-y-4 text-gray-700">
-            <li className="flex items-start">
-              <span className="mr-3">•</span>
-              <div>
-                <strong>Economic inclusion:</strong> Enables diaspora and local retail investors to participate in high-value digital infrastructure returns.
-              </div>
-            </li>
-            <li className="flex items-start">
-              <span className="mr-3">•</span>
-              <div>
-                <strong>Digital sovereignty:</strong> By financing local data hosting, Siscom supports national strategies for data sovereignty and reduced foreign dependency.
-              </div>
-            </li>
-            <li className="flex items-start">
-              <span className="mr-3">•</span>
-              <div>
-                <strong>Sustainable infrastructure:</strong> Focus on modular DC designs and renewable energy siting (Kenya's renewables profile) reduces OPEX and carbon footprint.
-              </div>
-            </li>
-          </ul>
+          <p className="text-base text-gray-700 mb-8">
+            Siscom is not just building infrastructure — we're shaping Africa's digital future by aligning growth with inclusion, sovereignty, and sustainability.
+          </p>
+          
+          <div className="space-y-6">
+            <div>
+              <h4 className="text-xl font-bold text-gray-900 mb-2">Economic Inclusion</h4>
+              <p className="text-base text-gray-700">
+                Siscom democratizes access to Africa's technology infrastructure economy by enabling diaspora, retail, and institutional investors to participate in high-return, real-economy assets — previously accessible only to global capital.
+              </p>
+            </div>
+            
+            <div>
+              <h4 className="text-xl font-bold text-gray-900 mb-2">Digital Sovereignty</h4>
+              <p className="text-base text-gray-700">
+                By financing local cloud, AI, and data-hosting infrastructure, Siscom directly supports national digital transformation and data sovereignty goals. This reduces reliance on foreign hyperscalers and ensures that African data remains under African governance.
+              </p>
+            </div>
+            
+            <div>
+              <h4 className="text-xl font-bold text-gray-900 mb-2">Sustainable Infrastructure</h4>
+              <p className="text-base text-gray-700">
+                Siscom's infrastructure projects are built for efficiency and sustainability, leveraging modular data center designs and renewable energy (especially Kenya's clean energy mix). This approach lowers operational costs (OPEX) while contributing to Africa's net-zero and green technology ambitions.
+              </p>
+            </div>
+          </div>
 
           <div className="mt-8 bg-gradient-to-r from-green-50 to-teal-50 rounded-xl p-8">
             <h4 className="text-xl font-bold text-green-700 mb-4">Exit Paths</h4>
@@ -511,7 +533,7 @@ export default function PitchContent() {
                   onClick={() => scrollToSection(section.id)}
                 className={`w-full text-left px-3 py-2 text-base rounded transition ${
                     activeSection === section.id
-                    ? "text-blue-600 font-semibold"
+                    ? "text-pink-500 font-semibold"
                     : "text-gray-600 hover:text-gray-900"
                   }`}
                 >

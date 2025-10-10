@@ -53,7 +53,7 @@ export default function BonusPerks() {
               <h3 className="text-base font-medium text-gray-600 mb-2">
                 Invest
               </h3>
-              <p className="text-5xl font-bold text-blue-600 mb-4">
+              <p className="text-5xl font-bold text-pink-500 mb-4">
                 {perk.amount}
               </p>
             </div>

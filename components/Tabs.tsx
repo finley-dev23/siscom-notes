@@ -8,9 +8,7 @@ import BonusPerks from "./BonusPerks";
 import About from "./About";
 import Team from "./Team";
 import Press from "./Press";
-import FAQ from "./FAQ";
 import Risks from "./Risks";
-import Discussion from "./Discussion";
 
 export default function Tabs() {
   const [activeTab, setActiveTab] = useState("pitch");
@@ -19,9 +17,6 @@ export default function Tabs() {
   
   const tabs = [
     { id: "pitch", label: "Pitch", badge: null },
-    { id: "discussion", label: "Discussion", badge: 10 },
-    { id: "updates", label: "Updates", badge: null },
-    { id: "reviews", label: "Reviews", badge: 1 },
   ];
 
   useEffect(() => {
@@ -51,7 +46,7 @@ export default function Tabs() {
                     onClick={() => setActiveTab(tab.id)}
                     className={`pb-4 pt-4 font-medium text-lg transition relative ${
                       activeTab === tab.id
-                        ? "text-blue-600 border-b-2 border-blue-600"
+                        ? "text-pink-500 border-b-2 border-pink-500"
                         : "text-gray-500 hover:text-gray-700"
                     }`}
                   >
@@ -68,7 +63,7 @@ export default function Tabs() {
               </div>
               <a 
                 href="/invest"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors inline-block"
+                className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors inline-block"
               >
                 Invest in Siscom Africa
               </a>
@@ -86,7 +81,7 @@ export default function Tabs() {
                 onClick={() => setActiveTab(tab.id)}
                 className={`pb-3 font-medium text-lg transition relative ${
                   activeTab === tab.id
-                    ? "text-blue-600 border-b-2 border-blue-600"
+                    ? "text-pink-500 border-b-2 border-pink-500"
                     : "text-gray-500 hover:text-gray-700"
                 }`}
               >
@@ -109,21 +104,7 @@ export default function Tabs() {
         <div className="lg:col-span-2">
           {/* Tab Content */}
           <div className="py-6">
-            {activeTab === "pitch" && <PitchContent />}
-            
-            {activeTab === "discussion" && <Discussion />}
-            
-            {activeTab === "updates" && (
-              <div className="text-center py-16">
-                <p className="text-gray-500 text-lg">No updates yet. Check back soon!</p>
-              </div>
-            )}
-            
-            {activeTab === "reviews" && (
-              <div className="text-center py-16">
-                <p className="text-gray-500 text-lg">Be the first to review this campaign</p>
-              </div>
-            )}
+            <PitchContent />
           </div>
         </div>
         
@@ -139,7 +120,6 @@ export default function Tabs() {
             <About />
             <Team />
             <Press />
-            <FAQ />
             <Risks />
           </div>
         </div>
