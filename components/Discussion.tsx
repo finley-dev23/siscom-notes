@@ -24,7 +24,7 @@ export default function Discussion() {
     {
       user: "Dave Vianen",
       time: "20 days ago",
-      content: "In 2024, $1.5 million cash was burned. There was $1.9 million in cash left at the end of 2024. Now you are raising $1.25M. What are you going to do with that because it seems that's enough until Q2-2026 with this burn-rate. Thanks",
+      content: "In 2024, KSH 150M cash was burned. There was KSH 190M in cash left at the end of 2024. Now you are raising KSH 35M. What are you going to do with that because it seems that's enough until Q2-2026 with this burn-rate. Thanks",
       likes: 2,
       replies: 1,
       avatar: "DV"

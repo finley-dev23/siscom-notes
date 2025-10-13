@@ -25,17 +25,17 @@ export default function InvestmentForm() {
   }, []);
 
   const investmentAmounts = [
-    "$500",
-    "$1,000",
-    "$2,500",
-    "$5,000",
-    "$10,000",
-    "$25,000",
-    "$50,000",
-    "$100,000",
-    "$250,000",
-    "$500,000",
-    "$1,000,000+"
+    "KSH 50,000",
+    "KSH 100,000",
+    "KSH 250,000",
+    "KSH 500,000",
+    "KSH 1M",
+    "KSH 2.5M",
+    "KSH 5M",
+    "KSH 10M",
+    "KSH 25M",
+    "KSH 50M",
+    "KSH 100M+"
   ];
 
   // Read URL parameter and set initial investment amount
@@ -45,14 +45,18 @@ export default function InvestmentForm() {
       // Convert the parameter to the correct format
       let formattedAmount = "";
       
-      // Handle special case for 1,000,000+
-      if (amountParam === "1000000+") {
-        formattedAmount = "$1,000,000+";
+      // Handle special case for 100M+
+      if (amountParam === "100000000+") {
+        formattedAmount = "KSH 100M+";
       } else {
-        // Parse the number and format it properly
+        // Parse the number and format it properly with KSH
         const numAmount = parseInt(amountParam);
         if (!isNaN(numAmount)) {
-          formattedAmount = `$${numAmount.toLocaleString()}`;
+          if (numAmount >= 1000000) {
+            formattedAmount = `KSH ${(numAmount / 1000000).toFixed(numAmount % 1000000 === 0 ? 0 : 2)}M`;
+          } else {
+            formattedAmount = `KSH ${numAmount.toLocaleString()}`;
+          }
         }
       }
       
@@ -168,15 +172,15 @@ export default function InvestmentForm() {
           <div className="grid grid-cols-2 gap-4 text-base">
             <div>
               <span className="text-gray-500">Security Type:</span>
-              <span className="ml-2 font-medium">Equity + SAFE</span>
+              <span className="ml-2 font-medium">SAFE Notes (100 available at KSH 350,000 each)</span>
             </div>
             <div>
-              <span className="text-gray-500">Minimum Investment:</span>
-              <span className="ml-2 font-medium">$500</span>
+              <span className="text-gray-500">SAFE Note Price:</span>
+              <span className="ml-2 font-medium">KSH 350,000</span>
             </div>
             <div>
               <span className="text-gray-500">Funding Goal:</span>
-              <span className="ml-2 font-medium">$1.25M</span>
+              <span className="ml-2 font-medium">KSH 35M</span>
             </div>
             <div>
               <span className="text-gray-500">Days Remaining:</span>

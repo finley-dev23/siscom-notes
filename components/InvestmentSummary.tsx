@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import { Star, Share2, DollarSign } from "lucide-react";
 
 export default function InvestmentSummary() {
-  const raised = 420000;
-  const target = 1250000;
-  const percentage = 34; // 420K/1.25M = 33.6%
+  const raised = 12000000; // KSH 12M
+  const target = 35000000; // KSH 35M
+  const percentage = 34; // Keep at 34%
   
   // Set to show exactly 90 days remaining
   const [daysRemaining, setDaysRemaining] = useState(90);
@@ -32,11 +32,11 @@ export default function InvestmentSummary() {
       <div>
         <div className="flex items-baseline space-x-2 mb-1">
           <h2 className="text-5xl font-bold text-gray-900">
-            ${raised.toLocaleString()}
+            KSH {(raised / 1000000).toFixed(1)}M
           </h2>
         </div>
         <p className="text-base text-gray-500 mb-6">
-          {percentage}% raised of $1.25M target
+          {percentage}% raised of KSH 35M target
         </p>
       </div>
       
@@ -62,7 +62,7 @@ export default function InvestmentSummary() {
         </a>
         
         <p className="text-center text-base text-gray-500">
-          $500 minimum investment
+          KSH 350,000 per SAFE note
         </p>
       </div>
       

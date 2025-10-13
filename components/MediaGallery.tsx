@@ -8,11 +8,11 @@ export default function MediaGallery() {
   const [currentIndex, setCurrentIndex] = useState(0);
   
   const media = [
-    { type: "image", title: "Siscom Africa", src: "/assets/home-screen-imgs/siscom-landing-3.jpeg" },
-    { type: "image", title: "The Problem", src: "/assets/home-screen-imgs/siscom-landing-1.jpeg" },
-    { type: "image", title: "How we solve it", src: "/assets/home-screen-imgs/siscom-landing-2.jpeg" },
-    { type: "image", title: "Company Vision", src: "/assets/home-screen-imgs/siscom-landing-4.jpeg" },
-    { type: "image", title: "Summary", src: "/assets/home-screen-imgs/siscom-landing-5.jpeg" },
+    { type: "image", title: "Siscom Africa", src: "/assets/home-screen-imgs/capitalized-1.jpg" },
+    { type: "image", title: "The Problem", src: "/assets/home-screen-imgs/capitalized-2.jpg" },
+    { type: "image", title: "How we solve it", src: "/assets/home-screen-imgs/capitalized-3.jpg" },
+    { type: "image", title: "Company Vision", src: "/assets/home-screen-imgs/capitalized-4.jpg" },
+    { type: "image", title: "Summary", src: "/assets/home-screen-imgs/capitalized-5.jpg" },
   ];
   
   return (

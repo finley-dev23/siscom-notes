@@ -20,11 +20,17 @@ export default function Header() {
             
             {/* Navigation */}
             <nav className="hidden md:flex space-x-8">
-              <a href="#" className="text-gray-700 hover:text-gray-900 font-medium text-sm">
-                Investors
+              <a href="#problem" className="text-gray-700 hover:text-pink-500 font-medium text-sm transition">
+                Problem
               </a>
-              <a href="#" className="text-gray-700 hover:text-gray-900 font-medium text-sm">
-                Businesses
+              <a href="#solution" className="text-gray-700 hover:text-pink-500 font-medium text-sm transition">
+                Solution
+              </a>
+              <a href="#gtm" className="text-gray-700 hover:text-pink-500 font-medium text-sm transition">
+                GTM
+              </a>
+              <a href="#business-model" className="text-gray-700 hover:text-pink-500 font-medium text-sm transition">
+                Revenue
               </a>
             </nav>
           </div>

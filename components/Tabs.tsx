@@ -6,9 +6,7 @@ import DealTerms from "./DealTerms";
 import Documents from "./Documents";
 import BonusPerks from "./BonusPerks";
 import About from "./About";
-import Team from "./Team";
 import Press from "./Press";
-import Risks from "./Risks";
 
 export default function Tabs() {
   const [activeTab, setActiveTab] = useState("pitch");
@@ -118,9 +116,7 @@ export default function Tabs() {
             <Documents />
             <BonusPerks />
             <About />
-            <Team />
             <Press />
-            <Risks />
           </div>
         </div>
       </div>

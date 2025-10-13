@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ChevronRight, ExternalLink } from "lucide-react";
+import { ChevronRight, ExternalLink, Mail, Linkedin } from "lucide-react";
+import Image from "next/image";
 
 export default function PitchContent() {
   const [activeSection, setActiveSection] = useState("problem");
@@ -18,7 +19,6 @@ export default function PitchContent() {
     { id: "gtm", label: "Go-to-Market" },
     { id: "funding", label: "Funding" },
     { id: "risks", label: "Risks" },
-    { id: "impact", label: "Impact" },
   ];
   
   const scrollToSection = (id: string) => {
@@ -76,7 +76,7 @@ export default function PitchContent() {
             </li>
             <li className="flex items-start">
               <span className="mr-3">•</span>
-              <span><strong>AI drives demand for capital-intensive infra:</strong> Africa's AI market is forecast to reach ~US$16.5B by 2030, requiring GPUs, rackspace and local processing capacity.</span>
+              <span><strong>AI drives demand for capital-intensive infra:</strong> Africa's AI market is forecast to reach ~KSH 1.65T by 2030, requiring GPUs, rackspace and local processing capacity.</span>
             </li>
             <li className="flex items-start">
               <span className="mr-3">•</span>
@@ -84,7 +84,7 @@ export default function PitchContent() {
             </li>
             <li className="flex items-start">
               <span className="mr-3">•</span>
-              <span><strong>Diaspora capital is sizable & available:</strong> Kenya alone recorded &gt; $5.0B in 12-month remittance inflows — representing a large, under-deployed pool of capital.</span>
+              <span><strong>Diaspora capital is sizable & available:</strong> Kenya alone recorded &gt; KSH 500B in 12-month remittance inflows — representing a large, under-deployed pool of capital.</span>
             </li>
             <li className="flex items-start">
               <span className="mr-3">•</span>
@@ -253,7 +253,7 @@ export default function PitchContent() {
           <div className="space-y-6">
             <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6">
               <h4 className="font-semibold text-gray-900 mb-3">AI Market (Africa)</h4>
-              <p className="text-2xl font-bold text-purple-700 mb-2">$4.5B → $16.5B by 2030</p>
+              <p className="text-2xl font-bold text-purple-700 mb-2">KSH 450B → KSH 1.65T by 2030</p>
               <p className="text-base text-gray-700 mb-3">Driven by the explosion of AI model training, edge computing, and GPU demand, Africa's AI market is expected to grow more than 3x in five years.</p>
               <a href="https://www.mastercard.com" target="_blank" rel="noopener noreferrer" className="text-sm text-pink-500 hover:underline flex items-center mt-2">
                 Source: Mastercard, Statista <ExternalLink className="w-3 h-3 ml-1" />
@@ -270,7 +270,7 @@ export default function PitchContent() {
 
             <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-6">
               <h4 className="font-semibold text-gray-900 mb-3">Data Center Expansion</h4>
-              <p className="text-base text-gray-700 mb-3">The IFC and World Bank are investing hundreds of millions into regional data centers. For instance, IFC's $100M investment in Raxio reflects global confidence in Africa's digital infrastructure market.</p>
+              <p className="text-base text-gray-700 mb-3">The IFC and World Bank are investing hundreds of millions into regional data centers. For instance, IFC's KSH 10B investment in Raxio reflects global confidence in Africa's digital infrastructure market.</p>
               <a href="https://www.reuters.com" target="_blank" rel="noopener noreferrer" className="text-sm text-pink-500 hover:underline flex items-center mt-2">
                 Source: Reuters <ExternalLink className="w-3 h-3 ml-1" />
               </a>
@@ -278,8 +278,8 @@ export default function PitchContent() {
 
             <div className="bg-gradient-to-r from-orange-50 to-yellow-50 rounded-xl p-6">
               <h4 className="font-semibold text-gray-900 mb-3">Diaspora Remittances (Kenya)</h4>
-              <p className="text-2xl font-bold text-orange-700 mb-2">$5.0B+</p>
-              <p className="text-base text-gray-700 mb-3">in annual inflows (2025), with monthly peaks exceeding $400M. Siscom taps into this massive pool of underutilized diaspora capital, redirecting it into productive tech assets that power local growth.</p>
+              <p className="text-2xl font-bold text-orange-700 mb-2">KSH 500B+</p>
+              <p className="text-base text-gray-700 mb-3">in annual inflows (2025), with monthly peaks exceeding KSH 40B. Siscom taps into this massive pool of underutilized diaspora capital, redirecting it into productive tech assets that power local growth.</p>
               <a href="#" className="text-sm text-pink-500 hover:underline flex items-center mt-2">
                 Source: Central Bank of Kenya <ExternalLink className="w-3 h-3 ml-1" />
               </a>
@@ -293,12 +293,12 @@ export default function PitchContent() {
           <h3 className="text-3xl font-bold text-gray-900 mb-6">Multiple Revenue Streams</h3>
           
           <div className="bg-gray-50 rounded-xl p-8 mb-6">
-            <h4 className="text-lg font-bold text-gray-900 mb-4">Revenue Lines</h4>
+            <h4 className="text-lg font-bold text-gray-900 mb-4">Revenue Streams</h4>
             <ul className="space-y-3 text-gray-700">
-              <li><strong>Origination fees (one-time):</strong> charged to operators for raising capital via Siscom (2–4% typical)</li>
-              <li><strong>Platform servicing / management fees:</strong> annual fees on AUM (1–2% per annum) for asset servicing and monitoring</li>
-              <li><strong>Secondary market fees:</strong> per trade execution fees and spread capture on token trading</li>
-              <li><strong>Value-add services:</strong> data center operations advisory, power/energy optimization, and marketplace integrations</li>
+              <li><strong>Investment fee:</strong> Transaction fees charged on successful investments (2–4% of capital raised)</li>
+              <li><strong>Asset management fee:</strong> Annual management fees on Assets Under Management (1–2% per annum)</li>
+              <li><strong>SAAS products:</strong> Subscription-based software solutions for infrastructure operators and investors</li>
+              <li><strong>IAAS products & services:</strong> Infrastructure-as-a-Service offerings including compute, storage, and networking solutions</li>
             </ul>
           </div>
 
@@ -307,11 +307,11 @@ export default function PitchContent() {
             <div className="grid grid-cols-2 gap-4 text-sm">
               <div>
                 <p className="text-gray-600">CAPEX</p>
-                <p className="text-xl font-bold text-gray-900">$25M</p>
+                <p className="text-xl font-bold text-gray-900">KSH 2.5B</p>
               </div>
               <div>
                 <p className="text-gray-600">Annual Revenue</p>
-                <p className="text-xl font-bold text-gray-900">$6M/year</p>
+                <p className="text-xl font-bold text-gray-900">KSH 600M/year</p>
               </div>
               <div>
                 <p className="text-gray-600">Operating Margin</p>
@@ -328,26 +328,42 @@ export default function PitchContent() {
         {/* Traction */}
         <section id="traction" className="mb-12 scroll-mt-24">
           <h2 className="text-2xl font-semibold text-gray-500 mb-6">Traction & Pipeline</h2>
-          <h3 className="text-3xl font-bold text-gray-900 mb-6">Current Pipeline & Near-Term Projects</h3>
+          <h3 className="text-3xl font-bold text-gray-900 mb-6">Current Progress & Pipeline</h3>
           
-          <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-8 mb-8">
-            <h4 className="text-xl font-bold text-indigo-700 mb-6">Pipeline Highlights</h4>
-            <div className="space-y-4">
-              <div className="bg-white rounded-lg p-4">
-                <h5 className="font-semibold text-gray-900 mb-2">Cluster 1 (Q1–Q3 2025)</h5>
-                <p className="text-sm text-gray-700">HPC node pilot — demand $0.5M–$2M</p>
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            {/* Current Traction */}
+            <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-8">
+              <h4 className="text-xl font-bold text-green-700 mb-6">Current Traction</h4>
+              <div className="space-y-6">
+                <div className="bg-white rounded-lg p-6">
+                  <div className="text-3xl font-bold text-green-700 mb-2">KSH 12M</div>
+                  <div className="text-base text-gray-700">Total Amount Raised</div>
+                  <div className="text-sm text-gray-500 mt-1">From SAFE notes and early investor commitments</div>
+                </div>
+                <div className="bg-white rounded-lg p-6">
+                  <div className="text-3xl font-bold text-green-700 mb-2">73</div>
+                  <div className="text-base text-gray-700">Total Investors Onboarded</div>
+                  <div className="text-sm text-gray-500 mt-1">Diaspora, retail, and institutional investors</div>
+                </div>
               </div>
-              <div className="bg-white rounded-lg p-4">
-                <h5 className="font-semibold text-gray-900 mb-2">Cluster 2 (Q4 2025–Q3 2026)</h5>
-                <p className="text-sm text-gray-700">Hybrid compute + storage cluster — target $5M–$10M</p>
-              </div>
-              <div className="bg-white rounded-lg p-4">
-                <h5 className="font-semibold text-gray-900 mb-2">AI GPU Cluster</h5>
-                <p className="text-sm text-gray-700">Partnership talks with NVIDIA channel partners, Supermicro — target initial cluster $10M</p>
-              </div>
-              <div className="bg-white rounded-lg p-4">
-                <h5 className="font-semibold text-gray-900 mb-2">Modular DC Site (Naivasha SEZ)</h5>
-                <p className="text-sm text-gray-700">Campus with $100M funding goal (partnered design)</p>
+            </div>
+
+            {/* Pipeline Highlights */}
+            <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-8">
+              <h4 className="text-xl font-bold text-indigo-700 mb-6">Pipeline Highlights</h4>
+              <div className="space-y-4">
+                <div className="bg-white rounded-lg p-4">
+                  <h5 className="font-semibold text-gray-900 mb-2">Cluster 1 (Q1–Q3 2025)</h5>
+                  <p className="text-sm text-gray-700">HPC node pilot — demand KSH 50M–KSH 200M</p>
+                </div>
+                <div className="bg-white rounded-lg p-4">
+                  <h5 className="font-semibold text-gray-900 mb-2">AI GPU Cluster</h5>
+                  <p className="text-sm text-gray-700">Partnership talks with NVIDIA channel partners — target initial cluster KSH 1B</p>
+                </div>
+                <div className="bg-white rounded-lg p-4">
+                  <h5 className="font-semibold text-gray-900 mb-2">Modular DC Site</h5>
+                  <p className="text-sm text-gray-700">Naivasha SEZ campus with KSH 10B funding goal</p>
+                </div>
               </div>
             </div>
           </div>
@@ -358,14 +374,181 @@ export default function PitchContent() {
           <h2 className="text-2xl font-semibold text-gray-500 mb-6">Team</h2>
           <h3 className="text-3xl font-bold text-gray-900 mb-6">Experienced Leadership</h3>
           
-          <div className="space-y-6">
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Derrick Gakuu - Founder</h4>
-              <p className="text-base text-gray-700">Derrick is the founder of Siscom Africa, leading the vision to build the Technology Bank of Africa. He is driving the mission to democratize access to Africa's technology infrastructure economy and enable local participation in the continent's fastest-growing asset class.</p>
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Derrick Gakuu */}
+            <div className="bg-white rounded-xl p-8 border border-gray-200 shadow-sm">
+              <div className="flex flex-col items-center text-center">
+                {/* Portrait */}
+                <div className="relative w-32 h-32 mb-6 rounded-full overflow-hidden border-4 border-pink-500">
+                  <Image
+                    src="/assets/home-screen-imgs/derrick-gakuu.jpg"
+                    alt="Derrick Gakuu - Founder"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                
+                {/* Name and Title */}
+                <h4 className="text-2xl font-bold text-gray-900 mb-2">Derrick Gakuu</h4>
+                <p className="text-lg text-pink-500 font-semibold mb-4">Founder</p>
+                
+                {/* Bio */}
+                <p className="text-base text-gray-700 mb-6 leading-relaxed">
+                  Derrick is the founder of Siscom Africa, leading the vision to build the Technology Bank of Africa. He is driving the mission to democratize access to Africa's technology infrastructure economy and enable local participation in the continent's fastest-growing asset class.
+                </p>
+                
+                {/* Contact Details */}
+                <div className="flex space-x-4">
+                  <a 
+                    href="https://www.linkedin.com/in/derrick-gakuu-a2889137/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2 text-gray-600 hover:text-pink-500 transition-colors"
+                  >
+                    <Linkedin className="w-5 h-5" />
+                    <span className="text-sm">LinkedIn</span>
+                  </a>
+                  <a 
+                    href="mailto:derrick@siscom.tech"
+                    className="flex items-center space-x-2 text-gray-600 hover:text-pink-500 transition-colors"
+                  >
+                    <Mail className="w-5 h-5" />
+                    <span className="text-sm">Email</span>
+                  </a>
+                </div>
+              </div>
             </div>
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Nashon Garvey - Co-Founder</h4>
-              <p className="text-base text-gray-700">Expert in Digital Infrastructure & Fintech | Reality Architect. Nashon co-leads Siscom's vision to democratize access to Africa's technology infrastructure economy, connecting local and diaspora capital to high-return digital infrastructure projects.</p>
+
+            {/* Nashon Garvey */}
+            <div className="bg-white rounded-xl p-8 border border-gray-200 shadow-sm">
+              <div className="flex flex-col items-center text-center">
+                {/* Portrait */}
+                <div className="relative w-32 h-32 mb-6 rounded-full overflow-hidden border-4 border-pink-500">
+                  <Image
+                    src="/assets/home-screen-imgs/nashon-garvey.jpg"
+                    alt="Nashon Garvey - Co-Founder"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                
+                {/* Name and Title */}
+                <h4 className="text-2xl font-bold text-gray-900 mb-2">Nashon Garvey</h4>
+                <p className="text-lg text-pink-500 font-semibold mb-4">Co-Founder</p>
+                
+                {/* Bio */}
+                <p className="text-base text-gray-700 mb-6 leading-relaxed">
+                  Expert in Digital Infrastructure & Fintech | Reality Architect. Nashon co-leads Siscom's vision to democratize access to Africa's technology infrastructure economy, connecting local and diaspora capital to high-return digital infrastructure projects.
+                </p>
+                
+                {/* Contact Details */}
+                <div className="flex space-x-4">
+                  <a 
+                    href="https://www.linkedin.com/in/nashon-garvey-582b6b19b/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2 text-gray-600 hover:text-pink-500 transition-colors"
+                  >
+                    <Linkedin className="w-5 h-5" />
+                    <span className="text-sm">LinkedIn</span>
+                  </a>
+                  <a 
+                    href="mailto:garvey@siscom.tech"
+                    className="flex items-center space-x-2 text-gray-600 hover:text-pink-500 transition-colors"
+                  >
+                    <Mail className="w-5 h-5" />
+                    <span className="text-sm">Email</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Dorcas Kanini */}
+            <div className="bg-white rounded-xl p-8 border border-gray-200 shadow-sm">
+              <div className="flex flex-col items-center text-center">
+                {/* Portrait */}
+                <div className="relative w-32 h-32 mb-6 rounded-full overflow-hidden border-4 border-pink-500">
+                  <Image
+                    src="/assets/home-screen-imgs/dorcas-kanini.jpeg"
+                    alt="Dorcas Kanini"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                
+                {/* Name and Title */}
+                <h4 className="text-2xl font-bold text-gray-900 mb-2">Dorcas Kanini</h4>
+                <p className="text-lg text-pink-500 font-semibold mb-4">Digital Sales Lead</p>
+                
+                {/* Bio */}
+                <p className="text-base text-gray-700 mb-6 leading-relaxed">
+                  Dorcas brings valuable expertise to the Siscom team, contributing to our mission of democratizing access to Africa's technology infrastructure economy.
+                </p>
+                
+                {/* Contact Details */}
+                <div className="flex space-x-4">
+                  <a 
+                    href="https://www.linkedin.com/in/dorcas-kanini-b86485365?fromQR=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2 text-gray-600 hover:text-pink-500 transition-colors"
+                  >
+                    <Linkedin className="w-5 h-5" />
+                    <span className="text-sm">LinkedIn</span>
+                  </a>
+                  <a 
+                    href="mailto:dorcas@siscom.tech"
+                    className="flex items-center space-x-2 text-gray-600 hover:text-pink-500 transition-colors"
+                  >
+                    <Mail className="w-5 h-5" />
+                    <span className="text-sm">Email</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Ian Obiero */}
+            <div className="bg-white rounded-xl p-8 border border-gray-200 shadow-sm">
+              <div className="flex flex-col items-center text-center">
+                {/* Portrait */}
+                <div className="relative w-32 h-32 mb-6 rounded-full overflow-hidden border-4 border-pink-500">
+                  <Image
+                    src="/assets/home-screen-imgs/ian-obiero.jpg"
+                    alt="Ian Obiero"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                
+                {/* Name and Title */}
+                <h4 className="text-2xl font-bold text-gray-900 mb-2">Ian Obiero</h4>
+                <p className="text-lg text-pink-500 font-semibold mb-4">Digital Marketing Lead</p>
+                
+                {/* Bio */}
+                <p className="text-base text-gray-700 mb-6 leading-relaxed">
+                  Ian plays a key role in advancing Siscom's vision of building the Technology Bank of Africa and connecting capital to digital infrastructure opportunities.
+                </p>
+                
+                {/* Contact Details */}
+                <div className="flex space-x-4">
+                  <a 
+                    href="https://www.linkedin.com/in/ian-obiero-350440367/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2 text-gray-600 hover:text-pink-500 transition-colors"
+                  >
+                    <Linkedin className="w-5 h-5" />
+                    <span className="text-sm">LinkedIn</span>
+                  </a>
+                  <a 
+                    href="mailto:ian@siscom.tech"
+                    className="flex items-center space-x-2 text-gray-600 hover:text-pink-500 transition-colors"
+                  >
+                    <Mail className="w-5 h-5" />
+                    <span className="text-sm">Email</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -378,11 +561,11 @@ export default function PitchContent() {
           <div className="space-y-6">
             <div className="border-l-4 border-green-600 pl-6 py-4 bg-green-50">
               <h4 className="font-semibold text-gray-900 mb-2">Diaspora Channel (Quick Wins)</h4>
-              <p className="text-sm text-gray-700">Integrate with remittance rails and major wallets (M-Pesa, payment processors) to present low-ticket infrastructure investments ($500–$2,500) to diaspora customers.</p>
+              <p className="text-sm text-gray-700">Integrate with remittance rails and major wallets (M-Pesa, payment processors) to present low-ticket infrastructure investments (KSH 50,000–KSH 250,000) to diaspora customers.</p>
             </div>
             <div className="border-l-4 border-pink-500 pl-6 py-4 bg-pink-50">
               <h4 className="font-semibold text-gray-900 mb-2">Institutional Channel (Scale)</h4>
-              <p className="text-sm text-gray-700">Run dedicated institutional funds / managed accounts for pension funds and family offices with larger minimums ($250k+), emphasizing regulatory compliance and yield.</p>
+              <p className="text-sm text-gray-700">Run dedicated institutional funds / managed accounts for pension funds and family offices with larger minimums (KSH 25M+), emphasizing regulatory compliance and yield.</p>
             </div>
             <div className="border-l-4 border-purple-600 pl-6 py-4 bg-purple-50">
               <h4 className="font-semibold text-gray-900 mb-2">Operator Partnerships</h4>
@@ -404,15 +587,17 @@ export default function PitchContent() {
               </div>
               <div>
                 <p className="text-sm text-gray-600 mb-1">Target</p>
-                <p className="text-2xl font-bold text-gray-900">$1.25M</p>
+                <p className="text-2xl font-bold text-gray-900">KSH 35M</p>
+                <p className="text-sm text-gray-600 mt-1">100 SAFE notes</p>
               </div>
               <div>
                 <p className="text-sm text-gray-600 mb-1">Pre-money Valuation</p>
-                <p className="text-2xl font-bold text-gray-900">$10M</p>
+                <p className="text-2xl font-bold text-gray-900">KSH 1B</p>
               </div>
               <div>
                 <p className="text-sm text-gray-600 mb-1">Security</p>
-                <p className="text-2xl font-bold text-gray-900">Equity + SAFE</p>
+                <p className="text-2xl font-bold text-gray-900">SAFE Notes</p>
+                <p className="text-sm text-gray-600 mt-1">100 notes @ KSH 350K each</p>
               </div>
             </div>
 
@@ -461,65 +646,12 @@ export default function PitchContent() {
               <p className="text-base text-gray-700">Data protection, cloud licensing, and digital asset regulations vary across African jurisdictions and are still evolving. Siscom's marketplace and tokenization model will maintain pan-African regulatory compliance, but shifts in law or compliance costs may influence operations or returns.</p>
             </div>
             <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-5">
-              <h4 className="font-semibold text-gray-900 mb-2">Macroeconomic & FX Risk</h4>
-              <p className="text-base text-gray-700">Given exposure to multiple African markets, currency fluctuations, inflation, or sovereign credit risk may affect infrastructure operator revenues and investor payouts. Siscom actively mitigates this through multi-currency structuring and diversified hosting zones.</p>
-            </div>
-            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-5">
               <h4 className="font-semibold text-gray-900 mb-2">Market Adoption Risk</h4>
               <p className="text-base text-gray-700">Market performance depends on enterprise adoption of local compute and storage solutions. Should hyperscalers or anchor tenants delay local hosting or contract commitments, early-stage projects could experience slower-than-expected cashflow stabilization.</p>
-            </div>
-            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-5">
-              <h4 className="font-semibold text-gray-900 mb-2">Liquidity Risk</h4>
-              <p className="text-base text-gray-700">While Siscom introduces tokenized infrastructure units with scheduled buybacks and internal marketplace liquidity, the secondary market depth may be limited during early rollout phases, potentially reducing immediate exit options for investors.</p>
-            </div>
-            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-5">
-              <h4 className="font-semibold text-gray-900 mb-2">Technology Risk</h4>
-              <p className="text-base text-gray-700">The GPU and compute hardware ecosystem evolves rapidly. New architectures or supply disruptions may necessitate additional capital expenditure to remain competitive, which could impact short-term yields or lead to stranded assets over time.</p>
             </div>
           </div>
         </section>
         
-        {/* Impact */}
-        <section id="impact" className="mb-12 scroll-mt-24">
-          <h2 className="text-2xl font-semibold text-gray-500 mb-6">Impact & Policy Alignment</h2>
-          <h3 className="text-3xl font-bold text-gray-900 mb-6">Creating Lasting Impact</h3>
-          
-          <p className="text-base text-gray-700 mb-8">
-            Siscom is not just building infrastructure — we're shaping Africa's digital future by aligning growth with inclusion, sovereignty, and sustainability.
-          </p>
-          
-          <div className="space-y-6">
-            <div>
-              <h4 className="text-xl font-bold text-gray-900 mb-2">Economic Inclusion</h4>
-              <p className="text-base text-gray-700">
-                Siscom democratizes access to Africa's technology infrastructure economy by enabling diaspora, retail, and institutional investors to participate in high-return, real-economy assets — previously accessible only to global capital.
-              </p>
-            </div>
-            
-            <div>
-              <h4 className="text-xl font-bold text-gray-900 mb-2">Digital Sovereignty</h4>
-              <p className="text-base text-gray-700">
-                By financing local cloud, AI, and data-hosting infrastructure, Siscom directly supports national digital transformation and data sovereignty goals. This reduces reliance on foreign hyperscalers and ensures that African data remains under African governance.
-              </p>
-            </div>
-            
-            <div>
-              <h4 className="text-xl font-bold text-gray-900 mb-2">Sustainable Infrastructure</h4>
-              <p className="text-base text-gray-700">
-                Siscom's infrastructure projects are built for efficiency and sustainability, leveraging modular data center designs and renewable energy (especially Kenya's clean energy mix). This approach lowers operational costs (OPEX) while contributing to Africa's net-zero and green technology ambitions.
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-8 bg-gradient-to-r from-green-50 to-teal-50 rounded-xl p-8">
-            <h4 className="text-xl font-bold text-green-700 mb-4">Exit Paths</h4>
-            <ul className="space-y-2 text-sm text-gray-700">
-              <li>• <strong>IPO:</strong> Build to list as Africa's first Technology Bank / infra platform</li>
-              <li>• <strong>Strategic sale:</strong> Sell platform or assets to global private equity, infrastructure funds, or hyperscalers</li>
-              <li>• <strong>Portfolio monetization:</strong> Structured secondary market and corporate partnerships enable partial liquidity for early investors</li>
-            </ul>
-          </div>
-        </section>
         
       </div>
       

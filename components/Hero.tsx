@@ -4,14 +4,14 @@ import { useState } from "react";
 import { Star, Share2 } from "lucide-react";
 
 export default function Hero() {
-  const [activeTag, setActiveTag] = useState("CLOUD");
+  const [activeTag, setActiveTag] = useState("problem");
   
   const tags = [
-    "CLOUD",
-    "AI", 
-    "INFRASTRUCTURE FINANCE",
-    "TOKENIZATION",
-    "MARKETPLACE"
+    "problem",
+    "solution", 
+    "gtm",
+    "revenue",
+    "SAFE investment"
   ];
 
   const handleTagClick = (tag: string) => {
@@ -19,11 +19,11 @@ export default function Hero() {
     
     // Scroll to relevant section based on tag
     const sectionMap: { [key: string]: string } = {
-      "CLOUD": "solution",
-      "AI": "market", 
-      "INFRASTRUCTURE FINANCE": "business-model",
-      "TOKENIZATION": "solution",
-      "MARKETPLACE": "solution"
+      "problem": "problem",
+      "solution": "solution", 
+      "gtm": "gtm",
+      "revenue": "business-model",
+      "SAFE investment": "funding"
     };
     
     const targetSection = sectionMap[tag] || "solution";
@@ -72,7 +72,7 @@ export default function Hero() {
               activeTag === tag ? "highlighted" : ""
             } cursor-pointer transition-all duration-200 hover:scale-105`}
           >
-            {tag}
+            {tag.toUpperCase()}
           </button>
         ))}
       </div>

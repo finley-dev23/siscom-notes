@@ -3,7 +3,7 @@
 export default function BonusPerks() {
   const perks = [
     {
-      amount: "$1,000",
+      amount: "KSH 100,000",
       items: [
         "A Siscom Africa Branded Yeti",
         "Access to our private investor newsletter with early updates and behind-the-scenes stories",
@@ -11,15 +11,15 @@ export default function BonusPerks() {
       ]
     },
     {
-      amount: "$5,000",
+      amount: "KSH 500,000",
       items: [
-        "A limited-edition Siscom Africa hoodie",
         "An invitation to a small-group virtual roundtable with our team (bi-annual)",
+        "Exclusive data center tour invitation",
         "+ All perks from previous tier"
       ]
     },
     {
-      amount: "$10,000",
+      amount: "KSH 1M",
       items: [
         "A 30-minute 1:1 call with our founder - we'd love to get your ideas and input",
         "Recognition in our Annual investor report",
@@ -28,11 +28,11 @@ export default function BonusPerks() {
       ]
     },
     {
-      amount: "$25,000",
+      amount: "KSH 2.5M",
       items: [
         "You'll be invited to join our Advisory Board",
+        "One free access to a capitalized event (annual investor conference or exclusive networking event)",
         "Enjoy a lifetime 'Friends & Family' discount (e.g. no service or membership fees) on future Siscom Africa products or services",
-        "Receive a custom thank-you gift created by a Siscom Africa family",
         "+ All perks from previous tier"
       ]
     }

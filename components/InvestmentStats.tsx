@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 import { Info, FileText } from "lucide-react";
 
 export default function InvestmentStats() {
-  const raised = 16700;
-  const minGoal = 75000;
+  const raised = 1670000; // KSH 1.67M (converted from $16.7K at 1:100)
+  const minGoal = 7500000; // KSH 7.5M (converted from $75K at 1:100)
   const percentage = Math.round((raised / minGoal) * 100);
   
   // Set to show exactly 90 days remaining
@@ -24,12 +24,12 @@ export default function InvestmentStats() {
         <div className="mb-6">
           <div className="flex items-baseline space-x-2">
             <h2 className="text-4xl font-bold text-gray-900">
-              ${raised.toLocaleString()}
+              KSH {(raised / 1000000).toFixed(2)}M
             </h2>
             <Info className="w-4 h-4 text-gray-400 cursor-pointer" />
           </div>
           <p className="text-sm text-gray-600 mt-1">
-            {percentage}% raised of ${(minGoal / 1000).toFixed(0)}K min
+            {percentage}% raised of KSH {(minGoal / 1000000).toFixed(2)}M min
           </p>
           
           {/* Progress Bar */}
@@ -60,7 +60,7 @@ export default function InvestmentStats() {
         </button>
         
         <p className="text-center text-sm text-gray-600 mt-3">
-          $50 minimum investment
+          KSH 5,000 minimum investment
         </p>
         
         {/* Deal Terms */}
@@ -70,25 +70,25 @@ export default function InvestmentStats() {
             <div className="flex justify-between text-sm">
               <span className="text-gray-600">Valuation cap</span>
               <div className="text-right">
-                <div className="font-semibold text-gray-900">$20,000,000</div>
+                <div className="font-semibold text-gray-900">KSH 2B</div>
               </div>
             </div>
             <div className="flex justify-between text-sm">
               <span className="text-gray-600">Minimum investment</span>
               <div className="text-right">
-                <div className="font-semibold text-gray-900">$50</div>
+                <div className="font-semibold text-gray-900">KSH 5,000</div>
               </div>
             </div>
             <div className="flex justify-between text-sm">
               <span className="text-gray-600">Maximum investment</span>
               <div className="text-right">
-                <div className="font-semibold text-gray-900">$124,000</div>
+                <div className="font-semibold text-gray-900">KSH 12.4M</div>
               </div>
             </div>
             <div className="flex justify-between text-sm">
               <span className="text-gray-600">Funding goal</span>
               <div className="text-right">
-                <div className="font-semibold text-gray-900">$500K</div>
+                <div className="font-semibold text-gray-900">KSH 50M</div>
               </div>
             </div>
             <div className="flex justify-between text-sm">
@@ -147,7 +147,7 @@ export default function InvestmentStats() {
               <div className="flex justify-between items-start mb-2">
                 <span className="text-xs text-gray-600">Invest</span>
               </div>
-              <div className="text-2xl font-bold text-pink-500 mb-3">$1,000</div>
+              <div className="text-2xl font-bold text-pink-500 mb-3">KSH 100,000</div>
               <div className="text-xs text-gray-600 mb-2">Receive</div>
               <ul className="text-sm text-gray-700 space-y-1">
                 <li>• A June Care Branded Yeti</li>
@@ -161,7 +161,7 @@ export default function InvestmentStats() {
               <div className="flex justify-between items-start mb-2">
                 <span className="text-xs text-gray-600">Invest</span>
               </div>
-              <div className="text-2xl font-bold text-pink-500 mb-3">$5,000</div>
+              <div className="text-2xl font-bold text-pink-500 mb-3">KSH 500,000</div>
               <div className="text-xs text-gray-600 mb-2">Receive</div>
               <ul className="text-sm text-gray-700 space-y-1">
                 <li>• A limited-edition June Care hoodie</li>
@@ -174,7 +174,7 @@ export default function InvestmentStats() {
               <div className="flex justify-between items-start mb-2">
                 <span className="text-xs text-gray-600">Invest</span>
               </div>
-              <div className="text-2xl font-bold text-pink-500 mb-3">$25,000</div>
+              <div className="text-2xl font-bold text-pink-500 mb-3">KSH 2.5M</div>
               <div className="text-xs text-gray-600 mb-2">Receive</div>
               <ul className="text-sm text-gray-700 space-y-1">
                 <li>• You'll be invited to join our Advisory Board</li>

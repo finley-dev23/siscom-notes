@@ -17,36 +17,6 @@ export default function DealTerms() {
       <h2 className="text-2xl font-semibold text-gray-900">Deal terms</h2>
       
       <div className="space-y-6">
-        {/* Pre-Money Valuation */}
-        <div>
-          <div className="flex items-center space-x-2 mb-2">
-            <span className="text-base font-medium text-gray-700">Pre-money valuation</span>
-            <button className="text-gray-400 hover:text-gray-600">
-              <Info className="w-4 h-4" />
-            </button>
-          </div>
-          <p className="text-xl font-semibold text-gray-900">$10,000,000</p>
-          <p className="text-sm text-gray-500 mt-1">
-            The company's valuation before this funding round.
-            <a href="#" className="text-pink-500 hover:underline ml-1">Learn more</a>
-          </p>
-        </div>
-
-        {/* Minimum Investment */}
-        <div>
-          <div className="flex items-center space-x-2 mb-2">
-            <span className="text-base font-medium text-gray-700">Minimum investment</span>
-            <button className="text-gray-400 hover:text-gray-600">
-              <Info className="w-4 h-4" />
-            </button>
-          </div>
-          <p className="text-xl font-semibold text-gray-900">$500</p>
-          <p className="text-sm text-gray-500 mt-1">
-            The smallest investment amount that Siscom Africa is accepting.
-            <a href="#" className="text-pink-500 hover:underline ml-1">Learn more</a>
-          </p>
-        </div>
-
         {/* Round Type */}
         <div>
           <div className="flex items-center space-x-2 mb-2">
@@ -70,9 +40,9 @@ export default function DealTerms() {
               <Info className="w-4 h-4" />
             </button>
           </div>
-          <p className="text-xl font-semibold text-gray-900">$1.25M</p>
+          <p className="text-xl font-semibold text-gray-900">KSH 35M</p>
           <p className="text-sm text-gray-500 mt-1">
-            Target raise for Siscom Africa's Seed round to fund platform development, deal pipeline, and market expansion.
+            100 SAFE notes at KSH 350,000 each. Target raise for Siscom Africa's Seed round to fund platform development, deal pipeline, and market expansion.
             <a href="#" className="text-pink-500 hover:underline ml-1">Learn more</a>
           </p>
         </div>
@@ -100,9 +70,9 @@ export default function DealTerms() {
               <Info className="w-4 h-4" />
             </button>
           </div>
-          <p className="text-xl font-semibold text-gray-900">Equity + SAFE</p>
+          <p className="text-xl font-semibold text-gray-900">SAFE Notes</p>
           <p className="text-sm text-gray-500 mt-1">
-            Combination of equity and SAFE (Simple Agreement for Future Equity) for early participants.
+            Simple Agreement for Future Equity. 100 SAFE notes available at KSH 350,000 each.
             <a href="#" className="text-pink-500 hover:underline ml-1">Learn more</a>
           </p>
         </div>
