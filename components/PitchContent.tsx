@@ -9,16 +9,17 @@ export default function PitchContent() {
   const [showSidebar, setShowSidebar] = useState(false);
   
   const sections = [
+    // Starting from Problem — match in-page titles
     { id: "problem", label: "Problem" },
-    { id: "solution", label: "Solution" },
+    { id: "solution", label: "Siscom Cloud & Infrastructure Stack" },
     { id: "investment-rationale", label: "Why Invest" },
     { id: "market", label: "Market" },
     { id: "business-model", label: "Business Model" },
-    { id: "traction", label: "Traction & Pipeline" },
+    { id: "traction", label: "Traction — From Concept to Operating Cloud" },
+    { id: "roadmap", label: "Roadmap — Building Africa's Edge Cloud & AI Future" },
+    { id: "competitive-advantage", label: "Competitive Advantage" },
     { id: "team", label: "Team" },
-    { id: "gtm", label: "Go-to-Market" },
-    { id: "funding", label: "Funding" },
-    { id: "risks", label: "Risks" },
+    { id: "funding", label: "Funding & Terms" },
   ];
   
   const scrollToSection = (id: string) => {
@@ -68,27 +69,23 @@ export default function PitchContent() {
           <ul className="space-y-3 text-lg text-gray-700">
             <li className="flex items-start">
               <span className="mr-3">•</span>
-              <span><strong>First-mover:</strong> Building Africa's first dedicated Technology Bank + Investment Marketplace focused on financing cloud, GPU/AI compute, and data-center infrastructure.</span>
+              <span><strong>Kenya's Cloud Market on the Rise:</strong> 2025 market projected at ~$1.3B, CAGR 13.8%</span>
             </li>
             <li className="flex items-start">
               <span className="mr-3">•</span>
-              <span><strong>Large & growing addressable market:</strong> Africa's digital infrastructure and data-center buildout is accelerating — trillions of dollars of downstream economic opportunity and billions of dollars of immediate infra TAM.</span>
+              <span><strong>Digital Transformation Accelerates:</strong> Growth in finance, e-commerce, healthcare, and government services increases cloud demand</span>
             </li>
             <li className="flex items-start">
               <span className="mr-3">•</span>
-              <span><strong>AI drives demand for capital-intensive infra:</strong> Africa's AI market is forecast to reach ~KSH 1.65T by 2030, requiring GPUs, rackspace and local processing capacity.</span>
+              <span><strong>Policy Tailwinds & Data Sovereignty:</strong> Data localization laws create structural demand for secure, homegrown cloud services</span>
             </li>
             <li className="flex items-start">
               <span className="mr-3">•</span>
-              <span><strong>Cloud adoption is surging in Africa:</strong> McKinsey finds cloud adoption is accelerating across African enterprises and is unlocking large productivity gains.</span>
+              <span><strong>Limited Competition, High First-Mover Advantage:</strong> Few local providers; Siscom can establish leadership and set standards before global hyperscalers dominate</span>
             </li>
             <li className="flex items-start">
               <span className="mr-3">•</span>
-              <span><strong>Diaspora capital is sizable & available:</strong> Kenya alone recorded &gt; KSH 500B in 12-month remittance inflows — representing a large, under-deployed pool of capital.</span>
-            </li>
-            <li className="flex items-start">
-              <span className="mr-3">•</span>
-              <span><strong>Policy tailwinds:</strong> Data sovereignty and regulatory trends increase demand for local data hosting, creating structural demand for infrastructure we finance.</span>
+              <span><strong>Node Investment MOAT:</strong> Crowdfunding model allows rapid scaling, lean ops, affordable pricing, and fast-tracked leadership across Kenya & East Africa</span>
             </li>
           </ul>
         </section>
@@ -96,41 +93,74 @@ export default function PitchContent() {
         {/* Problem */}
         <section id="problem" className="mb-12 scroll-mt-24">
           <h2 className="text-3xl font-semibold text-gray-500 mb-6">Problem</h2>
-          <h3 className="text-4xl font-bold text-gray-900 mb-4">Capital allocation is skewed in Africa</h3>
+          <h3 className="text-4xl font-bold text-gray-900 mb-4">Africa's Digital Growth Constrained</h3>
           <p className="text-2xl text-gray-700 mb-6">Infrastructure underbuilt despite massive opportunity</p>
           
           <ul className="space-y-4 text-lg text-gray-700 mb-8">
             <li className="flex items-start">
               <span className="mr-3">•</span>
               <div>
-              <strong>Capital allocation is skewed:</strong> Over 70%+ of local savings flow into low-yield assets (real estate, government bonds) that underperform frontier tech infrastructure opportunities.
+              <strong>Global Cloud Dependence:</strong> Most data & workloads hosted offshore → latency, compliance risk, capital flight
               </div>
             </li>
             <li className="flex items-start">
               <span className="mr-3">•</span>
               <div>
-              <strong>Infrastructure is underbuilt:</strong> Africa has &lt;1% of global data-center capacity despite rapidly accelerating data usage and cloud demand. External capital currently funds most buildouts — but local investors are excluded from the returns.
+              <strong>Engineering & Deployment Complexity:</strong> Hyperscaler platforms too complex for SMEs
               </div>
             </li>
             <li className="flex items-start">
               <span className="mr-3">•</span>
               <div>
-              <strong>AI & cloud create new capital needs:</strong> GPUs, rackspace, and local compute are capital intensive (high upfront CAPEX), creating a funding gap that slows local deployments and increases reliance on foreign hyperscalers.
+              <strong>Rigid Pricing Models:</strong> AWS/Azure-style pricing misaligned with SME realities, currency volatility, seasonal workloads
               </div>
             </li>
             <li className="flex items-start">
               <span className="mr-3">•</span>
               <div>
-              <strong>Regulatory pressure increases local demand:</strong> Data protection/data localisation trends force enterprises to host locally, increasing the cost and urgency of onshore infrastructure.
+              <strong>Data Flight = Lost Intelligence:</strong> When data leaves Africa, value for AI, analytics, and research is lost
+              </div>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-3">•</span>
+              <div>
+              <strong>Infrastructure Inequality:</strong> Africa consumes digital infrastructure but owns little; profits & innovation externalized
               </div>
             </li>
           </ul>
+          
+          <div className="mt-8 bg-gray-50 rounded-lg p-6">
+            <h4 className="text-2xl font-bold text-gray-900 mb-4">Context: Cost Barriers for SMEs</h4>
+            <ul className="space-y-4 text-lg text-gray-700">
+              <li className="flex items-start">
+                <span className="mr-3">•</span>
+                <div>
+                <strong>Billing Currency Mismatch:</strong> OPEX billed in USD, revenue in KES; exchange rate volatility inflates bills
+                  <div className="mt-2 text-base text-gray-600 italic">
+                    Example: $42 cloud bill → KES 5,418; 20% KES depreciation → KES 6,510
+                  </div>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3">•</span>
+                <div>
+                <strong>Hidden Hyperscaler Add-Ons:</strong> Network egress, load balancers, managed services inflate OPEX
+                </div>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3">•</span>
+                <div>
+                <strong>Rigid Commitment Models:</strong> Yearly contracts don't match seasonal or irregular workloads → overpayment
+                </div>
+              </li>
+            </ul>
+          </div>
         </section>
         
         {/* Solution */}
         <section id="solution" className="mb-12 scroll-mt-24">
           <h2 className="text-3xl font-semibold text-gray-500 mb-6">Solution</h2>
-          <h3 className="text-4xl font-bold text-gray-900 mb-4">The Technology Bank of Africa</h3>
+          <h3 className="text-4xl font-bold text-gray-900 mb-4">Siscom Cloud & Infrastructure Stack</h3>
           
           <p className="text-lg text-gray-700 mb-4">
             Siscom is creating a regulated technology investment marketplace that channels local, diaspora, and institutional capital into Africa's high-capex, high-return technology infrastructure — from GPU clusters and HPC nodes to modular data centers and cloud service layers.
@@ -145,52 +175,93 @@ export default function PitchContent() {
             <h4 className="text-2xl font-bold text-blue-700 mb-6">The Siscom Product Stack</h4>
             <div className="space-y-6">
               <div>
-                <h5 className="text-lg font-semibold text-gray-900 mb-3">1) Marketplace & Platform</h5>
-                <p className="text-base text-gray-700 mb-3">A unified platform for investing in Africa's digital infrastructure:</p>
+                <h5 className="text-lg font-semibold text-gray-900 mb-3">Cloud & Compute Infrastructure</h5>
                 <ul className="text-base text-gray-700 space-y-2 ml-4">
-                  <li>• <strong>Investor onboarding & KYC/AML compliance</strong> — pan-African ready.</li>
-                  <li>• <strong>Investment product catalog</strong> — fractional ownership of cloud tokens, GPU pods, and modular data center capacity.</li>
-                  <li>• <strong>Liquidity layer</strong> — internal marketplace with scheduled buybacks for early liquidity and investor flexibility.</li>
+                  <li>• HPC nodes, AI GPU clusters (H100/A100), hybrid storage clusters</li>
+                  <li>• Scalable modular DCs, edge zones for regional connectivity</li>
                 </ul>
               </div>
               <div>
-                <h5 className="text-lg font-semibold text-gray-900 mb-3">2) Deal Origination & Underwriting</h5>
-                <p className="text-base text-gray-700 mb-3">Siscom partners with vetted infrastructure operators and handles the financial structuring to ensure safe, transparent, and sustainable returns:</p>
+                <h5 className="text-lg font-semibold text-gray-900 mb-3">Locally-Owned, Intelligent Cloud</h5>
                 <ul className="text-base text-gray-700 space-y-2 ml-4">
-                  <li>• <strong>Operator due diligence</strong> — onboarding and underwriting data center hosts, colocation partners, and GPU node operators.</li>
-                  <li>• <strong>Bespoke financial engineering</strong> — cashflow waterfalls, revenue-sharing models, and risk-managed structures.</li>
-                  <li>• <strong>Anchor contracts</strong> — take-or-pay agreements to stabilize early deployments and reduce investment risk.</li>
+                  <li>• Pan-African cloud designed for African workloads</li>
+                  <li>• Data residency compliant & secure</li>
+                  <li>• Affordable pricing for SMEs & enterprises</li>
+                </ul>
+              </div>
+              <div>
+                <h5 className="text-lg font-semibold text-gray-900 mb-3">Scalable Crowdfunding & Lean Model</h5>
+                <ul className="text-base text-gray-700 space-y-2 ml-4">
+                  <li>• Distributed compute nodes funded by retail, diaspora, and institutional channels</li>
+                  <li>• Rapid capacity expansion with lean operations, enabling market leadership</li>
+                </ul>
+              </div>
+              <div>
+                <h5 className="text-lg font-semibold text-gray-900 mb-3">Strategic Positioning</h5>
+                <ul className="text-base text-gray-700 space-y-2 ml-4">
+                  <li>• <strong>Kenya & Greater East Africa:</strong> Meet growing SME & enterprise cloud demand while ensuring data sovereignty</li>
+                  <li>• <strong>Scalable, Lean Model:</strong> Crowdfunding nodes enable rapid expansion and cost efficiency</li>
+                  <li>• <strong>Affordable Access:</strong> SMEs gain cloud & compute without prohibitive CAPEX</li>
+                  <li>• <strong>Market Leadership:</strong> Early mover advantage in HPC & regional cloud infrastructure</li>
                 </ul>
               </div>
             </div>
           </div>
           
           <div className="bg-gradient-to-r from-green-50 to-teal-50 rounded-xl p-6 mb-6">
-            <h4 className="text-xl font-bold text-green-700 mb-4">Asset Types (Phase Roadmap)</h4>
+            <h4 className="text-xl font-bold text-green-700 mb-4">Phased Expansion</h4>
             <div className="grid md:grid-cols-3 gap-4 text-base">
               <div>
                 <p className="text-lg font-semibold text-gray-900 mb-2">Phase 1 (2025):</p>
-                <p className="text-base text-gray-700">HPC nodes, AI GPU clusters (A100/H100 class), and hybrid cloud storage nodes.</p>
+                <p className="text-base text-gray-700">HPC nodes & AI clusters</p>
               </div>
               <div>
-                <p className="text-lg font-semibold text-gray-900 mb-2">Phase 2 (2026–2027):</p>
-                <p className="text-base text-gray-700">Modular data center campuses, Starlink/edge zones, and colocation infrastructure.</p>
+                <p className="text-lg font-semibold text-gray-900 mb-2">Phase 2 (2026–27):</p>
+                <p className="text-base text-gray-700">Modular DC campuses, colocation, edge zones</p>
               </div>
               <div>
                 <p className="text-lg font-semibold text-gray-900 mb-2">Phase 3 (2028+):</p>
-                <p className="text-base text-gray-700">Hyperscale-ready campuses, regional Points of Presence (PoPs), and high-yield digital infrastructure products.</p>
+                <p className="text-base text-gray-700">Hyperscale campuses & regional POP</p>
               </div>
             </div>
           </div>
           
           <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-xl p-6">
-            <h4 className="text-xl font-bold text-indigo-700 mb-4">Go-To-Market Strategy</h4>
-            <p className="text-base text-gray-700 mb-4">Siscom is designed for scale — with multi-channel access to capital and infrastructure:</p>
-            <ul className="text-base text-gray-700 space-y-3">
-              <li>• <strong>Diaspora Retail Channel:</strong> Strategic partnerships with remittance and fintech platforms like M-Pesa, Flutterwave, and WorldRemit, enabling simple access for Africans abroad to invest back home.</li>
-              <li>• <strong>Institutional Channel:</strong> Collaborations with pension funds, family offices, and local banks for large-scale, structured infrastructure investments.</li>
-              <li>• <strong>Operator Channel:</strong> Partnerships with data center developers, GPU suppliers, and cloud infrastructure builders to ensure technical readiness and deployment capacity.</li>
-            </ul>
+            <h4 className="text-xl font-bold text-indigo-700 mb-4">Go-To-Market — Cloud, Data & AI Focus</h4>
+            <div className="space-y-6">
+              <div>
+                <h5 className="text-lg font-semibold text-gray-900 mb-2">SME & Enterprise Channels</h5>
+                <ul className="text-base text-gray-700 space-y-2 ml-4">
+                  <li>• Affordable cloud subscriptions, hybrid storage, AI compute tailored to local business needs</li>
+                  <li>• Use-case driven adoption: agriculture, healthcare, fintech, creative industries, e-government</li>
+                  <li>• SaaS partnerships accelerate enterprise digital transformation</li>
+                </ul>
+              </div>
+              <div>
+                <h5 className="text-lg font-semibold text-gray-900 mb-2">Developer & Innovation Community</h5>
+                <ul className="text-base text-gray-700 space-y-2 ml-4">
+                  <li>• Incentivize developers & startups to build on Siscom cloud</li>
+                  <li>• Hackathons, grants, incubation programs for AI, analytics, and cloud-native solutions</li>
+                </ul>
+              </div>
+              <div>
+                <h5 className="text-lg font-semibold text-gray-900 mb-2">Strategic Infrastructure Partnerships</h5>
+                <ul className="text-base text-gray-700 space-y-2 ml-4">
+                  <li>• Modular DC builders, IX providers, GPU suppliers for rapid scaling</li>
+                  <li>• Co-located infrastructure ensures low-latency, compliant, cost-effective services</li>
+                </ul>
+              </div>
+              <div>
+                <h5 className="text-lg font-semibold text-gray-900 mb-2">Regional Use-Case Expansion</h5>
+                <ul className="text-base text-gray-700 space-y-2 ml-4">
+                  <li>• <strong>AgTech:</strong> AI-driven precision agriculture & supply chain solutions</li>
+                  <li>• <strong>HealthTech:</strong> EMR, telemedicine, AI diagnostics</li>
+                  <li>• <strong>FinTech:</strong> Payments, core banking, microfinance analytics</li>
+                  <li>• <strong>Creative / Media:</strong> Rendering, video, digital content pipelines</li>
+                  <li>• <strong>E-Government:</strong> Citizen data, analytics, service hosting</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </section>
         
@@ -246,44 +317,71 @@ export default function PitchContent() {
           <h2 className="text-3xl font-semibold text-gray-500 mb-6">Market</h2>
           <h3 className="text-4xl font-bold text-gray-900 mb-6">Market Opportunity</h3>
           
-          <p className="text-lg text-gray-700 mb-8">
-            The market is massive — and just getting started.
-          </p>
-          
-          <div className="space-y-6">
+          <div className="space-y-6 mb-8">
             <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6">
-              <h4 className="font-semibold text-gray-900 mb-3">AI Market (Africa)</h4>
-              <p className="text-2xl font-bold text-purple-700 mb-2">KSH 450B → KSH 1.65T by 2030</p>
-              <p className="text-base text-gray-700 mb-3">Driven by the explosion of AI model training, edge computing, and GPU demand, Africa's AI market is expected to grow more than 3x in five years.</p>
-              <a href="https://www.mastercard.com" target="_blank" rel="noopener noreferrer" className="text-sm text-pink-500 hover:underline flex items-center mt-2">
-                Source: Mastercard, Statista <ExternalLink className="w-3 h-3 ml-1" />
-              </a>
+              <h4 className="font-semibold text-gray-900 mb-3">SME/MSME Digitization</h4>
+              <ul className="text-base text-gray-700 space-y-2">
+                <li>• MSMEs = ~98% of Kenyan businesses, 30%+ GDP contribution</li>
+                <li>• Digitization spans payments, SaaS, cloud hosting, and sector-specific platforms (agriculture, health, retail)</li>
+              </ul>
             </div>
 
             <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-6">
-              <h4 className="font-semibold text-gray-900 mb-3">Cloud Adoption</h4>
-              <p className="text-base text-gray-700 mb-3">Cloud migration is accelerating across African enterprises, with local hosting creating new revenue and efficiency opportunities.</p>
-              <a href="https://www.mckinsey.com" target="_blank" rel="noopener noreferrer" className="text-sm text-pink-500 hover:underline flex items-center mt-2">
-                Source: McKinsey & Company <ExternalLink className="w-3 h-3 ml-1" />
-              </a>
+              <h4 className="font-semibold text-gray-900 mb-3">Cloud & Digital Transformation</h4>
+              <ul className="text-base text-gray-700 space-y-2">
+                <li>• Kenya cloud market: ~$959M (2024), growing rapidly</li>
+                <li>• Africa digital transformation market: ~$30B (2025), projected to double by 2030</li>
+              </ul>
             </div>
 
             <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-6">
-              <h4 className="font-semibold text-gray-900 mb-3">Data Center Expansion</h4>
-              <p className="text-base text-gray-700 mb-3">The IFC and World Bank are investing hundreds of millions into regional data centers. For instance, IFC's KSH 10B investment in Raxio reflects global confidence in Africa's digital infrastructure market.</p>
-              <a href="https://www.reuters.com" target="_blank" rel="noopener noreferrer" className="text-sm text-pink-500 hover:underline flex items-center mt-2">
-                Source: Reuters <ExternalLink className="w-3 h-3 ml-1" />
-              </a>
+              <h4 className="font-semibold text-gray-900 mb-3">AI & Advanced Compute</h4>
+              <p className="text-base text-gray-700">Multi-billion USD by mid-2020s; demand for local GPU/AI compute for language, ag analytics, health AI, fintech risk models</p>
             </div>
 
             <div className="bg-gradient-to-r from-orange-50 to-yellow-50 rounded-xl p-6">
-              <h4 className="font-semibold text-gray-900 mb-3">Diaspora Remittances (Kenya)</h4>
-              <p className="text-2xl font-bold text-orange-700 mb-2">KSH 500B+</p>
-              <p className="text-base text-gray-700 mb-3">in annual inflows (2025), with monthly peaks exceeding KSH 40B. Siscom taps into this massive pool of underutilized diaspora capital, redirecting it into productive tech assets that power local growth.</p>
-              <a href="#" className="text-sm text-pink-500 hover:underline flex items-center mt-2">
-                Source: Central Bank of Kenya <ExternalLink className="w-3 h-3 ml-1" />
-              </a>
+              <h4 className="font-semibold text-gray-900 mb-3">Government & Public Sector Modernization</h4>
+              <p className="text-base text-gray-700">Digitization & data residency laws increase demand for compliant hosting and cloud platforms</p>
             </div>
+          </div>
+          
+          <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-6">
+            <h4 className="text-xl font-bold text-indigo-700 mb-4">Why This Matters for Siscom:</h4>
+            <ul className="text-base text-gray-700 space-y-3">
+              <li>• <strong>Large addressable market:</strong> SMEs + public sector + AI workloads = multiple revenue streams</li>
+              <li>• <strong>Timing validated by hyperscaler investments and government programs</strong></li>
+              <li>• <strong>Moat:</strong> Local billing, sovereign hosting, SME-ready products, and crowdfunded ownership drive adoption & retention</li>
+            </ul>
+          </div>
+          
+          <div className="mt-8 rounded-xl overflow-hidden shadow-lg">
+            <Image
+              src="/assets/images/10.png"
+              alt="Market Opportunity Visualization"
+              width={1200}
+              height={600}
+              className="w-full h-auto"
+            />
+          </div>
+          
+          <div className="mt-6 rounded-xl overflow-hidden shadow-lg">
+            <Image
+              src="/assets/images/11.png"
+              alt="Market Insights"
+              width={1200}
+              height={600}
+              className="w-full h-auto"
+            />
+          </div>
+
+          <div className="mt-6 rounded-xl overflow-hidden shadow-lg">
+            <Image
+              src="/assets/images/12.png"
+              alt="Market Analysis"
+              width={1200}
+              height={600}
+              className="w-full h-auto"
+            />
           </div>
         </section>
         
@@ -327,44 +425,122 @@ export default function PitchContent() {
         
         {/* Traction */}
         <section id="traction" className="mb-12 scroll-mt-24">
-          <h2 className="text-2xl font-semibold text-gray-500 mb-6">Traction & Pipeline</h2>
-          <h3 className="text-3xl font-bold text-gray-900 mb-6">Current Progress & Pipeline</h3>
-          
+          <h2 className="text-2xl font-semibold text-gray-500 mb-6">Traction — From Concept to Operating Cloud</h2>
+          <h3 className="text-3xl font-bold text-gray-900 mb-6">Launched March 2025 — operational & revenue-aligned</h3>
           <div className="grid md:grid-cols-2 gap-8 mb-8">
-            {/* Current Traction */}
-            <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-8">
-              <h4 className="text-xl font-bold text-green-700 mb-6">Current Traction</h4>
-              <div className="space-y-6">
-                <div className="bg-white rounded-lg p-6">
-                  <div className="text-3xl font-bold text-green-700 mb-2">KSH 12M</div>
-                  <div className="text-base text-gray-700">Total Amount Raised</div>
-                  <div className="text-sm text-gray-500 mt-1">From SAFE notes and early investor commitments</div>
-                </div>
-                <div className="bg-white rounded-lg p-6">
-                  <div className="text-3xl font-bold text-green-700 mb-2">73</div>
-                  <div className="text-base text-gray-700">Total Investors Onboarded</div>
-                  <div className="text-sm text-gray-500 mt-1">Diaspora, retail, and institutional investors</div>
-                </div>
+            <div className="space-y-6">
+              <div className="bg-white rounded-lg p-6">
+                <div className="text-lg font-bold text-green-700 mb-1">10 Fully Funded Nodes</div>
+                <div className="text-base text-gray-700">$150k total investment, crowdfunded & deployed at IX Africa Tier 3 DC</div>
+              </div>
+              <div className="bg-white rounded-lg p-6">
+                <div className="text-lg font-bold text-green-700 mb-1">3 Active Nodes</div>
+                <div className="text-base text-gray-700">Powering live workloads in East Africa</div>
+              </div>
+              <div className="bg-white rounded-lg p-6">
+                <div className="text-lg font-bold text-green-700 mb-1">2 Active Customers</div>
+                <div className="text-base text-gray-700">IaaS & PaaS global developer platform running POP on Siscom</div>
               </div>
             </div>
-
-            {/* Pipeline Highlights */}
-            <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-8">
-              <h4 className="text-xl font-bold text-indigo-700 mb-6">Pipeline Highlights</h4>
-              <div className="space-y-4">
-                <div className="bg-white rounded-lg p-4">
-                  <h5 className="font-semibold text-gray-900 mb-2">Cluster 1 (Q1–Q3 2025)</h5>
-                  <p className="text-sm text-gray-700">HPC node pilot — demand KSH 50M–KSH 200M</p>
-                </div>
-                <div className="bg-white rounded-lg p-4">
-                  <h5 className="font-semibold text-gray-900 mb-2">AI GPU Cluster</h5>
-                  <p className="text-sm text-gray-700">Partnership talks with NVIDIA channel partners — target initial cluster KSH 1B</p>
-                </div>
-                <div className="bg-white rounded-lg p-4">
-                  <h5 className="font-semibold text-gray-900 mb-2">Modular DC Site</h5>
-                  <p className="text-sm text-gray-700">Naivasha SEZ campus with KSH 10B funding goal</p>
-                </div>
+            <div className="space-y-6">
+              <div className="bg-white rounded-lg p-6">
+                <div className="text-lg font-bold text-green-700 mb-1">$344k Committed Demand</div>
+                <div className="text-base text-gray-700">5 enterprise clients signed (2025–2030)</div>
               </div>
+              <div className="bg-white rounded-lg p-6">
+                <div className="text-lg font-bold text-green-700 mb-1">Developer Ecosystem</div>
+                <div className="text-base text-gray-700">500+ active Kenyan developers building on Siscom</div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-8 rounded-xl overflow-hidden shadow-lg">
+            <Image
+              src="/assets/images/14.png"
+              alt="Traction Metrics"
+              width={1200}
+              height={600}
+              className="w-full h-auto"
+            />
+          </div>
+        </section>
+        
+        {/* Roadmap */}
+        <section id="roadmap" className="mb-16 scroll-mt-24">
+          <h2 className="text-3xl font-bold text-pink-600 mb-8 text-center">Roadmap — Building Africa's Edge Cloud & AI Future</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* 2025 */}
+            <div className="bg-gradient-to-br from-pink-50 to-purple-100 rounded-xl shadow-md p-6 border-l-4 border-pink-500">
+              <h3 className="text-xl font-bold text-pink-700 mb-4">2025 — Foundation & Market Validation</h3>
+              <ul className="list-disc ml-5 text-sm text-gray-700 space-y-2">
+                <li>Launch Siscom Cloud Grid, 10 funded nodes</li>
+                <li>Strategic partnerships with academia, cooperatives, counties & banks</li>
+                <li>Operational traction: 3 live nodes, 2 enterprise customers</li>
+              </ul>
+            </div>
+            
+            {/* 2026 */}
+            <div className="bg-gradient-to-br from-purple-50 to-blue-100 rounded-xl shadow-md p-6 border-l-4 border-purple-500">
+              <h3 className="text-xl font-bold text-purple-700 mb-4">2026 — Growth & Intelligence Layer</h3>
+              <ul className="list-disc ml-5 text-sm text-gray-700 space-y-2">
+                <li>Deploy AI GPU nodes (EdgeAI grid)</li>
+                <li>Host locally trained SaaS LLMs with MindIntelligence</li>
+                <li>Capture 30% of developer market via credits & community events</li>
+                <li>Commercialize AI workloads & GPU compute for enterprises</li>
+              </ul>
+            </div>
+            
+            {/* 2027 */}
+            <div className="bg-gradient-to-br from-blue-50 to-green-100 rounded-xl shadow-md p-6 border-l-4 border-blue-500">
+              <h3 className="text-xl font-bold text-blue-700 mb-4">2027 — Scale & Integration</h3>
+              <ul className="list-disc ml-5 text-sm text-gray-700 space-y-2">
+                <li>Enter modular DC segment (Navon partnership)</li>
+                <li>Deliver first vertically integrated AI + GPU turnkey infrastructure</li>
+                <li>Expand edge nodes across Kenya</li>
+                <li>Launch regional developer acceleration hubs</li>
+              </ul>
+            </div>
+            
+            {/* 2028 */}
+            <div className="bg-gradient-to-br from-green-50 to-yellow-100 rounded-xl shadow-md p-6 border-l-4 border-green-500">
+              <h3 className="text-xl font-bold text-green-700 mb-4">2028 — Market Leadership & Regional Expansion</h3>
+              <ul className="list-disc ml-5 text-sm text-gray-700 space-y-2">
+                <li>Capture 10% of Kenya's $1B Edge Cloud market ($3B TAM by 2028)</li>
+                <li>Lead East Africa's Edge AI ecosystem</li>
+                <li>Expand into Uganda, Tanzania, Rwanda</li>
+                <li>Position for Series A & strategic hyperscale partnerships</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        
+        {/* Competitive Advantage */}
+        <section id="competitive-advantage" className="mb-16 scroll-mt-24">
+          <h2 className="text-3xl font-bold text-indigo-600 mb-8 text-center">Competitive Advantage</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl shadow-md p-6 border-l-4 border-blue-500">
+              <h3 className="text-lg font-bold text-blue-700 mb-3">Built for Kenya's Scale & Use Cases</h3>
+              <p className="text-sm text-gray-700">SMEs, startups, developers, counties; solving local challenges in ag, health, fintech, e-government</p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-green-50 to-teal-100 rounded-xl shadow-md p-6 border-l-4 border-green-500">
+              <h3 className="text-lg font-bold text-green-700 mb-3">Affordable, Locally Funded Infrastructure</h3>
+              <p className="text-sm text-gray-700">Crowdfunded nodes, lean OPEX, KES-based pricing; eliminates USD risk</p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-purple-50 to-pink-100 rounded-xl shadow-md p-6 border-l-4 border-purple-500">
+              <h3 className="text-lg font-bold text-purple-700 mb-3">Edge Intelligence & AI Readiness</h3>
+              <p className="text-sm text-gray-700">Local GPU infrastructure, supporting locally hosted LLMs</p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-orange-50 to-yellow-100 rounded-xl shadow-md p-6 border-l-4 border-orange-500">
+              <h3 className="text-lg font-bold text-orange-700 mb-3">Data Sovereignty & Neutrality</h3>
+              <p className="text-sm text-gray-700">Hosted in Kenyan Tier 3 DCs, carrier & DC neutral</p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-pink-50 to-rose-100 rounded-xl shadow-md p-6 border-l-4 border-pink-500 md:col-span-2">
+              <h3 className="text-lg font-bold text-pink-700 mb-3">Community-Owned, Developer-First Cloud</h3>
+              <p className="text-sm text-gray-700">Backed by local investors, 500+ developers, academia, cooperatives</p>
             </div>
           </div>
         </section>
@@ -554,101 +730,64 @@ export default function PitchContent() {
         </section>
         
         {/* Go-to-Market */}
-        <section id="gtm" className="mb-12 scroll-mt-24">
-          <h2 className="text-2xl font-semibold text-gray-500 mb-6">Go-to-Market</h2>
-          <h3 className="text-3xl font-bold text-gray-900 mb-6">Multi-Channel Strategy</h3>
-          
-          <div className="space-y-6">
-            <div className="border-l-4 border-green-600 pl-6 py-4 bg-green-50">
-              <h4 className="font-semibold text-gray-900 mb-2">Diaspora Channel (Quick Wins)</h4>
-              <p className="text-sm text-gray-700">Integrate with remittance rails and major wallets (M-Pesa, payment processors) to present low-ticket infrastructure investments (KSH 50,000–KSH 250,000) to diaspora customers.</p>
-            </div>
-            <div className="border-l-4 border-pink-500 pl-6 py-4 bg-pink-50">
-              <h4 className="font-semibold text-gray-900 mb-2">Institutional Channel (Scale)</h4>
-              <p className="text-sm text-gray-700">Run dedicated institutional funds / managed accounts for pension funds and family offices with larger minimums (KSH 25M+), emphasizing regulatory compliance and yield.</p>
-            </div>
-            <div className="border-l-4 border-purple-600 pl-6 py-4 bg-purple-50">
-              <h4 className="font-semibold text-gray-900 mb-2">Operator Partnerships</h4>
-              <p className="text-sm text-gray-700">Secure long-term colocation and take-or-pay contracts with anchor tenants (hyperscalers, telcos, large enterprise customers) to reduce revenue volatility.</p>
-            </div>
-          </div>
-        </section>
+        
         
         {/* Funding */}
         <section id="funding" className="mb-12 scroll-mt-24">
-          <h2 className="text-2xl font-semibold text-gray-500 mb-6">Funding</h2>
-          <h3 className="text-3xl font-bold text-gray-900 mb-6">Use of Proceeds</h3>
+          <h2 className="text-2xl font-semibold text-gray-500 mb-6">Funding & Terms</h2>
+          <h3 className="text-3xl font-bold text-gray-900 mb-6">Raise: $270k / Ksh 35M Seed</h3>
           
           <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8">
             <div className="grid grid-cols-2 gap-6 mb-8">
               <div>
-                <p className="text-sm text-gray-600 mb-1">Round Type</p>
-                <p className="text-2xl font-bold text-gray-900">Seed</p>
+                <p className="text-sm text-gray-600 mb-1">Valuation</p>
+                <p className="text-2xl font-bold text-gray-900">Pre-money (example)</p>
               </div>
               <div>
-                <p className="text-sm text-gray-600 mb-1">Target</p>
-                <p className="text-2xl font-bold text-gray-900">KSH 35M</p>
-                <p className="text-sm text-gray-600 mt-1">100 SAFE notes</p>
+                <p className="text-sm text-gray-600 mb-1">Structure</p>
+                <p className="text-2xl font-bold text-gray-900">Equity + potential SAFE</p>
+                <p className="text-sm text-gray-600 mt-1">For early participants</p>
               </div>
               <div>
-                <p className="text-sm text-gray-600 mb-1">Pre-money Valuation</p>
-                <p className="text-2xl font-bold text-gray-900">KSH 1B</p>
+                <p className="text-sm text-gray-600 mb-1">Issue</p>
+                <p className="text-2xl font-bold text-gray-900">100 SAFE Notes</p>
+                <p className="text-sm text-gray-600 mt-1">@ Ksh 350k each</p>
               </div>
               <div>
-                <p className="text-sm text-gray-600 mb-1">Security</p>
-                <p className="text-2xl font-bold text-gray-900">SAFE Notes</p>
-                <p className="text-sm text-gray-600 mt-1">100 notes @ KSH 350K each</p>
+                <p className="text-sm text-gray-600 mb-1">Equity Raise</p>
+                <p className="text-2xl font-bold text-gray-900">Ksh 35M for 10%</p>
               </div>
             </div>
 
-            <h4 className="text-lg font-bold text-gray-900 mb-4">Planned Use of Funds (24-month runway)</h4>
+            <h4 className="text-lg font-bold text-gray-900 mb-4">Use of Funds (12-month runway to 2026):</h4>
             <div className="space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-700">Platform & product engineering</span>
-                <span className="text-sm font-semibold text-gray-900">30%</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-700">Operator & deal pipeline development</span>
-                <span className="text-sm font-semibold text-gray-900">25%</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-700">Marketing & investor acquisition</span>
+                <span className="text-sm text-gray-700">Platform Build & Product Development: (nodes, PaaS, billing platform)</span>
                 <span className="text-sm font-semibold text-gray-900">20%</span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-700">Regulatory, licensing & compliance</span>
+                <span className="text-sm text-gray-700">Developer Community & Operator Partnerships</span>
                 <span className="text-sm font-semibold text-gray-900">15%</span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-700">Key hires</span>
-                <span className="text-sm font-semibold text-gray-900">10%</span>
+                <span className="text-sm text-gray-700">Marketing & Customer Acquisition</span>
+                <span className="text-sm font-semibold text-gray-900">20%</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-700">Team Expansion (Tech + Business Dev)</span>
+                <span className="text-sm font-semibold text-gray-900">40%</span>
               </div>
             </div>
           </div>
-        </section>
-        
-        {/* Risks */}
-        <section id="risks" className="mb-12 scroll-mt-24">
-          <h2 className="text-2xl font-semibold text-gray-500 mb-6">Risks</h2>
-          <h3 className="text-3xl font-bold text-gray-900 mb-6">Investment Risks</h3>
           
-          <p className="text-base text-gray-700 mb-6">
-            At Siscom, we believe in transparency and responsible innovation. While the opportunities across Africa's digital infrastructure landscape are substantial, investors should be aware of the following potential risks associated with this emerging asset class:
-          </p>
-          
-          <div className="space-y-4">
-            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-5">
-              <h4 className="font-semibold text-gray-900 mb-2">Execution Risk</h4>
-              <p className="text-base text-gray-700">Developing, financing, and operationalizing data centers, GPU clusters, and hybrid cloud nodes requires significant capital and precision. Delays in procurement, deployment, or partner execution could temporarily impact projected timelines and returns.</p>
-            </div>
-            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-5">
-              <h4 className="font-semibold text-gray-900 mb-2">Regulatory Risk</h4>
-              <p className="text-base text-gray-700">Data protection, cloud licensing, and digital asset regulations vary across African jurisdictions and are still evolving. Siscom's marketplace and tokenization model will maintain pan-African regulatory compliance, but shifts in law or compliance costs may influence operations or returns.</p>
-            </div>
-            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-5">
-              <h4 className="font-semibold text-gray-900 mb-2">Market Adoption Risk</h4>
-              <p className="text-base text-gray-700">Market performance depends on enterprise adoption of local compute and storage solutions. Should hyperscalers or anchor tenants delay local hosting or contract commitments, early-stage projects could experience slower-than-expected cashflow stabilization.</p>
-            </div>
+          <div className="mt-8 rounded-xl overflow-hidden shadow-lg">
+            <Image
+              src="/assets/images/19.png"
+              alt="Funding Breakdown"
+              width={1200}
+              height={600}
+              className="w-full h-auto"
+            />
           </div>
         </section>
         

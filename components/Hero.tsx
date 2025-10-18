@@ -45,7 +45,7 @@ export default function Hero() {
                 Siscom Africa — Powering #FutureAfrica
               </h1>
               <p className="text-gray-600 text-lg leading-relaxed">
-                Building Africa's first dedicated Technology Bank + Investment Marketplace focused on financing cloud, GPU/AI compute, and data-center infrastructure.
+                Building Africa's intelligent Cloud, Data, and AI infrastructure to empower Kenya's SMEs to innovate, scale, and thrive in a digital-first global economy.
               </p>
             </div>
             

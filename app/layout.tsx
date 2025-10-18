@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Siscom Africa - Powering #FutureAfrica",
-  description: "Building Africa's first dedicated Technology Bank + Investment Marketplace focused on financing cloud, GPU/AI compute, and data-center infrastructure.",
+  title: "SISCOM - Cloud & AI Infrastructure Investment",
+  description: "Building Africa's intelligent Cloud, Data, and AI infrastructure to empower Kenya's SMEs to innovate, scale, and thrive in a digital-first global economy.",
   icons: {
     icon: '/assets/images/siscom-image.png',
     apple: '/assets/images/siscom-image.png',

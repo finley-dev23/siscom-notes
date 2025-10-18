@@ -162,7 +162,7 @@ export default function InvestmentForm() {
             Invest in Siscom Africa
           </h1>
           <p className="text-lg text-gray-600">
-            Join us in building Africa's first dedicated Technology Bank + Investment Marketplace
+            Join us in building Africa's intelligent Cloud, Data, and AI infrastructure to empower Kenya's SMEs to innovate, scale, and thrive in a digital-first global economy
           </p>
         </div>
 

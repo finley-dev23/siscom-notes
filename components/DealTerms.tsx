@@ -28,7 +28,6 @@ export default function DealTerms() {
           <p className="text-xl font-semibold text-gray-900">Seed</p>
           <p className="text-sm text-gray-500 mt-1">
             Early-stage funding round to support product development and market expansion.
-            <a href="#" className="text-pink-500 hover:underline ml-1">Learn more</a>
           </p>
         </div>
 
@@ -43,7 +42,6 @@ export default function DealTerms() {
           <p className="text-xl font-semibold text-gray-900">KSH 35M</p>
           <p className="text-sm text-gray-500 mt-1">
             100 SAFE notes at KSH 350,000 each. Target raise for Siscom Africa's Seed round to fund platform development, deal pipeline, and market expansion.
-            <a href="#" className="text-pink-500 hover:underline ml-1">Learn more</a>
           </p>
         </div>
 
@@ -58,7 +56,6 @@ export default function DealTerms() {
           <p className="text-xl font-semibold text-gray-900">{daysRemaining} days remaining</p>
           <p className="text-sm text-gray-500 mt-1">
             Siscom Africa is raising funds on a rolling basis. Deadline subject to extension.
-            <a href="#" className="text-pink-500 hover:underline ml-1">Learn more</a>
           </p>
         </div>
 
@@ -73,17 +70,11 @@ export default function DealTerms() {
           <p className="text-xl font-semibold text-gray-900">SAFE Notes</p>
           <p className="text-sm text-gray-500 mt-1">
             Simple Agreement for Future Equity. 100 SAFE notes available at KSH 350,000 each.
-            <a href="#" className="text-pink-500 hover:underline ml-1">Learn more</a>
           </p>
         </div>
       </div>
       
-      {/* How it works link */}
-      <div className="pt-4 border-t border-gray-200">
-        <a href="#" className="text-base text-pink-500 hover:underline">
-          How it works
-        </a>
-      </div>
+      
     </div>
   );
 }
