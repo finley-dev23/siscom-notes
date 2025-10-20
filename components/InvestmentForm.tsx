@@ -168,7 +168,7 @@ export default function InvestmentForm() {
           </button>
           
           <h1 className="text-4xl font-bold text-gray-900 mb-2">
-            Invest in Siscom Africa
+            Book a Call
           </h1>
           <p className="text-lg text-gray-600">
             Join us in building Africa's intelligent Cloud, Data, and AI infrastructure to empower Kenya's SMEs to innovate, scale, and thrive in a digital-first global economy

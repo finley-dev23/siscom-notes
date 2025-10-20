@@ -50,7 +50,7 @@ export default function InvestmentSummary() {
           href="/invest"
           className="block w-full bg-pink-500 hover:bg-pink-600 text-white py-3 px-6 rounded-lg text-lg font-semibold transition-colors duration-200 text-center"
         >
-          Invest in Siscom Africa
+          Book a Call
         </a>
         
         <p className="text-center text-base text-gray-500">
