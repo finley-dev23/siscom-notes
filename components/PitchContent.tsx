@@ -726,6 +726,117 @@ export default function PitchContent() {
                 </div>
               </div>
             </div>
+
+            {/* Riyaz Bachani */}
+            <div className="bg-white rounded-xl p-8 border border-gray-200 shadow-sm">
+              <div className="flex flex-col items-center text-center">
+                {/* Portrait */}
+                <div className="relative w-32 h-32 mb-6 rounded-full overflow-hidden border-4 border-pink-500">
+                  <Image
+                    src="/assets/images/riyaz-bachani.jpeg"
+                    alt="Riyaz Bachani"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                
+                {/* Name and Title */}
+                <h4 className="text-2xl font-bold text-gray-900 mb-2">Riyaz Bachani</h4>
+                <p className="text-lg text-pink-500 font-semibold mb-4">Advisor</p>
+                
+                {/* Bio */}
+                <p className="text-base text-gray-700 mb-6 leading-relaxed">
+                  Riyaz brings strategic expertise and valuable insights to help guide Siscom's growth and expansion across Africa's technology infrastructure landscape.
+                </p>
+                
+                {/* Contact Details */}
+                <div className="flex space-x-4">
+                  <a 
+                    href="https://www.linkedin.com/in/riyaz-bachani/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2 text-gray-600 hover:text-pink-500 transition-colors"
+                  >
+                    <Linkedin className="w-5 h-5" />
+                    <span className="text-sm">LinkedIn</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Alfred Ongere */}
+            <div className="bg-white rounded-xl p-8 border border-gray-200 shadow-sm">
+              <div className="flex flex-col items-center text-center">
+                {/* Portrait */}
+                <div className="relative w-32 h-32 mb-6 rounded-full overflow-hidden border-4 border-pink-500">
+                  <Image
+                    src="/assets/images/alfred-ongere.png"
+                    alt="Alfred Ongere"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                
+                {/* Name and Title */}
+                <h4 className="text-2xl font-bold text-gray-900 mb-2">Alfred Ongere</h4>
+                <p className="text-lg text-pink-500 font-semibold mb-4">Advisor</p>
+                
+                {/* Bio */}
+                <p className="text-base text-gray-700 mb-6 leading-relaxed">
+                  Alfred provides strategic guidance and industry expertise to support Siscom's mission of democratizing access to Africa's technology infrastructure economy.
+                </p>
+                
+                {/* Contact Details */}
+                <div className="flex space-x-4">
+                  <a 
+                    href="https://www.linkedin.com/in/alfred-ongere-2963b873/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2 text-gray-600 hover:text-pink-500 transition-colors"
+                  >
+                    <Linkedin className="w-5 h-5" />
+                    <span className="text-sm">LinkedIn</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Eric Ruenji */}
+            <div className="bg-white rounded-xl p-8 border border-gray-200 shadow-sm">
+              <div className="flex flex-col items-center text-center">
+                {/* Portrait */}
+                <div className="relative w-32 h-32 mb-6 rounded-full overflow-hidden border-4 border-pink-500">
+                  <Image
+                    src="/assets/images/eric-ruenji.jpeg"
+                    alt="Eric Ruenji"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                
+                {/* Name and Title */}
+                <h4 className="text-2xl font-bold text-gray-900 mb-2">Eric Ruenji</h4>
+                <p className="text-lg text-pink-500 font-semibold mb-4">Advisor</p>
+                
+                {/* Bio */}
+                <p className="text-base text-gray-700 mb-6 leading-relaxed">
+                  Eric contributes valuable expertise and strategic insights to help Siscom achieve its vision of building Africa's intelligent Cloud, Data, and AI infrastructure.
+                </p>
+                
+                {/* Contact Details */}
+                <div className="flex space-x-4">
+                  <a 
+                    href="https://www.linkedin.com/in/ericruenji/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2 text-gray-600 hover:text-pink-500 transition-colors"
+                  >
+                    <Linkedin className="w-5 h-5" />
+                    <span className="text-sm">LinkedIn</span>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
         
