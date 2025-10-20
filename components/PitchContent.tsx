@@ -266,43 +266,39 @@ export default function PitchContent() {
           <h2 className="text-3xl font-semibold text-gray-500 mb-6">Why Invest</h2>
           <h3 className="text-4xl font-bold text-gray-900 mb-6">Investment Rationale</h3>
           
-          <p className="text-lg text-gray-700 mb-8">
-            Siscom offers investors a gateway into Africa's most strategic and fast-growing asset class — digital infrastructure. By connecting capital directly to cloud, AI, and data infrastructure projects, Siscom enables investors to earn sustainable returns while fueling the continent's digital transformation.
-          </p>
-          
           <div className="space-y-6">
             <div>
-              <h4 className="text-xl font-bold text-gray-900 mb-2">Asymmetric Upside:</h4>
+              <h4 className="text-xl font-bold text-gray-900 mb-3">1. Tackling Africa's Cloud Cost Crisis</h4>
               <p className="text-lg text-gray-700">
-                Siscom opens up access to high-yield, high-growth assets — such as GPU clusters and modular data centers — offering stronger risk-adjusted returns than traditional local assets like real estate or bonds.
+                African businesses pay 20–50% more for cloud than the global average, driven by USD pricing, high upfront costs, and rigid annual models. Siscom's local currency billing and flexible pay-as-you-grow plans directly solve this — unlocking mass adoption for millions of SMEs.
               </p>
             </div>
             
             <div>
-              <h4 className="text-xl font-bold text-gray-900 mb-2">Structural Demand:</h4>
+              <h4 className="text-xl font-bold text-gray-900 mb-3">2. Massive Untapped Market</h4>
               <p className="text-lg text-gray-700">
-                The rise of AI, cloud, and data sovereignty laws is driving multi-decade demand for locally hosted compute and storage, creating a permanent market need for onshore infrastructure.
+                Africa's digital economy is projected to exceed $180B by 2025, yet less than 20% of workloads are hosted locally. Siscom is positioned to capture this gap by providing affordable, compliant, and localized cloud infrastructure purpose-built for African realities.
               </p>
             </div>
             
             <div>
-              <h4 className="text-xl font-bold text-gray-900 mb-2">Scalable Model:</h4>
+              <h4 className="text-xl font-bold text-gray-900 mb-3">3. Local Data = Local Intelligence</h4>
               <p className="text-lg text-gray-700">
-                Siscom's marketplace model allows specialized infrastructure operators to originate and manage assets, while Siscom captures fees and recurring service revenue, ensuring scalability without operational overload.
+                By keeping data on the continent, Siscom enables AI, analytics, and innovation ecosystems to thrive in Africa. This builds a foundation for digital sovereignty while reducing cross-border costs and latency — a key differentiator in markets reliant on offshore data centers.
               </p>
             </div>
             
             <div>
-              <h4 className="text-xl font-bold text-gray-900 mb-2">Liquidity Innovation:</h4>
+              <h4 className="text-xl font-bold text-gray-900 mb-3">4. Inclusive Ownership Model</h4>
               <p className="text-lg text-gray-700">
-                Through tokenization and periodic secondary market buybacks, Siscom provides early liquidity options — solving the traditional challenge of long lock-up periods in infrastructure investing.
+                Siscom isn't just building infrastructure — it's democratizing ownership. Through a crowdfunded, cooperative model, local investors, communities, and innovators can own and profit from Africa's digital backbone, creating both social and financial returns.
               </p>
             </div>
             
             <div>
-              <h4 className="text-xl font-bold text-gray-900 mb-2">Institutional Validation:</h4>
+              <h4 className="text-xl font-bold text-gray-900 mb-3">5. Developer-First, Africa-Ready Platform</h4>
               <p className="text-lg text-gray-700">
-                With major players like the IFC, World Bank, and Raxio investing heavily in African data centers, the macro tailwinds are undeniable. Siscom brings that same institutional confidence to the retail and diaspora investor level.
+                Siscom offers a simple, affordable, and locally optimized cloud for developers and SMEs — blending the ease of DigitalOcean, the compute efficiency of CoreWeave, and pricing that reflects local economies. This drives adoption across high-impact sectors like health, agriculture, logistics, and education.
               </p>
             </div>
           </div>
@@ -369,53 +365,20 @@ export default function PitchContent() {
               className="w-full h-auto"
             />
           </div>
-
-          <div className="mt-6 rounded-xl overflow-hidden shadow-lg">
-            <Image
-              src="/assets/images/12.png"
-              alt="Market Analysis"
-              width={1200}
-              height={600}
-              className="w-full h-auto"
-            />
-          </div>
         </section>
         
         {/* Business Model */}
         <section id="business-model" className="mb-12 scroll-mt-24">
           <h2 className="text-2xl font-semibold text-gray-500 mb-6">Business Model & Unit Economics</h2>
-          <h3 className="text-3xl font-bold text-gray-900 mb-6">Multiple Revenue Streams</h3>
           
-          <div className="bg-gray-50 rounded-xl p-8 mb-6">
-            <h4 className="text-lg font-bold text-gray-900 mb-4">Revenue Streams</h4>
-            <ul className="space-y-3 text-gray-700">
-              <li><strong>Investment fee:</strong> Transaction fees charged on successful investments (2–4% of capital raised)</li>
-              <li><strong>Asset management fee:</strong> Annual management fees on Assets Under Management (1–2% per annum)</li>
-              <li><strong>SAAS products:</strong> Subscription-based software solutions for infrastructure operators and investors</li>
-              <li><strong>IAAS products & services:</strong> Infrastructure-as-a-Service offerings including compute, storage, and networking solutions</li>
-            </ul>
-          </div>
-
-          <div className="border-l-4 border-pink-500 pl-6 py-4 bg-pink-50 rounded-r-xl">
-            <h4 className="font-semibold text-gray-900 mb-3">Sample Unit Economics (5 MW modular campus)</h4>
-            <div className="grid grid-cols-2 gap-4 text-sm">
-              <div>
-                <p className="text-gray-600">CAPEX</p>
-                <p className="text-xl font-bold text-gray-900">KSH 2.5B</p>
-              </div>
-              <div>
-                <p className="text-gray-600">Annual Revenue</p>
-                <p className="text-xl font-bold text-gray-900">KSH 600M/year</p>
-              </div>
-              <div>
-                <p className="text-gray-600">Operating Margin</p>
-                <p className="text-xl font-bold text-gray-900">35–45%</p>
-              </div>
-              <div>
-                <p className="text-gray-600">Investor IRR</p>
-                <p className="text-xl font-bold text-gray-900">20–35%</p>
-              </div>
-            </div>
+          <div className="rounded-xl overflow-hidden shadow-lg">
+            <Image
+              src="/assets/images/12.png"
+              alt="Business Model and Revenue Streams"
+              width={1200}
+              height={600}
+              className="w-full h-auto"
+            />
           </div>
         </section>
         
