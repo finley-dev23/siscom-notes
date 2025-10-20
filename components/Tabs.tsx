@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef } from "react";
 import PitchContent from "./PitchContent";
 import DealTerms from "./DealTerms";
-import Documents from "./Documents";
 import BonusPerks from "./BonusPerks";
 import About from "./About";
 import Press from "./Press";
@@ -113,7 +112,6 @@ export default function Tabs() {
             {activeTab === "pitch" && <DealTerms />}
             
             {/* Always show other sections */}
-            <Documents />
             <BonusPerks />
             <About />
             <Press />

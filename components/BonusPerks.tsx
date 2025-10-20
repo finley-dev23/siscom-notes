@@ -3,14 +3,6 @@
 export default function BonusPerks() {
   const perks = [
     {
-      amount: "KSH 100,000",
-      items: [
-        "A Siscom Africa Branded Yeti",
-        "Access to our private investor newsletter with early updates and behind-the-scenes stories",
-        "Your name featured on our Founding Investor Wall on our website"
-      ]
-    },
-    {
       amount: "KSH 500,000",
       items: [
         "An invitation to a small-group virtual roundtable with our team (bi-annual)",

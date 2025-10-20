@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Star, Share2 } from "lucide-react";
 
 export default function Hero() {
   const [activeTag, setActiveTag] = useState("problem");
@@ -49,15 +48,7 @@ export default function Hero() {
               </p>
             </div>
             
-            {/* Action Buttons */}
-            <div className="flex items-center space-x-3 ml-4">
-              <button className="p-2 hover:bg-gray-100 rounded-lg transition">
-                <Star className="w-5 h-5 text-gray-600" />
-              </button>
-              <button className="p-2 hover:bg-gray-100 rounded-lg transition">
-                <Share2 className="w-5 h-5 text-gray-600" />
-              </button>
-            </div>
+            
           </div>
         </div>
       </div>

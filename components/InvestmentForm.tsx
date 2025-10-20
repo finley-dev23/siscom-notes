@@ -1,11 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import { ChevronDown, ArrowLeft } from "lucide-react";
 
 export default function InvestmentForm() {
   const searchParams = useSearchParams();
+  const router = useRouter();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -15,6 +16,16 @@ export default function InvestmentForm() {
   });
 
   const [isAmountDropdownOpen, setIsAmountDropdownOpen] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [showToast, setShowToast] = useState(false);
+  const handleDownloadClick = () => {
+    // Auto-close the modal shortly after download starts
+    window.setTimeout(() => {
+      setShowSuccessModal(false);
+      setShowToast(true);
+      window.setTimeout(() => setShowToast(false), 4000);
+    }, 5000);
+  };
   
   // Set to show exactly 90 days remaining
   const [daysRemaining, setDaysRemaining] = useState(90);
@@ -25,8 +36,6 @@ export default function InvestmentForm() {
   }, []);
 
   const investmentAmounts = [
-    "KSH 50,000",
-    "KSH 100,000",
     "KSH 250,000",
     "KSH 500,000",
     "KSH 1M",
@@ -119,8 +128,8 @@ export default function InvestmentForm() {
       });
       
       // Since we're using no-cors mode, we can't check the response
-      // But we can show success message
-      alert("Thank you for your investment interest! We'll be in touch soon.");
+      // Show success modal with SAFE download instead of alert
+      setShowSuccessModal(true);
       
       // Reset form
       setFormData({
@@ -308,11 +317,11 @@ export default function InvestmentForm() {
                 />
                 <label htmlFor="terms" className="text-base text-gray-700">
                   I agree to the{" "}
-                  <a href="#" className="text-pink-500 hover:underline">
+                  <a href="/terms" className="text-pink-500 hover:underline">
                     Terms of Service
                   </a>{" "}
                   and{" "}
-                  <a href="#" className="text-pink-500 hover:underline">
+                  <a href="/privacy" className="text-pink-500 hover:underline">
                     Privacy Policy
                   </a>
                   . I understand that this is a private investment opportunity and I am an accredited investor.
@@ -337,6 +346,38 @@ export default function InvestmentForm() {
           </p>
         </div>
       </div>
+      {showSuccessModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4">
+          <div className="bg-white rounded-xl shadow-xl max-w-md w-full p-6">
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">Thank you!</h3>
+            <p className="text-base text-gray-700 mb-4">
+              Your request has been submitted. You can download the SAFE contract overview below.
+            </p>
+            <a
+              href="/assets/SISCOM%20Crowd%20SAFE%20Investment%20Overview.docx"
+              download
+              onClick={handleDownloadClick}
+              className="inline-flex items-center justify-center w-full bg-pink-500 hover:bg-pink-600 text-white py-3 px-4 rounded-lg font-semibold transition-colors mb-3"
+            >
+              Download SAFE Contract Overview
+            </a>
+            <button
+              type="button"
+              onClick={() => router.push("/")}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-700 font-medium hover:bg-gray-50 transition"
+            >
+              Continue exploring
+            </button>
+          </div>
+        </div>
+      )}
+      {showToast && (
+        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
+          <div className="bg-gray-900 text-white px-4 py-3 rounded-lg shadow-lg text-sm">
+            SAFE contract download started.
+          </div>
+        </div>
+      )}
     </div>
   );
 }

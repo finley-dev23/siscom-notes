@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Star, Share2, DollarSign } from "lucide-react";
+import { DollarSign } from "lucide-react";
 
 export default function InvestmentSummary() {
   const raised = 12000000; // KSH 12M
@@ -18,15 +18,7 @@ export default function InvestmentSummary() {
   
   return (
     <div className="space-y-6">
-      {/* Action Buttons */}
-      <div className="flex items-center space-x-3 justify-end">
-        <button className="p-2 hover:bg-gray-100 rounded-lg transition">
-          <Star className="w-5 h-5 text-gray-600" />
-        </button>
-        <button className="p-2 hover:bg-gray-100 rounded-lg transition">
-          <Share2 className="w-5 h-5 text-gray-600" />
-        </button>
-      </div>
+      
       
       {/* Raised Amount */}
       <div>

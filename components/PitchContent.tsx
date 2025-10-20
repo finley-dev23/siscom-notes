@@ -431,7 +431,7 @@ export default function PitchContent() {
             <div className="space-y-6">
               <div className="bg-white rounded-lg p-6">
                 <div className="text-lg font-bold text-green-700 mb-1">10 Fully Funded Nodes</div>
-                <div className="text-base text-gray-700">$150k total investment, crowdfunded & deployed at IX Africa Tier 3 DC</div>
+                <div className="text-base text-gray-700">$270k total investment, crowdfunded & deployed at IX Africa Tier 3 DC</div>
               </div>
               <div className="bg-white rounded-lg p-6">
                 <div className="text-lg font-bold text-green-700 mb-1">3 Active Nodes</div>
@@ -739,10 +739,6 @@ export default function PitchContent() {
           
           <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8">
             <div className="grid grid-cols-2 gap-6 mb-8">
-              <div>
-                <p className="text-sm text-gray-600 mb-1">Valuation</p>
-                <p className="text-2xl font-bold text-gray-900">Pre-money (example)</p>
-              </div>
               <div>
                 <p className="text-sm text-gray-600 mb-1">Structure</p>
                 <p className="text-2xl font-bold text-gray-900">Equity + potential SAFE</p>
