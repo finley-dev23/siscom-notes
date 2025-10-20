@@ -163,7 +163,7 @@ export default function PitchContent() {
           <h3 className="text-4xl font-bold text-gray-900 mb-4">Siscom Cloud & Infrastructure Stack</h3>
           
           <p className="text-lg text-gray-700 mb-8">
-            We are building the backbone that powers Africa's digital, AI, and cloud economy, enabling local participation in one of the continent's fastest-growing asset classes.
+            Siscom solves Africa's infrastructure inequality by building a decentralized, community-funded cloud and AI infrastructure stack — designed for local realities, SME affordability, and data sovereignty.
           </p>
           
           {/* Solution Components */}
