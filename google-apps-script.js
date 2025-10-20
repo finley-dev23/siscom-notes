@@ -13,7 +13,16 @@
  */
 
 // Replace this with your Google Sheet ID (found in the URL)
-const SHEET_ID = 'YOUR_GOOGLE_SHEET_ID';
+const SHEET_ID = '1-cmRoDJ2vcT2xBoTqZvzAZOjyW9N4QA8lBkXeZXqBnw';
+
+// Email notification settings
+const NOTIFICATION_EMAILS = [
+  'finley@siscom.tech',
+  'garvey@siscom.tech',
+  'dorcas@siscom.tech',
+  'derrick@siscom.tech'
+  // Add more email addresses as needed
+];
 
 function doPost(e) {
   try {
@@ -51,6 +60,9 @@ function doPost(e) {
     // Append the new row
     sheet.appendRow(rowData);
     
+    // Send email notification to team
+    sendEmailNotification(data);
+    
     // Return success response
     return ContentService
       .createTextOutput(JSON.stringify({
@@ -78,4 +90,90 @@ function doGet(e) {
       timestamp: new Date().toISOString()
     }))
     .setMimeType(ContentService.MimeType.JSON);
+}
+
+/**
+ * Send email notification when a new investment submission is received
+ */
+function sendEmailNotification(data) {
+  try {
+    const subject = `🚀 New Investment Lead: ${data.firstName} ${data.lastName}`;
+    
+    const htmlBody = `
+      <html>
+        <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+          <div style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; border-radius: 10px;">
+            <h2 style="color: #ec4899; margin-bottom: 20px;">💰 New Investment Submission</h2>
+            
+            <div style="background-color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+              <h3 style="color: #333; margin-top: 0;">Investor Details</h3>
+              <table style="width: 100%; border-collapse: collapse;">
+                <tr>
+                  <td style="padding: 8px 0; font-weight: bold; width: 40%;">Name:</td>
+                  <td style="padding: 8px 0;">${data.firstName} ${data.lastName}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 0; font-weight: bold;">Email:</td>
+                  <td style="padding: 8px 0;"><a href="mailto:${data.email}" style="color: #ec4899;">${data.email}</a></td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 0; font-weight: bold;">Phone:</td>
+                  <td style="padding: 8px 0;">${data.phone || 'Not provided'}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 0; font-weight: bold;">Investment Amount:</td>
+                  <td style="padding: 8px 0; color: #ec4899; font-size: 18px; font-weight: bold;">${data.investmentAmount}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 0; font-weight: bold;">Timestamp:</td>
+                  <td style="padding: 8px 0;">${new Date(data.timestamp).toLocaleString()}</td>
+                </tr>
+              </table>
+            </div>
+            
+            <div style="background-color: #fef3f8; padding: 15px; border-radius: 8px; border-left: 4px solid #ec4899;">
+              <p style="margin: 0; font-size: 14px;">
+                <strong>Action Required:</strong> Follow up with this lead within 24 hours to discuss investment details and answer any questions.
+              </p>
+            </div>
+            
+            <hr style="border: none; border-top: 1px solid #ddd; margin: 20px 0;">
+            
+            <p style="font-size: 12px; color: #666; margin: 0;">
+              This notification was automatically generated from the Siscom Africa investment landing page.
+            </p>
+          </div>
+        </body>
+      </html>
+    `;
+    
+    const plainBody = `
+New Investment Submission
+
+Investor Details:
+- Name: ${data.firstName} ${data.lastName}
+- Email: ${data.email}
+- Phone: ${data.phone || 'Not provided'}
+- Investment Amount: ${data.investmentAmount}
+- Timestamp: ${new Date(data.timestamp).toLocaleString()}
+
+Action Required: Follow up with this lead within 24 hours.
+    `;
+    
+    // Send email to all notification recipients
+    NOTIFICATION_EMAILS.forEach(email => {
+      MailApp.sendEmail({
+        to: email,
+        subject: subject,
+        body: plainBody,
+        htmlBody: htmlBody
+      });
+    });
+    
+    Logger.log(`Email notification sent to ${NOTIFICATION_EMAILS.length} recipients`);
+    
+  } catch (error) {
+    Logger.log(`Error sending email notification: ${error.toString()}`);
+    // Don't throw error - we don't want to fail the form submission if email fails
+  }
 }

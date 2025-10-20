@@ -36,15 +36,12 @@ export default function InvestmentForm() {
   }, []);
 
   const investmentAmounts = [
-    "KSH 250,000",
-    "KSH 500,000",
-    "KSH 1M",
-    "KSH 2.5M",
-    "KSH 5M",
-    "KSH 10M",
-    "KSH 25M",
-    "KSH 50M",
-    "KSH 100M+"
+    "KSH 350,000",
+    "KSH 700,000",
+    "KSH 1.05M",
+    "KSH 1.4M",
+    "KSH 1.75M",
+    "KSH 2.1M"
   ];
 
   // Read URL parameter and set initial investment amount
@@ -117,8 +114,7 @@ export default function InvestmentForm() {
       };
       
       // Send data to Google Sheets via Apps Script
-      // Note: Replace YOUR_SCRIPT_ID with your actual Google Apps Script ID
-      const response = await fetch('https://script.google.com/macros/s/AKfycbw4OUsocQUBM3QZ9pSLDdBUjLGHIaJOlQxLbtgXT_0UbjR6brYPGqdjTHiRBmWl2xBzcw/exec', {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbyQkXHnOUkFWxZlAu92p-cVVP_7Vfm2HlujIX-OLJcPXRqn6hApJKkshXz41H36sCb7iA/exec', {
         method: 'POST',
         mode: 'no-cors',
         headers: {
