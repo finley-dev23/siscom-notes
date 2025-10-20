@@ -63,6 +63,25 @@ export default function PitchContent() {
       {/* Main Content */}
       <div className="max-w-4xl mx-auto xl:ml-10">
         
+        {/* Elevator Pitch */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-semibold text-gray-500 mb-6">Elevator Pitch</h2>
+          <div className="bg-gradient-to-r from-pink-50 to-purple-50 rounded-xl p-8 space-y-4">
+            <p className="text-xl text-gray-800 leading-relaxed">
+              <strong>Siscom is building Africa's own AWS</strong> — a locally-owned, intelligent cloud that keeps data and value on the continent.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              By crowdfunding our compute infrastructure, we make cloud access affordable for SMEs and developers while scaling faster and staying lean.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              We've proven the model with paying enterprise clients and a growing developer ecosystem — and now, we're expanding to serve 1,000+ SMEs with local cloud, analytics, and AI tools.
+            </p>
+            <p className="text-lg text-gray-800 font-semibold leading-relaxed">
+              We're raising $270,000 to continue powering Africa's digital independence — one locally-owned cloud node at a time.
+            </p>
+          </div>
+        </section>
+        
         {/* Highlights Section */}
         <section id="highlights" className="mb-16 scroll-mt-24">
           <h2 className="text-3xl font-semibold text-gray-500 mb-6">Highlights — Why Siscom, right now</h2>
@@ -88,6 +107,21 @@ export default function PitchContent() {
               <span><strong>Node Investment MOAT:</strong> Crowdfunding model allows rapid scaling, lean ops, affordable pricing, and fast-tracked leadership across Kenya & East Africa</span>
             </li>
           </ul>
+        </section>
+        
+        {/* YouTube Video */}
+        <section className="mb-12">
+          <div className="rounded-xl overflow-hidden shadow-lg bg-black">
+            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/82MT7MJ0ogc"
+                title="Siscom Overview"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
         </section>
         
         {/* Problem */}
@@ -410,6 +444,10 @@ export default function PitchContent() {
                 <div className="text-lg font-bold text-green-700 mb-1">Developer Ecosystem</div>
                 <div className="text-base text-gray-700">500+ active Kenyan developers building on Siscom</div>
               </div>
+              <div className="bg-white rounded-lg p-6">
+                <div className="text-lg font-bold text-green-700 mb-1">Data Compliance</div>
+                <div className="text-base text-gray-700">Regulated both as a data controller and a data processor</div>
+              </div>
             </div>
           </div>
           
@@ -500,6 +538,21 @@ export default function PitchContent() {
             <div className="bg-gradient-to-br from-pink-50 to-rose-100 rounded-xl shadow-md p-6 border-l-4 border-pink-500 md:col-span-2">
               <h3 className="text-lg font-bold text-pink-700 mb-3">Community-Owned, Developer-First Cloud</h3>
               <p className="text-sm text-gray-700">Backed by local investors, 500+ developers, academia, cooperatives</p>
+            </div>
+          </div>
+        </section>
+        
+        {/* YouTube Video - Team Introduction */}
+        <section className="mb-12">
+          <div className="rounded-xl overflow-hidden shadow-lg bg-black">
+            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/tc4VOOJaDxY"
+                title="Siscom Team"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
             </div>
           </div>
         </section>
