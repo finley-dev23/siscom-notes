@@ -162,10 +162,6 @@ export default function PitchContent() {
           <h2 className="text-3xl font-semibold text-gray-500 mb-6">Solution</h2>
           <h3 className="text-4xl font-bold text-gray-900 mb-4">Siscom Cloud & Infrastructure Stack</h3>
           
-          <p className="text-lg text-gray-700 mb-4">
-            Siscom is creating a regulated technology investment marketplace that channels local, diaspora, and institutional capital into Africa's high-capex, high-return technology infrastructure — from GPU clusters and HPC nodes to modular data centers and cloud service layers.
-          </p>
-          
           <p className="text-lg text-gray-700 mb-8">
             We are building the backbone that powers Africa's digital, AI, and cloud economy, enabling local participation in one of the continent's fastest-growing asset classes.
           </p>
