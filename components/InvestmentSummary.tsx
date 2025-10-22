@@ -52,10 +52,6 @@ export default function InvestmentSummary() {
         >
           Book a Call
         </a>
-        
-        <p className="text-center text-base text-gray-500">
-          KSH 350,000 per SAFE note
-        </p>
       </div>
       
     </div>
