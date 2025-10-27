@@ -30,10 +30,20 @@ export default function Tabs() {
   
   return (
     <div>
-      {/* Sticky Navigation Bar (appears when scrolled past tabs) */}
+      {/* Mobile: Sticky Button at Bottom */}
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-50 p-4">
+        <a 
+          href="/invest"
+          className="w-full bg-pink-500 hover:bg-pink-600 text-white px-6 py-4 rounded-lg text-lg font-semibold transition-colors block text-center"
+        >
+          Book a Call
+        </a>
+      </div>
+
+      {/* Desktop: Sticky Navigation Bar (appears when scrolled past tabs) */}
       {showStickyNav && (
-        <div className="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 shadow-sm z-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="hidden lg:flex fixed top-0 left-0 right-0 bg-white border-b border-gray-200 shadow-sm z-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="flex items-center justify-between">
               <div className="flex space-x-8">
                 {tabs.map((tab) => (
@@ -95,7 +105,7 @@ export default function Tabs() {
       </div>
       
       {/* Two Column Layout */}
-      <div className="lg:grid lg:grid-cols-3 lg:gap-8 mt-6">
+      <div className="lg:grid lg:grid-cols-3 lg:gap-8 mt-6 pb-24 lg:pb-6">
         {/* Left Column - Main Content */}
         <div className="lg:col-span-2">
           {/* Tab Content */}
