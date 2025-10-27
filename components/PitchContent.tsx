@@ -17,7 +17,7 @@ export default function PitchContent() {
     { id: "business-model", label: "Business Model" },
     { id: "traction", label: "Traction — From Concept to Operating Cloud" },
     { id: "roadmap", label: "Roadmap — Building Africa's Edge Cloud & AI Future" },
-    { id: "competitive-advantage", label: "Competitive Advantage" },
+    { id: "competitive-advantage", label: "Product Moat" },
     { id: "team", label: "Team" },
     { id: "funding", label: "Funding & Terms" },
   ];
@@ -68,16 +68,25 @@ export default function PitchContent() {
           <h2 className="text-3xl font-semibold text-gray-500 mb-6">Elevator Pitch</h2>
           <div className="bg-gradient-to-r from-pink-50 to-purple-50 rounded-xl p-8 space-y-4">
             <p className="text-xl text-gray-800 leading-relaxed">
-              <strong>Siscom is building Africa's own AWS</strong> — a locally-owned, intelligent cloud that keeps data and value on the continent.
+              At Siscom Africa, we're reimagining what cloud means for Africa.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              By crowdfunding our compute infrastructure, we make cloud access affordable for SMEs and developers while scaling faster and staying lean.
+              We asked ourselves two questions:
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              We've proven the model with paying enterprise clients and a growing developer ecosystem — and now, we're expanding to serve 1,000+ SMEs with local cloud, analytics, and AI tools.
+              1. How can a small kiosk in Turkana enjoy the same transformative power of cloud and AI as an enterprise client using AWS in Nairobi?
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              2. How can a young Kenyan investor earn returns from the very digital infrastructure powering that kiosk's success?
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Our answer is a vertically integrated Kenyan SME cloud & Digitization ecosystem — purpose-built for financial services, SME digitization, analytics, automation, and developers.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              We make it possible for millions of SMEs to adopt cloud, data, and AI solutions through a localized, affordable stack — while Kenyan investors co-own the backbone of this transformation: the servers, GPUs, and data centers fueling it all.
             </p>
             <p className="text-lg text-gray-800 font-semibold leading-relaxed">
-              We're raising $270,000 to continue powering Africa's digital independence — one locally-owned cloud node at a time.
+              We're democratizing Africa's digital economy from the ground up.
             </p>
           </div>
         </section>
@@ -127,171 +136,110 @@ export default function PitchContent() {
         {/* Problem */}
         <section id="problem" className="mb-12 scroll-mt-24">
           <h2 className="text-3xl font-semibold text-gray-500 mb-6">Problem</h2>
-          <h3 className="text-4xl font-bold text-gray-900 mb-4">Africa's Digital Growth Constrained</h3>
-          <p className="text-2xl text-gray-700 mb-6">Infrastructure underbuilt despite massive opportunity</p>
+          <h3 className="text-4xl font-bold text-gray-900 mb-4">The Problem — Kenya's Cloud Divide</h3>
+          <p className="text-2xl text-gray-700 mb-6">Kenya's 7.4 million SMEs power over 80% of employment and nearly half of GDP — yet they remain locked out of the digital transformation driving the modern economy.</p>
           
-          <ul className="space-y-4 text-lg text-gray-700 mb-8">
-            <li className="flex items-start">
-              <span className="mr-3">•</span>
-              <div>
-              <strong>Global Cloud Dependence:</strong> Most data & workloads hosted offshore → latency, compliance risk, capital flight
-              </div>
-            </li>
-            <li className="flex items-start">
-              <span className="mr-3">•</span>
-              <div>
-              <strong>Engineering & Deployment Complexity:</strong> Hyperscaler platforms too complex for SMEs
-              </div>
-            </li>
-            <li className="flex items-start">
-              <span className="mr-3">•</span>
-              <div>
-              <strong>Rigid Pricing Models:</strong> AWS/Azure-style pricing misaligned with SME realities, currency volatility, seasonal workloads
-              </div>
-            </li>
-            <li className="flex items-start">
-              <span className="mr-3">•</span>
-              <div>
-              <strong>Data Flight = Lost Intelligence:</strong> When data leaves Africa, value for AI, analytics, and research is lost
-              </div>
-            </li>
-            <li className="flex items-start">
-              <span className="mr-3">•</span>
-              <div>
-              <strong>Infrastructure Inequality:</strong> Africa consumes digital infrastructure but owns little; profits & innovation externalized
-              </div>
-            </li>
-          </ul>
+          <p className="text-xl text-gray-700 mb-8">Here's the challenge:</p>
           
-          <div className="mt-8 bg-gray-50 rounded-lg p-6">
-            <h4 className="text-2xl font-bold text-gray-900 mb-4">Context: Cost Barriers for SMEs</h4>
-            <ul className="space-y-4 text-lg text-gray-700">
-              <li className="flex items-start">
-                <span className="mr-3">•</span>
-                <div>
-                <strong>Billing Currency Mismatch:</strong> OPEX billed in USD, revenue in KES; exchange rate volatility inflates bills
-                  <div className="mt-2 text-base text-gray-600 italic">
-                    Example: $42 cloud bill → KES 5,418; 20% KES depreciation → KES 6,510
-                  </div>
-                </div>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3">•</span>
-                <div>
-                <strong>Hidden Hyperscaler Add-Ons:</strong> Network egress, load balancers, managed services inflate OPEX
-                </div>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3">•</span>
-                <div>
-                <strong>Rigid Commitment Models:</strong> Yearly contracts don't match seasonal or irregular workloads → overpayment
-                </div>
-              </li>
-            </ul>
+          <div className="space-y-6">
+            <div className="bg-white rounded-lg p-6 border-l-4 border-red-500">
+              <h4 className="text-xl font-bold text-gray-900 mb-3">1. High Cost of Global Cloud</h4>
+              <p className="text-lg text-gray-700 mb-2">Most cloud infrastructure is priced in U.S. dollars and optimized for large enterprises.</p>
+              <p className="text-lg text-gray-700">SMEs in Nakuru, Kisumu, or Turkana can't absorb these costs — nor manage dollar-based volatility.</p>
+            </div>
+            
+            <div className="bg-white rounded-lg p-6 border-l-4 border-red-500">
+              <h4 className="text-xl font-bold text-gray-900 mb-3">2. Rigid Billing and Cashflow Mismatch</h4>
+              <p className="text-lg text-gray-700 mb-2">Global providers demand fixed monthly commitments.</p>
+              <p className="text-lg text-gray-700">Kenyan SMEs operate on daily or weekly cashflows, not predictable subscription cycles.</p>
+            </div>
+            
+            <div className="bg-white rounded-lg p-6 border-l-4 border-red-500">
+              <h4 className="text-xl font-bold text-gray-900 mb-3">3. Technical Barriers</h4>
+              <p className="text-lg text-gray-700">Building and managing cloud-native tools requires DevOps, data engineering, and cybersecurity expertise — skills that most SMEs can't afford or access.</p>
+            </div>
+            
+            <div className="bg-white rounded-lg p-6 border-l-4 border-red-500">
+              <h4 className="text-xl font-bold text-gray-900 mb-3">4. Foreign Clouds, Foreign Context</h4>
+              <p className="text-lg text-gray-700">Global cloud solutions aren't built for Kenya's retail, fintech, or regulatory realities — no integration with M-Pesa, PesaLink, or local data sovereignty laws.</p>
+            </div>
+            
+            <div className="bg-white rounded-lg p-6 border-l-4 border-red-500">
+              <h4 className="text-xl font-bold text-gray-900 mb-3">5. Value Flight</h4>
+              <p className="text-lg text-gray-700 mb-2">Every shilling spent on global cloud leaks value offshore.</p>
+              <p className="text-lg text-gray-700">Kenyan investors don't own or earn from the data centers, GPUs, or servers powering their own economy.</p>
+            </div>
           </div>
         </section>
         
         {/* Solution */}
         <section id="solution" className="mb-12 scroll-mt-24">
           <h2 className="text-3xl font-semibold text-gray-500 mb-6">Solution</h2>
-          <h3 className="text-4xl font-bold text-gray-900 mb-4">Siscom Cloud & Infrastructure Stack</h3>
+          <h3 className="text-4xl font-bold text-gray-900 mb-4">Our Solution — The Kenyan Cloud for Kenya's Economy</h3>
           
-          <p className="text-lg text-gray-700 mb-8">
-            Siscom solves Africa's infrastructure inequality by building a decentralized, community-funded cloud and AI infrastructure stack — designed for local realities, SME affordability, and data sovereignty.
+          <p className="text-2xl text-gray-700 mb-8">
+            At Siscom, we're building Kenya's first vertically integrated cloud ecosystem — designed from the ground up for Kenyan industries, Kenyan developers, and Kenyan investors.
           </p>
           
-          {/* Solution Components */}
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-8 mb-8">
-            <h4 className="text-2xl font-bold text-blue-700 mb-6">The Siscom Product Stack</h4>
+            <h4 className="text-2xl font-bold text-blue-700 mb-6">A 3-Layer Cloud Stack</h4>
+            <p className="text-lg text-gray-700 mb-6">Our cloud platform operates at three layers — fully interoperable, compliant, and industry-aware:</p>
+            
             <div className="space-y-6">
-              <div>
-                <h5 className="text-lg font-semibold text-gray-900 mb-3">Cloud & Compute Infrastructure</h5>
-                <ul className="text-base text-gray-700 space-y-2 ml-4">
-                  <li>• HPC nodes, AI GPU clusters (H100/A100), hybrid storage clusters</li>
-                  <li>• Scalable modular DCs, edge zones for regional connectivity</li>
-                </ul>
+              <div className="bg-white rounded-lg p-6 border-l-4 border-blue-500">
+                <h5 className="text-xl font-bold text-gray-900 mb-3">1. Infrastructure-as-a-Service (IaaS)</h5>
+                <p className="text-lg text-gray-700">Locally hosted compute, storage, and GPU infrastructure at IX Africa and regional data centers — ensuring data sovereignty, low latency, and compliance with Kenyan regulations.</p>
               </div>
-              <div>
-                <h5 className="text-lg font-semibold text-gray-900 mb-3">Locally-Owned, Intelligent Cloud</h5>
-                <ul className="text-base text-gray-700 space-y-2 ml-4">
-                  <li>• Pan-African cloud designed for African workloads</li>
-                  <li>• Data residency compliant & secure</li>
-                  <li>• Affordable pricing for SMEs & enterprises</li>
-                </ul>
+              
+              <div className="bg-white rounded-lg p-6 border-l-4 border-blue-500">
+                <h5 className="text-xl font-bold text-gray-900 mb-3">2. Platform-as-a-Service (PaaS)</h5>
+                <p className="text-lg text-gray-700">Developer-ready environments for APIs, analytics, and automation — enabling fast, secure, and scalable application development without deep DevOps expertise.</p>
               </div>
-              <div>
-                <h5 className="text-lg font-semibold text-gray-900 mb-3">Scalable Crowdfunding & Lean Model</h5>
-                <ul className="text-base text-gray-700 space-y-2 ml-4">
-                  <li>• Distributed compute nodes funded by retail, diaspora, and institutional channels</li>
-                  <li>• Rapid capacity expansion with lean operations, enabling market leadership</li>
-                </ul>
-              </div>
-              <div>
-                <h5 className="text-lg font-semibold text-gray-900 mb-3">Strategic Positioning</h5>
-                <ul className="text-base text-gray-700 space-y-2 ml-4">
-                  <li>• <strong>Kenya & Greater East Africa:</strong> Meet growing SME & enterprise cloud demand while ensuring data sovereignty</li>
-                  <li>• <strong>Scalable, Lean Model:</strong> Crowdfunding nodes enable rapid expansion and cost efficiency</li>
-                  <li>• <strong>Affordable Access:</strong> SMEs gain cloud & compute without prohibitive CAPEX</li>
-                  <li>• <strong>Market Leadership:</strong> Early mover advantage in HPC & regional cloud infrastructure</li>
-                </ul>
+              
+              <div className="bg-white rounded-lg p-6 border-l-4 border-blue-500">
+                <h5 className="text-xl font-bold text-gray-900 mb-3">3. Software-as-a-Service (SaaS)</h5>
+                <p className="text-lg text-gray-700">Industry-specific applications that address real Kenyan use cases — financial services, retail, e-commerce, healthcare, and even the church — all available as plug-and-play digital tools.</p>
               </div>
             </div>
           </div>
           
-          <div className="bg-gradient-to-r from-green-50 to-teal-50 rounded-xl p-6 mb-6">
-            <h4 className="text-xl font-bold text-green-700 mb-4">Phased Expansion</h4>
-            <div className="grid md:grid-cols-3 gap-4 text-base">
-              <div>
-                <p className="text-lg font-semibold text-gray-900 mb-2">Phase 1 (2025):</p>
-                <p className="text-base text-gray-700">HPC nodes & AI clusters</p>
-              </div>
-              <div>
-                <p className="text-lg font-semibold text-gray-900 mb-2">Phase 2 (2026–27):</p>
-                <p className="text-base text-gray-700">Modular DC campuses, colocation, edge zones</p>
-              </div>
-              <div>
-                <p className="text-lg font-semibold text-gray-900 mb-2">Phase 3 (2028+):</p>
-                <p className="text-base text-gray-700">Hyperscale campuses & regional POP</p>
-              </div>
-            </div>
+          <div className="bg-gradient-to-r from-green-50 to-teal-50 rounded-xl p-6 mb-8">
+            <h4 className="text-2xl font-bold text-green-700 mb-6">Built for Kenya's Reality</h4>
+            <ul className="space-y-4 text-lg text-gray-700">
+              <li className="flex items-start">
+                <span className="mr-3 text-green-600">✓</span>
+                <span><strong>Flexible billing</strong> — daily, monthly, or annual, to match SME cashflow cycles.</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 text-green-600">✓</span>
+                <span><strong>Billed in Kenya Shillings, not dollars.</strong></span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 text-green-600">✓</span>
+                <span><strong>Plug & Play</strong> — SMEs can deploy ready-made digital tools without technical teams.</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 text-green-600">✓</span>
+                <span><strong>Local developer ecosystem</strong> — empowering Kenyan engineers to build on Kenyan infrastructure.</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 text-green-600">✓</span>
+                <span><strong>Compliant by design</strong> — aligned with CBK, ODPC, and ICT Authority regulations.</span>
+              </li>
+            </ul>
           </div>
           
-          <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-xl p-6">
-            <h4 className="text-xl font-bold text-indigo-700 mb-4">Go-To-Market — Cloud, Data & AI Focus</h4>
-            <div className="space-y-6">
-              <div>
-                <h5 className="text-lg font-semibold text-gray-900 mb-2">SME & Enterprise Channels</h5>
-                <ul className="text-base text-gray-700 space-y-2 ml-4">
-                  <li>• Affordable cloud subscriptions, hybrid storage, AI compute tailored to local business needs</li>
-                  <li>• Use-case driven adoption: agriculture, healthcare, fintech, creative industries, e-government</li>
-                  <li>• SaaS partnerships accelerate enterprise digital transformation</li>
-                </ul>
-              </div>
-              <div>
-                <h5 className="text-lg font-semibold text-gray-900 mb-2">Developer & Innovation Community</h5>
-                <ul className="text-base text-gray-700 space-y-2 ml-4">
-                  <li>• Incentivize developers & startups to build on Siscom cloud</li>
-                  <li>• Hackathons, grants, incubation programs for AI, analytics, and cloud-native solutions</li>
-                </ul>
-              </div>
-              <div>
-                <h5 className="text-lg font-semibold text-gray-900 mb-2">Strategic Infrastructure Partnerships</h5>
-                <ul className="text-base text-gray-700 space-y-2 ml-4">
-                  <li>• Modular DC builders, IX providers, GPU suppliers for rapid scaling</li>
-                  <li>• Co-located infrastructure ensures low-latency, compliant, cost-effective services</li>
-                </ul>
-              </div>
-              <div>
-                <h5 className="text-lg font-semibold text-gray-900 mb-2">Regional Use-Case Expansion</h5>
-                <ul className="text-base text-gray-700 space-y-2 ml-4">
-                  <li>• <strong>AgTech:</strong> AI-driven precision agriculture & supply chain solutions</li>
-                  <li>• <strong>HealthTech:</strong> EMR, telemedicine, AI diagnostics</li>
-                  <li>• <strong>FinTech:</strong> Payments, core banking, microfinance analytics</li>
-                  <li>• <strong>Creative / Media:</strong> Rendering, video, digital content pipelines</li>
-                  <li>• <strong>E-Government:</strong> Citizen data, analytics, service hosting</li>
-                </ul>
-              </div>
-            </div>
+          <div className="bg-gradient-to-r from-pink-50 to-purple-50 rounded-xl p-8">
+            <h4 className="text-2xl font-bold text-purple-700 mb-4">Funded by Kenyans, for Kenya</h4>
+            <p className="text-lg text-gray-700 mb-4">
+              We're redefining what it means to invest in digital infrastructure.
+            </p>
+            <p className="text-lg text-gray-700 mb-4">
+              Through micro-investment opportunities, local investors can co-own the cloud — from the servers and GPUs to the data centers that power Kenya's digital future.
+            </p>
+            <p className="text-lg text-gray-800 font-semibold">
+              So the same young Kenyan who uses PesaHub or runs a kiosk in Turkana can invest in and profit from the very cloud infrastructure enabling their growth.
+            </p>
           </div>
         </section>
         
@@ -343,61 +291,37 @@ export default function PitchContent() {
           <h2 className="text-3xl font-semibold text-gray-500 mb-6">Market</h2>
           <h3 className="text-4xl font-bold text-gray-900 mb-6">Market Opportunity</h3>
           
-          <div className="space-y-6 mb-8">
-            <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6">
-              <h4 className="font-semibold text-gray-900 mb-3">SME/MSME Digitization</h4>
-              <ul className="text-base text-gray-700 space-y-2">
-                <li>• MSMEs = ~98% of Kenyan businesses, 30%+ GDP contribution</li>
-                <li>• Digitization spans payments, SaaS, cloud hosting, and sector-specific platforms (agriculture, health, retail)</li>
-              </ul>
-            </div>
-
-            <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-6">
-              <h4 className="font-semibold text-gray-900 mb-3">Cloud & Digital Transformation</h4>
-              <ul className="text-base text-gray-700 space-y-2">
-                <li>• Kenya cloud market: ~$959M (2024), growing rapidly</li>
-                <li>• Africa digital transformation market: ~$30B (2025), projected to double by 2030</li>
-              </ul>
-            </div>
-
-            <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-6">
-              <h4 className="font-semibold text-gray-900 mb-3">AI & Advanced Compute</h4>
-              <p className="text-base text-gray-700">Multi-billion USD by mid-2020s; demand for local GPU/AI compute for language, ag analytics, health AI, fintech risk models</p>
-            </div>
-
-            <div className="bg-gradient-to-r from-orange-50 to-yellow-50 rounded-xl p-6">
-              <h4 className="font-semibold text-gray-900 mb-3">Government & Public Sector Modernization</h4>
-              <p className="text-base text-gray-700">Digitization & data residency laws increase demand for compliant hosting and cloud platforms</p>
-            </div>
-          </div>
+          <p className="text-2xl text-gray-700 mb-8">
+            Digitizing 7.8M SMEs = a multi-billion-dollar cloud market waiting to be localized and democratized.
+          </p>
           
-          <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-6">
-            <h4 className="text-xl font-bold text-indigo-700 mb-4">Why This Matters for Siscom:</h4>
-            <ul className="text-base text-gray-700 space-y-3">
-              <li>• <strong>Large addressable market:</strong> SMEs + public sector + AI workloads = multiple revenue streams</li>
-              <li>• <strong>Timing validated by hyperscaler investments and government programs</strong></li>
-              <li>• <strong>Moat:</strong> Local billing, sovereign hosting, SME-ready products, and crowdfunded ownership drive adoption & retention</li>
-            </ul>
-          </div>
-          
-          <div className="mt-8 rounded-xl overflow-hidden shadow-lg">
-            <Image
-              src="/assets/images/10.png"
-              alt="Market Opportunity Visualization"
-              width={1200}
-              height={600}
-              className="w-full h-auto"
-            />
-          </div>
-          
-          <div className="mt-6 rounded-xl overflow-hidden shadow-lg">
-            <Image
-              src="/assets/images/11.png"
-              alt="Market Insights"
-              width={1200}
-              height={600}
-              className="w-full h-auto"
-            />
+          <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-8 overflow-x-auto">
+            <table className="w-full min-w-full">
+              <thead>
+                <tr className="border-b-2 border-purple-500">
+                  <th className="text-left py-4 px-6 text-lg font-bold text-gray-900">Metric</th>
+                  <th className="text-left py-4 px-6 text-lg font-bold text-gray-900">Insight</th>
+                  <th className="text-left py-4 px-6 text-lg font-bold text-gray-900">Estimated Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-gray-200">
+                  <td className="py-4 px-6 text-base font-semibold text-gray-900">TAM (All SMEs)</td>
+                  <td className="py-4 px-6 text-base text-gray-700">7.8M Kenyan SMEs adopting cloud & AI tools</td>
+                  <td className="py-4 px-6 text-base font-bold text-purple-700">US$5.2 – 7.8 Billion</td>
+                </tr>
+                <tr className="border-b border-gray-200">
+                  <td className="py-4 px-6 text-base font-semibold text-gray-900">SAM (Regulated Industries)**</td>
+                  <td className="py-4 px-6 text-base text-gray-700">Finance, Healthcare, eGov, Retail</td>
+                  <td className="py-4 px-6 text-base font-bold text-purple-700">US$2.5 – 3.5 Billion</td>
+                </tr>
+                <tr>
+                  <td className="py-4 px-6 text-base font-semibold text-gray-900">SOM (Phase 1 Focus)**</td>
+                  <td className="py-4 px-6 text-base text-gray-700">FinTechs, Retailers, Developer Ecosystem</td>
+                  <td className="py-4 px-6 text-base font-bold text-purple-700">US$500 Million – 1 Billion</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </section>
         
@@ -513,31 +437,97 @@ export default function PitchContent() {
         
         {/* Competitive Advantage */}
         <section id="competitive-advantage" className="mb-16 scroll-mt-24">
-          <h2 className="text-3xl font-bold text-indigo-600 mb-8 text-center">Competitive Advantage</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl shadow-md p-6 border-l-4 border-blue-500">
-              <h3 className="text-lg font-bold text-blue-700 mb-3">Built for Kenya's Scale & Use Cases</h3>
-              <p className="text-sm text-gray-700">SMEs, startups, developers, counties; solving local challenges in ag, health, fintech, e-government</p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-green-50 to-teal-100 rounded-xl shadow-md p-6 border-l-4 border-green-500">
-              <h3 className="text-lg font-bold text-green-700 mb-3">Affordable, Locally Funded Infrastructure</h3>
-              <p className="text-sm text-gray-700">Crowdfunded nodes, lean OPEX, KES-based pricing; eliminates USD risk</p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-purple-50 to-pink-100 rounded-xl shadow-md p-6 border-l-4 border-purple-500">
-              <h3 className="text-lg font-bold text-purple-700 mb-3">Edge Intelligence & AI Readiness</h3>
-              <p className="text-sm text-gray-700">Local GPU infrastructure, supporting locally hosted LLMs</p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-orange-50 to-yellow-100 rounded-xl shadow-md p-6 border-l-4 border-orange-500">
-              <h3 className="text-lg font-bold text-orange-700 mb-3">Data Sovereignty & Neutrality</h3>
-              <p className="text-sm text-gray-700">Hosted in Kenyan Tier 3 DCs, carrier & DC neutral</p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-pink-50 to-rose-100 rounded-xl shadow-md p-6 border-l-4 border-pink-500 md:col-span-2">
-              <h3 className="text-lg font-bold text-pink-700 mb-3">Community-Owned, Developer-First Cloud</h3>
-              <p className="text-sm text-gray-700">Backed by local investors, 500+ developers, academia, cooperatives</p>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Product Moat — The Siscom Ecosystem Advantage</h2>
+          <h3 className="text-2xl text-gray-700 mb-8">Built for Kenya. Scaled for Africa.</h3>
+          
+          <p className="text-xl text-gray-700 mb-10">
+            Siscom's competitive moat lies in deep vertical integration, local compliance, and multi-layered interoperability across infrastructure, platform, and intelligence layers — all priced and billed in Kenya Shillings, and optimized for African realities of scale.
+          </p>
+          
+          <div className="space-y-8">
+            <div>
+              <h4 className="text-2xl font-bold text-blue-700 mb-6">Our Product Pillars (The Moat Components)</h4>
+              
+              <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-8 mb-6 border-l-4 border-blue-500">
+                <h5 className="text-xl font-bold text-gray-900 mb-4">1. Siscom Dev — On-Demand Cloud for Developers</h5>
+                <p className="text-lg text-gray-700 mb-4">
+                  The first Kenyan-built PAAS cloud offering local developers access to compute and AI resources.
+                </p>
+                <ul className="space-y-2 text-base text-gray-700">
+                  <li>• Pay-as-you-go (hourly, monthly, annual) in KES</li>
+                  <li>• Elastic compute, storage, APIs, GPU access</li>
+                  <li>• Integrated AI environments (ML training, model deployment)</li>
+                  <li>• Developer-friendly CLI, SDK, and low-latency edge servers hosted locally (IX Africa)</li>
+                </ul>
+                <div className="mt-4 p-4 bg-blue-100 rounded-lg">
+                  <p className="text-base text-blue-900 font-semibold">→ Moat: Captures the developer economy with local billing, lower latency, and regulatory confidence.</p>
+                </div>
+              </div>
+              
+              <div className="bg-gradient-to-r from-green-50 to-teal-50 rounded-xl p-8 mb-6 border-l-4 border-green-500">
+                <h5 className="text-xl font-bold text-gray-900 mb-4">2. Pesahub — FinTech-as-a-Service Cloud</h5>
+                <p className="text-lg text-gray-700 mb-4">
+                  A vertically integrated platform for FinTechs and Financial Institutions to build, launch, and scale faster.
+                </p>
+                <ul className="space-y-2 text-base text-gray-700">
+                  <li>• Wallet-as-a-Service (multi-currency, interoperable)</li>
+                  <li>• API Gateway (M-Pesa, PesaLink, Cards, Wallets, Banks)</li>
+                  <li>• Digital Onboarding & KYC APIs</li>
+                  <li>• AML Screening, Credit Scoring, and Analytics</li>
+                  <li>• Automated Reconciliation & Customer Lifecycle Management</li>
+                  <li>• Cybersecurity & Compliance Layer: Regulated as both data controller and processor</li>
+                  <li>• High availability & redundancy per CBK & ODPC guidelines</li>
+                </ul>
+                <div className="mt-4 p-4 bg-green-100 rounded-lg">
+                  <p className="text-base text-green-900 font-semibold">→ Moat: Combines infrastructure + compliance + innovation — making it nearly impossible for global players to localize at this depth.</p>
+                </div>
+              </div>
+              
+              <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-8 mb-6 border-l-4 border-purple-500">
+                <h5 className="text-xl font-bold text-gray-900 mb-4">3. Siscom Pulse — Community & Ecosystem Engine</h5>
+                <p className="text-lg text-gray-700 mb-4">
+                  Backend infrastructure for events, community, networking, and innovation hubs.
+                </p>
+                <ul className="space-y-2 text-base text-gray-700">
+                  <li>• API-driven event management & ticketing</li>
+                  <li>• Real-time analytics on participation and engagement</li>
+                  <li>• Community growth and developer network integration</li>
+                </ul>
+                <div className="mt-4 p-4 bg-purple-100 rounded-lg">
+                  <p className="text-base text-purple-900 font-semibold">→ Moat: Creates network effects around the Siscom brand — developer loyalty + community lock-in.</p>
+                </div>
+              </div>
+              
+              <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-xl p-8 mb-6 border-l-4 border-indigo-500">
+                <h5 className="text-xl font-bold text-gray-900 mb-4">4. Siscom CloudX — SME Digitization Stack</h5>
+                <p className="text-lg text-gray-700 mb-4">
+                  Unified billing, automation, and workplace productivity tools for Kenya's 7.8M SMEs.
+                </p>
+                <ul className="space-y-2 text-base text-gray-700">
+                  <li>• Centralized dashboard for billing, CRM, POS, Payroll, and Analytics</li>
+                  <li>• Integrations with Zoho, Google Workspace, Microsoft 365</li>
+                  <li>• Localized AI assistants for business productivity</li>
+                </ul>
+                <div className="mt-4 p-4 bg-indigo-100 rounded-lg">
+                  <p className="text-base text-indigo-900 font-semibold">→ Moat: Captures the largest TAM — SME digitization — and enables retention through daily operational reliance.</p>
+                </div>
+              </div>
+              
+              <div className="bg-gradient-to-r from-orange-50 to-yellow-50 rounded-xl p-8 mb-6 border-l-4 border-orange-500">
+                <h5 className="text-xl font-bold text-gray-900 mb-4">5. AI Mtaani — Africa's Localized AI Suite</h5>
+                <p className="text-lg text-gray-700 mb-4">
+                  Local-language, culturally tuned AI solutions and training programs.
+                </p>
+                <ul className="space-y-2 text-base text-gray-700">
+                  <li>• Corporate & sector-specific LLMs</li>
+                  <li>• AI developer training programs & R&D labs</li>
+                  <li>• Enterprise AI adoption tools</li>
+                  <li>• Partnerships with universities and government AI initiatives</li>
+                </ul>
+                <div className="mt-4 p-4 bg-orange-100 rounded-lg">
+                  <p className="text-base text-orange-900 font-semibold">→ Moat: Positions Siscom as the AI infrastructure and knowledge backbone of Kenya.</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
